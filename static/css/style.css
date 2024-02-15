@@ -125,6 +125,7 @@ header .action {
     top: 0;
     z-index: 100;
     box-shadow: 0px 3px 5px rgba(0 0 0 /10%);
+    -webkit-box-orient: vertical;
 }
 
 .navbar.scrolled {
