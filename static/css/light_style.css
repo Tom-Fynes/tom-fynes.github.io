@@ -602,6 +602,12 @@ a {
     color: var(--gray-menu-button);
 }
 
+.iframe {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+}
 
 .text-justify {
     text-align: justify !important
