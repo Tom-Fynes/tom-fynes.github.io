@@ -1,11 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
 
 :root {
     --primary: #3f48cc;
     --primary-dark: #313899;
     --primary-darker: #202569;
     --text: #1C1C1C;
+    --hero-text: #F9F9F9;
     --background: #F9F9F9;
     --secondary-background: #2E2E2E;
     --secondary: #2E2E2E;
@@ -131,6 +133,15 @@ header .action {
 
 .navbar.scrolled {
     background-color: var(--background);
+    color: var(--text);
+}
+
+.navbar p {
+    color: var(--hero-text);
+}
+
+.navbar i {
+    color: var(--hero-text);
 }
 
 .navigation {
@@ -153,7 +164,7 @@ header .action {
 }
 
 .navigation>li>a {
-    color: var(--text);
+    color: var(--hero-text);
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
@@ -208,6 +219,7 @@ header .action {
 
 .navbar.scrolled {
     background-color: var(--background);
+    color: var(--text);
 }
 
 @media only screen and (max-width: 1026px) {
@@ -336,7 +348,11 @@ html {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--text)
+    color: var(--hero-text)
+}
+
+.hero-text>p {
+    color: var(--hero-text)
 }
 
 .avatar {
@@ -644,4 +660,8 @@ a {
 
 .primary:hover {
     background-color: var(--primary-darker);
+}
+
+i {
+    color: var(--hero-text);
 }
