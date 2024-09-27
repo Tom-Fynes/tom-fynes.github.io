@@ -1,0 +1,14 @@
+sql:
+  label: sql
+  permalink: /sql
+  description: Tag used for SQL related posts
+
+python:
+  label: Python
+  permalink: /python
+  description: Tag used for Python related posts
+
+misc:
+  label: misc
+  permalink: /misc
+  description: Tag used for posts that don't fit in any other category
