@@ -1,0 +1,24 @@
+{
+  "id": "Grade 3/02 Aggregation",
+  "title": "Aggregate Functions",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 3/02 Aggregation.md",
+  "sourceDirName": "Grade 3",
+  "slug": "/Grade 3/02 Aggregation",
+  "permalink": "/docs/Grade 3/02 Aggregation",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Joins",
+    "permalink": "/docs/Grade 3/01 joins"
+  },
+  "next": {
+    "title": "Subqueries",
+    "permalink": "/docs/Grade 3/03 subqueries"
+  }
+}

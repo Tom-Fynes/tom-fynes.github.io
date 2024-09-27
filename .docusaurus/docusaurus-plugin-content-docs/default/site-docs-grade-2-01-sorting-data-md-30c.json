@@ -1,0 +1,24 @@
+{
+  "id": "Grade 2/01 sorting data",
+  "title": "Sorting Data",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 2/01 sorting data.md",
+  "sourceDirName": "Grade 2",
+  "slug": "/Grade 2/01 sorting data",
+  "permalink": "/docs/Grade 2/01 sorting data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Filtering Data",
+    "permalink": "/docs/Grade 1/04 Filtering data"
+  },
+  "next": {
+    "title": "Limiting Data",
+    "permalink": "/docs/Grade 2/02 Limiting data"
+  }
+}

@@ -16,8 +16,8 @@ function HomepageHeader() {
           alt="Avatar"
           class="hero-avatar center"
         ></img>
-        <Heading as="h1" className="hero__title ">
-          <div className="--hero-text">{siteConfig.title}</div>
+        <Heading as="h1" className="hero__title">
+          <div>{siteConfig.title}</div>
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
       </div>

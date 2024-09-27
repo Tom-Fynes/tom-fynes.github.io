@@ -1,0 +1,20 @@
+{
+  "id": "Grade 9 (Extras)/SQL Server/01 tsql cursors",
+  "title": "Cursors",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 9 (Extras)/SQL Server/01 tsql cursors.md",
+  "sourceDirName": "Grade 9 (Extras)/SQL Server",
+  "slug": "/Grade 9 (Extras)/SQL Server/01 tsql cursors",
+  "permalink": "/docs/Grade 9 (Extras)/SQL Server/01 tsql cursors",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Window Functions",
+    "permalink": "/docs/Grade 8/03 Windows functions"
+  }
+}

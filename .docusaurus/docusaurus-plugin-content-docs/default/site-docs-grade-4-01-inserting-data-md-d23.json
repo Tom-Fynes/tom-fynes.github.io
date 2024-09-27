@@ -1,0 +1,24 @@
+{
+  "id": "Grade 4/01 Inserting data",
+  "title": "Inserting Data",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 4/01 Inserting data.md",
+  "sourceDirName": "Grade 4",
+  "slug": "/Grade 4/01 Inserting data",
+  "permalink": "/docs/Grade 4/01 Inserting data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Set Operations",
+    "permalink": "/docs/Grade 3/04 Set operations"
+  },
+  "next": {
+    "title": "Updating Data",
+    "permalink": "/docs/Grade 4/02 Updateing data"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "Grade 6/04 Case",
+  "title": "CASE Statements",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 6/04 Case.md",
+  "sourceDirName": "Grade 6",
+  "slug": "/Grade 6/04 Case",
+  "permalink": "/docs/Grade 6/04 Case",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Mathematical Functions",
+    "permalink": "/docs/Grade 6/03 Maths"
+  },
+  "next": {
+    "title": "Indexes",
+    "permalink": "/docs/Grade 7/01 Indexes"
+  }
+}

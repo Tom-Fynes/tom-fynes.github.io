@@ -1,0 +1,208 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/docs/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/docs/",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "Getting Started/Duckdb",
+              "path": "/docs/Getting Started/Duckdb",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Getting Started/MySql",
+              "path": "/docs/Getting Started/MySql",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Getting Started/Postgres",
+              "path": "/docs/Getting Started/Postgres",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Getting Started/SQL Server",
+              "path": "/docs/Getting Started/SQL Server",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 1/01 What is SQL",
+              "path": "/docs/Grade 1/01 What is SQL",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 1/02 Relational databases",
+              "path": "/docs/Grade 1/02 Relational databases",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 1/03 Simple queries",
+              "path": "/docs/Grade 1/03 Simple queries",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 1/04 Filtering data",
+              "path": "/docs/Grade 1/04 Filtering data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 2/01 sorting data",
+              "path": "/docs/Grade 2/01 sorting data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 2/02 Limiting data",
+              "path": "/docs/Grade 2/02 Limiting data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 2/03 Basic functions",
+              "path": "/docs/Grade 2/03 Basic functions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 2/04 Alias",
+              "path": "/docs/Grade 2/04 Alias",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 3/01 joins",
+              "path": "/docs/Grade 3/01 joins",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 3/02 Aggregation",
+              "path": "/docs/Grade 3/02 Aggregation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 3/03 subqueries",
+              "path": "/docs/Grade 3/03 subqueries",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 3/04 Set operations",
+              "path": "/docs/Grade 3/04 Set operations",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 4/01 Inserting data",
+              "path": "/docs/Grade 4/01 Inserting data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 4/02 Updateing data",
+              "path": "/docs/Grade 4/02 Updateing data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 4/03 Deleting data",
+              "path": "/docs/Grade 4/03 Deleting data",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 5/01 Create tables",
+              "path": "/docs/Grade 5/01 Create tables",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 5/02 Altering tables",
+              "path": "/docs/Grade 5/02 Altering tables",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 5/03 Droping Tables",
+              "path": "/docs/Grade 5/03 Droping Tables",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 5/04 Constraints",
+              "path": "/docs/Grade 5/04 Constraints",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 6/01 String functions",
+              "path": "/docs/Grade 6/01 String functions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 6/02 Date time",
+              "path": "/docs/Grade 6/02 Date time",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 6/03 Maths",
+              "path": "/docs/Grade 6/03 Maths",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 6/04 Case",
+              "path": "/docs/Grade 6/04 Case",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 7/01 Indexes",
+              "path": "/docs/Grade 7/01 Indexes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 7/02 Optermization",
+              "path": "/docs/Grade 7/02 Optermization",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 7/03 Execution plans",
+              "path": "/docs/Grade 7/03 Execution plans",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 7/04 Temp tables and ctes",
+              "path": "/docs/Grade 7/04 Temp tables and ctes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 8/01 Transactions",
+              "path": "/docs/Grade 8/01 Transactions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 8/02 Locking concurrentct",
+              "path": "/docs/Grade 8/02 Locking concurrentct",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 8/03 Windows functions",
+              "path": "/docs/Grade 8/03 Windows functions",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 9 (Extras)/SQL Server/01 tsql cursors",
+              "path": "/docs/Grade 9 (Extras)/SQL Server/01 tsql cursors",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/docs/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

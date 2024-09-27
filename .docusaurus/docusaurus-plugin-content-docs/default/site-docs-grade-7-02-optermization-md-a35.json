@@ -1,0 +1,24 @@
+{
+  "id": "Grade 7/02 Optermization",
+  "title": "Query Optermization",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 7/02 Optermization.md",
+  "sourceDirName": "Grade 7",
+  "slug": "/Grade 7/02 Optermization",
+  "permalink": "/docs/Grade 7/02 Optermization",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Indexes",
+    "permalink": "/docs/Grade 7/01 Indexes"
+  },
+  "next": {
+    "title": "Execution Plans",
+    "permalink": "/docs/Grade 7/03 Execution plans"
+  }
+}

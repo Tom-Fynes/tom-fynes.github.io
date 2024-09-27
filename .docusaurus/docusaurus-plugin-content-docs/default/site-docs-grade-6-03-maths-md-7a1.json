@@ -1,0 +1,24 @@
+{
+  "id": "Grade 6/03 Maths",
+  "title": "Mathematical Functions",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 6/03 Maths.md",
+  "sourceDirName": "Grade 6",
+  "slug": "/Grade 6/03 Maths",
+  "permalink": "/docs/Grade 6/03 Maths",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Date and Time Functions",
+    "permalink": "/docs/Grade 6/02 Date time"
+  },
+  "next": {
+    "title": "CASE Statements",
+    "permalink": "/docs/Grade 6/04 Case"
+  }
+}

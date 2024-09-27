@@ -1,0 +1,24 @@
+{
+  "id": "Getting Started/SQL Server",
+  "title": "SQL Server",
+  "description": "Configure SQL Server",
+  "source": "@site/docs/Getting Started/SQL Server.md",
+  "sourceDirName": "Getting Started",
+  "slug": "/Getting Started/SQL Server",
+  "permalink": "/docs/Getting Started/SQL Server",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Postgres",
+    "permalink": "/docs/Getting Started/Postgres"
+  },
+  "next": {
+    "title": "Overview of SQL",
+    "permalink": "/docs/Grade 1/01 What is SQL"
+  }
+}

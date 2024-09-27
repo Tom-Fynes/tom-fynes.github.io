@@ -1,0 +1,24 @@
+{
+  "id": "Grade 7/01 Indexes",
+  "title": "Indexes",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 7/01 Indexes.md",
+  "sourceDirName": "Grade 7",
+  "slug": "/Grade 7/01 Indexes",
+  "permalink": "/docs/Grade 7/01 Indexes",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CASE Statements",
+    "permalink": "/docs/Grade 6/04 Case"
+  },
+  "next": {
+    "title": "Query Optermization",
+    "permalink": "/docs/Grade 7/02 Optermization"
+  }
+}

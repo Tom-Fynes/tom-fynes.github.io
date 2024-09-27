@@ -1,0 +1,24 @@
+{
+  "id": "Getting Started/MySql",
+  "title": "MySql",
+  "description": "Configure MySQL",
+  "source": "@site/docs/Getting Started/MySql.md",
+  "sourceDirName": "Getting Started",
+  "slug": "/Getting Started/MySql",
+  "permalink": "/docs/Getting Started/MySql",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Configure DuckDB",
+    "permalink": "/docs/Getting Started/Duckdb"
+  },
+  "next": {
+    "title": "Postgres",
+    "permalink": "/docs/Getting Started/Postgres"
+  }
+}

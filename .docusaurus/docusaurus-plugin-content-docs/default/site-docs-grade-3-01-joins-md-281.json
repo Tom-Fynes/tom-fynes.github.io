@@ -1,0 +1,24 @@
+{
+  "id": "Grade 3/01 joins",
+  "title": "Joins",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 3/01 joins.md",
+  "sourceDirName": "Grade 3",
+  "slug": "/Grade 3/01 joins",
+  "permalink": "/docs/Grade 3/01 joins",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Aliasing",
+    "permalink": "/docs/Grade 2/04 Alias"
+  },
+  "next": {
+    "title": "Aggregate Functions",
+    "permalink": "/docs/Grade 3/02 Aggregation"
+  }
+}

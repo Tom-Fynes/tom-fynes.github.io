@@ -1,0 +1,24 @@
+{
+  "id": "Grade 1/01 What is SQL",
+  "title": "Overview of SQL",
+  "description": "SQL (Structured Query Language) is a language designed for managing and manipulating relational databases. It is widely used in various applications, from small-scale software to large enterprise systems. SQL allows users to create, read, update, and delete data within a database, providing a powerful and flexible means of handling data.",
+  "source": "@site/docs/Grade 1/01 What is SQL.md",
+  "sourceDirName": "Grade 1",
+  "slug": "/Grade 1/01 What is SQL",
+  "permalink": "/docs/Grade 1/01 What is SQL",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "SQL Server",
+    "permalink": "/docs/Getting Started/SQL Server"
+  },
+  "next": {
+    "title": "Relational Databases",
+    "permalink": "/docs/Grade 1/02 Relational databases"
+  }
+}

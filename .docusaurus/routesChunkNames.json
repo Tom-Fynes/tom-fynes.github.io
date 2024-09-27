@@ -1,0 +1,302 @@
+{
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/blog-835": {
+    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-524-da6"
+      }
+    ],
+    "__props": "__props---blogc-15-573"
+  },
+  "/blog/archive-182": {
+    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "__props": "__props---blog-archivef-81-229"
+  },
+  "/blog/authors-0b7": {
+    "__comp": "__comp---theme-blog-pages-blog-authors-list-page-621-70c",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "__props": "__props---blog-authorsef-8-44f"
+  },
+  "/blog/authors/tomfynes-b0a": {
+    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "items": [
+      {
+        "content": "content---blog-524-da6"
+      }
+    ],
+    "sidebar": "sidebar---blog-814-8ac",
+    "__props": "__props---blog-authors-tomfynesecd-141"
+  },
+  "/blog/tags-287": {
+    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "__props": "__props---blog-tags-3-a-2-fa2"
+  },
+  "/blog/tags/misc-3d9": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-524-da6"
+      }
+    ],
+    "__props": "__props---blog-tags-misc-2-c-0-f10"
+  },
+  "/blog/welcome-841": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-welcome-93-c-76b"
+  },
+  "/markdown-page-3d7": {
+    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__context": {
+      "plugin": "plugin---markdown-pagea-74-7b5"
+    },
+    "content": "content---markdown-page-393-028"
+  },
+  "/skills-56c": {
+    "__comp": "__comp---site-src-pages-skills-js-18-d-1c7",
+    "__context": {
+      "plugin": "plugin---markdown-pagea-74-7b5"
+    },
+    "config": "config---skills-5-e-9-eb4"
+  },
+  "/docs-20b": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---docsaba-d7c"
+    }
+  },
+  "/docs-88b": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---docs-005-788"
+  },
+  "/docs-ff7": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/docs/Getting Started/Duckdb-409": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-duckdbf-83-970"
+  },
+  "/docs/Getting Started/MySql-b98": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-my-sql-571-9e7"
+  },
+  "/docs/Getting Started/Postgres-41c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-postgres-923-63b"
+  },
+  "/docs/Getting Started/SQL Server-abb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-getting-started-sql-server-89-d-be1"
+  },
+  "/docs/Grade 1/01 What is SQL-bd0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-1-01-what-is-sq-ldd-7-0fb"
+  },
+  "/docs/Grade 1/02 Relational databases-a2c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-1-02-relational-databasesfd-2-ef0"
+  },
+  "/docs/Grade 1/03 Simple queries-693": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-1-03-simple-queries-5-fc-b47"
+  },
+  "/docs/Grade 1/04 Filtering data-a49": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-1-04-filtering-data-3-fd-109"
+  },
+  "/docs/Grade 2/01 sorting data-536": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-2-01-sorting-data-30-c-a07"
+  },
+  "/docs/Grade 2/02 Limiting data-3c8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-2-02-limiting-data-1-ad-270"
+  },
+  "/docs/Grade 2/03 Basic functions-991": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-2-03-basic-functions-56-f-cca"
+  },
+  "/docs/Grade 2/04 Alias-38c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-2-04-aliasee-7-97e"
+  },
+  "/docs/Grade 3/01 joins-1fd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-3-01-joins-281-afa"
+  },
+  "/docs/Grade 3/02 Aggregation-880": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-3-02-aggregation-2-b-6-f71"
+  },
+  "/docs/Grade 3/03 subqueries-21f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-3-03-subqueries-2-eb-b2b"
+  },
+  "/docs/Grade 3/04 Set operations-22b": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-3-04-set-operations-54-c-d4d"
+  },
+  "/docs/Grade 4/01 Inserting data-378": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-4-01-inserting-datad-23-ccf"
+  },
+  "/docs/Grade 4/02 Updateing data-6c0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-4-02-updateing-dataca-6-c08"
+  },
+  "/docs/Grade 4/03 Deleting data-f10": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-4-03-deleting-datad-42-4da"
+  },
+  "/docs/Grade 5/01 Create tables-32f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-5-01-create-tables-0-d-5-29a"
+  },
+  "/docs/Grade 5/02 Altering tables-021": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-5-02-altering-tables-4-e-4-957"
+  },
+  "/docs/Grade 5/03 Droping Tables-abd": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-5-03-droping-tables-38-f-c44"
+  },
+  "/docs/Grade 5/04 Constraints-2ab": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-5-04-constraints-877-e28"
+  },
+  "/docs/Grade 6/01 String functions-f06": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-6-01-string-functionscbc-7ef"
+  },
+  "/docs/Grade 6/02 Date time-295": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-6-02-date-time-371-c3a"
+  },
+  "/docs/Grade 6/03 Maths-3fb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-6-03-maths-7-a-1-22e"
+  },
+  "/docs/Grade 6/04 Case-09f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-6-04-casea-34-a0d"
+  },
+  "/docs/Grade 7/01 Indexes-402": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-7-01-indexes-0-b-1-f27"
+  },
+  "/docs/Grade 7/02 Optermization-087": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-7-02-optermizationa-35-de0"
+  },
+  "/docs/Grade 7/03 Execution plans-2ca": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-7-03-execution-plans-865-b82"
+  },
+  "/docs/Grade 7/04 Temp tables and ctes-e3d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-7-04-temp-tables-and-ctesbf-6-38d"
+  },
+  "/docs/Grade 8/01 Transactions-bf8": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-8-01-transactionscf-8-489"
+  },
+  "/docs/Grade 8/02 Locking concurrentct-0e1": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-8-02-locking-concurrentct-74-e-5d8"
+  },
+  "/docs/Grade 8/03 Windows functions-1d0": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-8-03-windows-functions-0-c-7-a65"
+  },
+  "/docs/Grade 9 (Extras)/SQL Server/01 tsql cursors-f63": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-grade-9-extras-sql-server-01-tsql-cursors-77-a-29e"
+  },
+  "/docs/intro-ff5": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-intro-377-7e9"
+  },
+  "/-2e1": {
+    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__context": {
+      "plugin": "plugin---markdown-pagea-74-7b5"
+    },
+    "config": "config---skills-5-e-9-eb4"
+  }
+}

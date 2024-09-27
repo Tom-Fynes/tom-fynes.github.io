@@ -1,0 +1,24 @@
+{
+  "id": "Grade 2/04 Alias",
+  "title": "Aliasing",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 2/04 Alias.md",
+  "sourceDirName": "Grade 2",
+  "slug": "/Grade 2/04 Alias",
+  "permalink": "/docs/Grade 2/04 Alias",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Basic Functions",
+    "permalink": "/docs/Grade 2/03 Basic functions"
+  },
+  "next": {
+    "title": "Joins",
+    "permalink": "/docs/Grade 3/01 joins"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "Grade 2/02 Limiting data",
+  "title": "Limiting Data",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 2/02 Limiting data.md",
+  "sourceDirName": "Grade 2",
+  "slug": "/Grade 2/02 Limiting data",
+  "permalink": "/docs/Grade 2/02 Limiting data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sorting Data",
+    "permalink": "/docs/Grade 2/01 sorting data"
+  },
+  "next": {
+    "title": "Basic Functions",
+    "permalink": "/docs/Grade 2/03 Basic functions"
+  }
+}

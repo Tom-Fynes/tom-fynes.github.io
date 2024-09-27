@@ -1,0 +1,24 @@
+{
+  "id": "Grade 3/04 Set operations",
+  "title": "Set Operations",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 3/04 Set operations.md",
+  "sourceDirName": "Grade 3",
+  "slug": "/Grade 3/04 Set operations",
+  "permalink": "/docs/Grade 3/04 Set operations",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Subqueries",
+    "permalink": "/docs/Grade 3/03 subqueries"
+  },
+  "next": {
+    "title": "Inserting Data",
+    "permalink": "/docs/Grade 4/01 Inserting data"
+  }
+}

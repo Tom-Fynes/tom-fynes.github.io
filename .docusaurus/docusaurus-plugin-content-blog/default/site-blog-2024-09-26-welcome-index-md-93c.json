@@ -1,0 +1,45 @@
+{
+  "permalink": "/blog/welcome",
+  "source": "@site/blog/2024/09-26-welcome/index.md",
+  "title": "Welcome",
+  "description": "Welcome to my new blog",
+  "date": "2024-09-26T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": false,
+      "label": "misc",
+      "permalink": "/blog/tags/misc",
+      "description": "Tag used for posts that don't fit in any other category"
+    }
+  ],
+  "readingTime": 0.16,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Tom Fynes",
+      "title": "Data Engineer @ EMIS",
+      "url": "https://github.com/Tom-Fynes",
+      "page": {
+        "permalink": "/blog/authors/tomfynes"
+      },
+      "socials": {
+        "x": "https://www.twitter.com/_tom_codes",
+        "github": "https://www.github.com/Tom-Fynes",
+        "linkedin": "https://www.linkedin.com/in/thomas-f-b00607163/"
+      },
+      "imageURL": "https://github.com/Tom-Fynes.png",
+      "key": "tomfynes"
+    }
+  ],
+  "frontMatter": {
+    "slug": "welcome",
+    "title": "Welcome",
+    "authors": [
+      "tomfynes"
+    ],
+    "tags": [
+      "misc"
+    ]
+  },
+  "unlisted": false
+}

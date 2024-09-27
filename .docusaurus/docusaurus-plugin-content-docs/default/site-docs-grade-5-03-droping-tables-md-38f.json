@@ -1,0 +1,24 @@
+{
+  "id": "Grade 5/03 Droping Tables",
+  "title": "Dropping Tables",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 5/03 Droping Tables.md",
+  "sourceDirName": "Grade 5",
+  "slug": "/Grade 5/03 Droping Tables",
+  "permalink": "/docs/Grade 5/03 Droping Tables",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Altering Tables",
+    "permalink": "/docs/Grade 5/02 Altering tables"
+  },
+  "next": {
+    "title": "Constraints",
+    "permalink": "/docs/Grade 5/04 Constraints"
+  }
+}

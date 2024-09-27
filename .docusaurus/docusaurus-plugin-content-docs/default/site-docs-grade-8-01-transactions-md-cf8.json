@@ -1,0 +1,24 @@
+{
+  "id": "Grade 8/01 Transactions",
+  "title": "Transactions",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 8/01 Transactions.md",
+  "sourceDirName": "Grade 8",
+  "slug": "/Grade 8/01 Transactions",
+  "permalink": "/docs/Grade 8/01 Transactions",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Temporary Tables and Common Table Expressions (CTEs)",
+    "permalink": "/docs/Grade 7/04 Temp tables and ctes"
+  },
+  "next": {
+    "title": "Locking and Concurrency",
+    "permalink": "/docs/Grade 8/02 Locking concurrentct"
+  }
+}

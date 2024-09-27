@@ -1,0 +1,24 @@
+{
+  "id": "Grade 7/03 Execution plans",
+  "title": "Execution Plans",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 7/03 Execution plans.md",
+  "sourceDirName": "Grade 7",
+  "slug": "/Grade 7/03 Execution plans",
+  "permalink": "/docs/Grade 7/03 Execution plans",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Query Optermization",
+    "permalink": "/docs/Grade 7/02 Optermization"
+  },
+  "next": {
+    "title": "Temporary Tables and Common Table Expressions (CTEs)",
+    "permalink": "/docs/Grade 7/04 Temp tables and ctes"
+  }
+}

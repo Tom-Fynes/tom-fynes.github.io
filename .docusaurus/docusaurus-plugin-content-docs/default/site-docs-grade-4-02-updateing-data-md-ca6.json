@@ -1,0 +1,24 @@
+{
+  "id": "Grade 4/02 Updateing data",
+  "title": "Updating Data",
+  "description": "Introduction",
+  "source": "@site/docs/Grade 4/02 Updateing data.md",
+  "sourceDirName": "Grade 4",
+  "slug": "/Grade 4/02 Updateing data",
+  "permalink": "/docs/Grade 4/02 Updateing data",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedBy": "Author",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Inserting Data",
+    "permalink": "/docs/Grade 4/01 Inserting data"
+  },
+  "next": {
+    "title": "Deleting Data",
+    "permalink": "/docs/Grade 4/03 Deleting data"
+  }
+}
