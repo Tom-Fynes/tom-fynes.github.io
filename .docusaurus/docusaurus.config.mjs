@@ -153,7 +153,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2024 Tom Fynes, Inc. Built with Docusaurus."
+      "copyright": "Copyright © 2024 Tom Fynes, Inc."
     },
     "prism": {
       "theme": {
