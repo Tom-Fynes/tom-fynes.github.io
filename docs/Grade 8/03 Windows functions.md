@@ -1,4 +1,4 @@
-# Window Functions: Using ROWNUMBER, RANK, and NTILE
+# Window Functions
 
 ### Introduction
 Window functions are powerful tools in SQL that allow you to perform calculations across a set of table rows related to the current row. This section covers how to use window functions such as `ROWNUMBER`, `RANK`, and `NTILE` to perform various analytical tasks.
@@ -13,7 +13,7 @@ ROW_NUMBER() OVER (PARTITION BY column1 ORDER BY column2)
 
 * PARTITION BY: Optional clause that divides the result set into partitions. The `ROWNUMBER` is reset for each partition.
 * ORDER BY: Defines the order of rows within each partition.
-* 
+
 **Example**
   
 Calculate the row number for each product category ordered by total sales:

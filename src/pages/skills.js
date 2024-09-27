@@ -14,6 +14,7 @@ export default function Hello() {
           fontSize: "20px",
         }}
       >
+    <div className="container">
         <div class="container">
             <div class="container-fluid">
                 <div class="card-grid">
@@ -102,6 +103,7 @@ export default function Hello() {
                 </div>
             </div>
         </div>
+    </div>
     </Layout>
   );
 }
