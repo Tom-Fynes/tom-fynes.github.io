@@ -2,150 +2,159 @@ import React from "react";
 import Layout from "@theme/Layout";
 import Heading from "@theme/Heading";
 
+import Card from "@site/src/components/Card";
+import CardBody from "@site/src/components/Card/CardBody";
+import CardHeader from "@site/src/components/Card/CardHeader";
+import CardImage from "@site/src/components/Card/CardImage";
+import Columns from "@site/src/components/Columns";
+import Column from "@site/src/components/Column";
+
+
+
 function SkillsMain() {
   return (
     <Heading as="h1" className="center">
-      <div
-        className="fixed-container"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          height: "50vh",
-          fontSize: "20px",
-        }}
-      >
-        <h2 className="h2">Skills</h2>
-        <div className="container">
-          <div class="card-grid">
-            <div class="card">
-              <div class="card-head">
-                <img src="img/python.png" class="image-style" />
-                <div class="card-title">
-                  <h3>Python</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>
-                  Using as the main language for professional development.
-                  effective in writing scalable, testable, and maintainable
-                  code.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/sql_server.png" class="image-style" />
-              </div>
-              <div class="card-title">
-                <h3>SQL Server</h3>
-              </div>
-              <div class="card-content">
-                <p>
-                  Proficient in all areas for SQL Server database development &
-                  administration; performance tuning, indexing beack up and
-                  retores etc.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/aws.png" class="image-style" />
-                <div class="card-title">
-                  <h3>AWS</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>
-                  Certified cloud practitinor with experience working with AWS
-                  on enterprise projects.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/trino.png" class="image-style" />
-                <div class="card-title">
-                  <h3>Trino</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>Experienced in creating and tuning presto sql statements.</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/Git.png" class="image-style" />
-                <div class="card-title">
-                  <h3>Git</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>
-                  Skilled in git and github CLI with the ability to maintain
-                  repository source control.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/sql_server.png" class="image-style" />
-                <div class="card-title">
-                  <h3>SSRS</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>
-                  Competent in deploying, creating and suporting SSRS reports
-                  along with maintaining and installing the product.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/powershell.png" class="image-style" />
-                <div class="card-title">
-                  <h3>Powershell</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>
-                  Proficient in writing supportable and testable powershell
-                  scripts.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/csharp.png" class="image-style" />
-                <div class="card-title">
-                  <h3>C#</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>
-                  Previous experiance with Windows forms and WPF development,
-                  along with C# scripting.
-                </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-head">
-                <img src="img/sql_server.png" class="image-style" />
-                <div class="card-title">
-                  <h3>SSIS</h3>
-                </div>
-              </div>
-              <div class="card-content">
-                <p>Skilled in creating and maintaining SSIS packages.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <h2>Skills</h2>
+      <div className="container">
+        <Columns>
+          <Column>
+            <Card className="card">
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/python.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Using as the main language for professional development.
+                effective in writing scalable, testable, and maintainable code.
+              </CardBody>
+            </Card>
+          </Column>
+          <Column className="text--center">
+            <Card>
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/sql_server.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Proficient in all areas for SQL Server database development &
+                administration; performance tuning, indexing beack up and
+                retores etc.
+              </CardBody>
+            </Card>
+          </Column>
+          <Column>
+            <Card className="card">
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/aws.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Certified cloud practitinor with experience working with AWS on
+                enterprise projects.
+              </CardBody>
+            </Card>
+          </Column>
+        </Columns>
+        <br />
+        <Columns>
+          <Column>
+            <Card className="card">
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/trino.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Experienced in creating and tuning presto sql statements.
+              </CardBody>
+            </Card>
+          </Column>
+          <Column className="text--center">
+            <Card>
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/Git.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Skilled in git and github CLI with the ability to maintain
+                repository source control.
+              </CardBody>
+            </Card>
+          </Column>
+          <Column>
+            <Card className="card">
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/sql_server.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Competent in deploying, creating and suporting SSRS reports
+                along with maintaining and installing the product.
+              </CardBody>
+            </Card>
+          </Column>
+        </Columns>
+        <br />
+        <Columns>
+          <Column>
+            <Card className="card">
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/powershell.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Proficient in writing supportable and testable powershell
+                scripts.
+              </CardBody>
+            </Card>
+          </Column>
+          <Column className="text--center">
+            <Card>
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/csharp.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Previous experiance with Windows forms and WPF development,
+                along with C# scripting.
+              </CardBody>
+            </Card>
+          </Column>
+          <Column>
+            <Card className="card">
+              <CardHeader>
+                <CardImage
+                  cardImageUrl="img/sql_server.png"
+                  className="avatar__photo center image-style"
+                />
+              </CardHeader>
+              <CardBody className="card-content">
+                Skilled in creating and maintaining SSIS packages.
+              </CardBody>
+            </Card>
+          </Column>
+        </Columns>
       </div>
     </Heading>
   );
 }
+
+
 
 export default function skills() {
   return (
