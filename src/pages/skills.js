@@ -30,6 +30,7 @@ function SkillsMain() {
                 effective in writing scalable, testable, and maintainable code.
               </CardBody>
             </Card>
+            <br />
           </Column>
           <Column className="text--center">
             <Card>
@@ -45,6 +46,7 @@ function SkillsMain() {
                 retores etc.
               </CardBody>
             </Card>
+            <br />
           </Column>
           <Column>
             <Card className="card">
@@ -59,9 +61,9 @@ function SkillsMain() {
                 enterprise projects.
               </CardBody>
             </Card>
+            <br />
           </Column>
         </Columns>
-        <br />
         <Columns>
           <Column>
             <Card className="card">
@@ -75,6 +77,7 @@ function SkillsMain() {
                 Experienced in creating and tuning presto sql statements.
               </CardBody>
             </Card>
+            <br />
           </Column>
           <Column className="text--center">
             <Card>
@@ -89,6 +92,7 @@ function SkillsMain() {
                 repository source control.
               </CardBody>
             </Card>
+            <br />
           </Column>
           <Column>
             <Card className="card">
@@ -103,9 +107,9 @@ function SkillsMain() {
                 along with maintaining and installing the product.
               </CardBody>
             </Card>
+            <br />
           </Column>
         </Columns>
-        <br />
         <Columns>
           <Column>
             <Card className="card">
@@ -120,6 +124,7 @@ function SkillsMain() {
                 scripts.
               </CardBody>
             </Card>
+            <br />
           </Column>
           <Column className="text--center">
             <Card>
@@ -134,6 +139,7 @@ function SkillsMain() {
                 along with C# scripting.
               </CardBody>
             </Card>
+            <br />
           </Column>
           <Column>
             <Card className="card">
@@ -147,6 +153,7 @@ function SkillsMain() {
                 Skilled in creating and maintaining SSIS packages.
               </CardBody>
             </Card>
+            <br />
           </Column>
         </Columns>
       </div>
