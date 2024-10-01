@@ -42,7 +42,7 @@ function SkillsMain() {
               </CardHeader>
               <CardBody className="card-content">
                 Proficient in all areas for SQL Server database development &
-                administration; performance tuning, indexing beack up and
+                administration; performance tuning, indexing back up and
                 retores etc.
               </CardBody>
             </Card>
