@@ -200,23 +200,19 @@ h2 {
 .markdown h1 {
   padding: 35px;
   text-align: center;
-  color: var(--ifm-color-primary);
 }
 
 .markdown h2 {
   padding: 25px;
   text-align: center;
-  color: var(--ifm-color-secondary-light);
 }
 
 .markdown h3 {
   padding: 20px;
-  color: var(--alt-text);
 }
 
 .markdown h4 {
   padding: 15px;
-  color: var(--ifm-color-secondary);
 }
 
 .markdown table {
@@ -231,7 +227,8 @@ h2 {
 }
 
 .markdown tr:hover {
-    background-color: var(--ifm-color-secondary-light);
+    background-color: var(--ifm-color-primary);
+    color: var(--hero-text);
 }
 
 .markdown th {
