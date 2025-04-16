@@ -1,20 +1,20 @@
-import clsx from 'clsx';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import clsx from "clsx";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Layout from "@theme/Layout";
+import HomepageFeatures from "@site/src/components/HomepageFeatures";
 
-import Heading from '@theme/Heading';
-import styles from './index.module.css';
+import Heading from "@theme/Heading";
+import styles from "./index.module.css";
 
 export function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero hero-image", styles.heroBanner)}>
       <div className="container">
         <img
           src="img/profile.jpg"
           alt="Avatar"
-          class="hero-avatar center"
+          class="inline-block size-30 rounded-full ring-2 ring-white"
         ></img>
         <Heading as="h1" className="hero__title">
           <div>{siteConfig.title}</div>
@@ -26,13 +26,10 @@ export function HomepageHeader() {
 }
 
 export default function Home() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Tom F website"
-    >
-      <HomepageHeader/>
+    <Layout title={`${siteConfig.title}`} description="Tom F website">
+      <HomepageHeader />
       <main>
         <HomepageFeatures />
       </main>

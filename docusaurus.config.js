@@ -1,4 +1,5 @@
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from "prism-react-renderer";
+import tailwindPlugin from "./plugins/tailwind-config.cjs";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -19,6 +20,8 @@ const config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
+  plugins: [tailwindPlugin],
 
   presets: [
     [

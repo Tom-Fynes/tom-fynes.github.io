@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 const FeatureList = [
   {
@@ -7,7 +7,7 @@ const FeatureList = [
     description: (
       <>
         I am a passionte Software Engineer currently working as a Senior Data
-        Engineer at 
+        Engineer at
         <a
           href="https://www.emishealth.com/"
           title="EMIS Group plc."
@@ -61,4 +61,3 @@ export default function HomepageFeatures() {
     </section>
   );
 }
-

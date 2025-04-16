@@ -26,6 +26,9 @@
       "type": "package",
       "name": "@docusaurus/theme-classic",
       "version": "3.5.2"
+    },
+    "tailwind-plugin": {
+      "type": "local"
     }
   }
 }

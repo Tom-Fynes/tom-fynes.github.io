@@ -22,6 +22,9 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
+  "plugins": [
+    null
+  ],
   "presets": [
     [
       "classic",
@@ -153,7 +156,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2024 Tom Fynes, Inc."
+      "copyright": "Copyright © 2025 Tom Fynes, Inc."
     },
     "prism": {
       "theme": {
@@ -396,7 +399,6 @@ export default {
     "static"
   ],
   "customFields": {},
-  "plugins": [],
   "themes": [],
   "scripts": [],
   "headTags": [],
