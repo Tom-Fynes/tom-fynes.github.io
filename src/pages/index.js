@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
+import AboutMe from "@site/src/components/About";
 import { Typewriter } from "react-simple-typewriter";
 
 import Heading from "@theme/Heading";
@@ -42,7 +42,7 @@ export default function Home() {
     <Layout title={`${siteConfig.title}`} description="Tom F website">
       <HomepageHeader />
       <main>
-        <HomepageFeatures />
+        <AboutMe />
       </main>
     </Layout>
   );
