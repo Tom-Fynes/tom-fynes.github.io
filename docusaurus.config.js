@@ -141,7 +141,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Tom Fynes, Inc.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Tom Fynes.`,
       },
       prism: {
         theme: prismThemes.github,
