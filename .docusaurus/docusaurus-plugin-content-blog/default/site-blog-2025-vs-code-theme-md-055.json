@@ -1,0 +1,49 @@
+{
+  "permalink": "/blog/create_vs_code_theme",
+  "source": "@site/blog/2025/vs_code_theme.md",
+  "title": "Create A VS Code Theme",
+  "description": "Although there are hundreds of good themes avaliable in VS code sometimes you just want to be able to put your own touch on things, which in this post is exactly what we are going to do.",
+  "date": "2025-04-17T11:00:00.000Z",
+  "tags": [
+    {
+      "inline": false,
+      "label": "misc",
+      "permalink": "/blog/tags/misc",
+      "description": "Tag used for posts that don't fit in any other category"
+    }
+  ],
+  "readingTime": 0.45,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Tom Fynes",
+      "title": "Data Engineer @ OptumUK",
+      "url": "https://github.com/Tom-Fynes",
+      "page": {
+        "permalink": "/blog/authors/tomfynes"
+      },
+      "socials": {
+        "github": "https://www.github.com/Tom-Fynes",
+        "linkedin": "https://www.linkedin.com/in/thomas-f-b00607163/"
+      },
+      "imageURL": "https://github.com/Tom-Fynes.png",
+      "key": "tomfynes"
+    }
+  ],
+  "frontMatter": {
+    "slug": "create_vs_code_theme",
+    "title": "Create A VS Code Theme",
+    "date": "2025-04-17T11:00",
+    "authors": [
+      "tomfynes"
+    ],
+    "tags": [
+      "misc"
+    ]
+  },
+  "unlisted": false,
+  "nextItem": {
+    "title": "Welcome",
+    "permalink": "/blog/welcome"
+  }
+}

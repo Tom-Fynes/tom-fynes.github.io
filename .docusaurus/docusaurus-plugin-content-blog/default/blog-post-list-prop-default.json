@@ -2,6 +2,12 @@
   "title": "Recent Posts",
   "items": [
     {
+      "title": "Create A VS Code Theme",
+      "permalink": "/blog/create_vs_code_theme",
+      "unlisted": false,
+      "date": "2025-04-17T11:00:00.000Z"
+    },
+    {
       "title": "Welcome",
       "permalink": "/blog/welcome",
       "unlisted": false,

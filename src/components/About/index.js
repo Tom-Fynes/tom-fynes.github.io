@@ -31,7 +31,7 @@ export default function AboutMe() {
       <h3 className="text-2xl font-semibold mb-4 mt-10">
         🛠️ Tech Stack & Tools
       </h3>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 text-base list-disc list-inside">
+      <ul className="grid grid-cols-1  gap-x-6 gap-y-2 text-base list-disc list-inside">
         <li>
           <strong>Languages:</strong> Python 🐍, SQL 🧮, JavaScript, C#
         </li>

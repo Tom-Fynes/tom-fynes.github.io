@@ -12,3 +12,8 @@ misc:
   label: misc
   permalink: /misc
   description: Tag used for posts that don't fit in any other category
+
+cloud:
+  label: Cloud
+  permalink: /cloud
+  description: Tag used for Cloud related posts, Azure, AWS, GCP, etc.

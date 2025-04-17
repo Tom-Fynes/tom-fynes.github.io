@@ -39,7 +39,7 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '835'),
+    component: ComponentCreator('/blog', '502'),
     exact: true
   },
   {
@@ -54,7 +54,12 @@ export default [
   },
   {
     path: '/blog/authors/tomfynes',
-    component: ComponentCreator('/blog/authors/tomfynes', 'b0a'),
+    component: ComponentCreator('/blog/authors/tomfynes', 'bfd'),
+    exact: true
+  },
+  {
+    path: '/blog/create_vs_code_theme',
+    component: ComponentCreator('/blog/create_vs_code_theme', '6da'),
     exact: true
   },
   {
@@ -64,7 +69,7 @@ export default [
   },
   {
     path: '/blog/tags/misc',
-    component: ComponentCreator('/blog/tags/misc', '3d9'),
+    component: ComponentCreator('/blog/tags/misc', '007'),
     exact: true
   },
   {

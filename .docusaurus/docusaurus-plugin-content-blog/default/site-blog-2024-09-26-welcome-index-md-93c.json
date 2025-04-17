@@ -17,13 +17,12 @@
   "authors": [
     {
       "name": "Tom Fynes",
-      "title": "Data Engineer @ EMIS",
+      "title": "Data Engineer @ OptumUK",
       "url": "https://github.com/Tom-Fynes",
       "page": {
         "permalink": "/blog/authors/tomfynes"
       },
       "socials": {
-        "x": "https://www.twitter.com/_tom_codes",
         "github": "https://www.github.com/Tom-Fynes",
         "linkedin": "https://www.linkedin.com/in/thomas-f-b00607163/"
       },
@@ -41,5 +40,9 @@
       "misc"
     ]
   },
-  "unlisted": false
+  "unlisted": false,
+  "prevItem": {
+    "title": "Create A VS Code Theme",
+    "permalink": "/blog/create_vs_code_theme"
+  }
 }
