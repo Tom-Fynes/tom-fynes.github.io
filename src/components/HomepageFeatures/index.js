@@ -34,11 +34,11 @@ function Feature() {
         Engineer at&nbsp;
         <a
           href="https://www.emishealth.com/"
-          title="EMIS Group plc."
+          title="OptumUK (formally EMIS)."
           target="_blank"
           rel="noopener"
         >
-          EMIS Group plc&nbsp;
+          OptumUK (formally EMIS)&nbsp;
         </a>
         within their Data and Analytics department, with a background in data
         engineering, analytics, and leadership, I am highly passionate about

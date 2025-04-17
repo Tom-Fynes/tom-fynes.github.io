@@ -48,8 +48,12 @@
   }
 
 html[data-theme='dark'] {
-    --ifm-background-color: #404E5C; /* Your desired background color */
+    --ifm-background-color: #404E5C;
     --ifm-navbar-background-color: #404E5C;
+  }
+
+  html[data-theme='dark'] .dropdown__menu {
+    background-color: #404E5C;
   }
 
 .center {
@@ -142,3 +146,6 @@ h2 {
     --ifm-footer-color: #ffffff;
     --ifm-footer-link-color: #ffffff;
 }
+html[data-theme='dark'] .footer {
+    --ifm-footer-title-color: #9F7EBE;
+  }

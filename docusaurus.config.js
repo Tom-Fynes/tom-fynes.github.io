@@ -87,14 +87,29 @@ const config = {
         },
         items: [
           { to: "/blog", label: "Blog", position: "left" },
-          { to: "skills", label: "Skills", position: "left" },
           {
-            type: "docSidebar",
-            sidebarId: "tutorialSidebar",
+            label: "Courses",
             position: "left",
-            label: "SQL 101",
-            to: "/docs/intro",
+            type: "dropdown",
+            items: [
+              {
+                label: "SQL 101",
+                to: "/docs/intro",
+              },
+            ],
           },
+          {
+            label: "Projects",
+            position: "left",
+            type: "dropdown",
+            items: [
+              {
+                label: "VS Code Theme",
+                href: "https://github.com/Tom-Fynes/nebula-nights",
+              },
+            ],
+          },
+          { to: "skills", label: "Skills", position: "left" },
         ],
       },
       footer: {

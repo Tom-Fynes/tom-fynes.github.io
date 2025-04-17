@@ -98,16 +98,31 @@ export default {
           "position": "left"
         },
         {
+          "label": "Courses",
+          "position": "left",
+          "type": "dropdown",
+          "items": [
+            {
+              "label": "SQL 101",
+              "to": "/docs/intro"
+            }
+          ]
+        },
+        {
+          "label": "Projects",
+          "position": "left",
+          "type": "dropdown",
+          "items": [
+            {
+              "label": "VS Code Theme",
+              "href": "https://github.com/Tom-Fynes/nebula-nights"
+            }
+          ]
+        },
+        {
           "to": "skills",
           "label": "Skills",
           "position": "left"
-        },
-        {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
-          "position": "left",
-          "label": "SQL 101",
-          "to": "/docs/intro"
         }
       ],
       "hideOnScroll": false
