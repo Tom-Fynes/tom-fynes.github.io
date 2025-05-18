@@ -40,9 +40,5 @@
       "misc"
     ]
   },
-  "unlisted": false,
-  "prevItem": {
-    "title": "Create A VS Code Theme",
-    "permalink": "/blog/create_vs_code_theme"
-  }
+  "unlisted": false
 }

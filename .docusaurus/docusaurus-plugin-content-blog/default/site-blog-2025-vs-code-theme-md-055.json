@@ -3,7 +3,7 @@
   "source": "@site/blog/2025/vs_code_theme.md",
   "title": "Create A VS Code Theme",
   "description": "Although there are hundreds of good themes avaliable in VS code sometimes you just want to be able to put your own touch on things, which in this post is exactly what we are going to do.",
-  "date": "2025-04-17T11:00:00.000Z",
+  "date": "2025-05-18T11:00:00.000Z",
   "tags": [
     {
       "inline": false,
@@ -12,7 +12,7 @@
       "description": "Tag used for posts that don't fit in any other category"
     }
   ],
-  "readingTime": 0.45,
+  "readingTime": 0.655,
   "hasTruncateMarker": true,
   "authors": [
     {
@@ -33,7 +33,7 @@
   "frontMatter": {
     "slug": "create_vs_code_theme",
     "title": "Create A VS Code Theme",
-    "date": "2025-04-17T11:00",
+    "date": "2025-05-18T11:00",
     "authors": [
       "tomfynes"
     ],

@@ -8,6 +8,11 @@ The SQL 101 course is designed for someone aspiring to build a career as data en
 
 By the end of the course, you will be writing complex queries, optimizing database performance, and using SQL to solve practical problems.
 
+If you like this course and want to support the project, you can do so here:
+
+[![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/tomfynes)
+
+
 ## Recommened Programs
 
 * [DBeaver Community](https://dbeaver.io/)
