@@ -1,0 +1,27 @@
+{
+  "id": "Grade 1/Installing Git",
+  "title": "Installing Git",
+  "description": "Before you can start using Git, you need to install it on your computer. Below are step-by-step instructions for installing Git on Windows, macOS, and Linux.",
+  "source": "@site/git_101/Grade 1/installing_git.md",
+  "sourceDirName": "Grade 1",
+  "slug": "/Grade 1/Installing Git",
+  "permalink": "/git_101/Grade 1/Installing Git",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "Installing Git",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "What is Git",
+    "permalink": "/git_101/Grade 1/What is Git"
+  },
+  "next": {
+    "title": "Setting Username and Email",
+    "permalink": "/git_101/Grade 1/Setting Username and Email"
+  }
+}

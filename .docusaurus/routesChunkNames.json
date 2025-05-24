@@ -292,6 +292,35 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-intro-377-7e9"
   },
+  "/git_101-eb5": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---git-1011-bf-587"
+    }
+  },
+  "/git_101-e54": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---git-1012-ed-066"
+  },
+  "/git_101-df8": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/git_101/Grade 1/Installing Git-55e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-1-installing-git-13-c-d76"
+  },
+  "/git_101/Grade 1/Setting Username and Email-763": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-1-configure-gita-0-d-ace"
+  },
+  "/git_101/Grade 1/What is Git-c33": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-1-what-is-gite-57-5d9"
+  },
+  "/git_101/intro-b59": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-introb-98-bf1"
+  },
   "/-2e1": {
     "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
     "__context": {

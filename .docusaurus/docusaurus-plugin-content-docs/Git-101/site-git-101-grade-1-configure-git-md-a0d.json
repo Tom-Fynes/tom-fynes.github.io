@@ -1,0 +1,23 @@
+{
+  "id": "Grade 1/Setting Username and Email",
+  "title": "Setting Username and Email",
+  "description": "Before making your first commit, it's essential to tell Git who you are. Git uses your username and email address to label every commit you make. This helps with collaboration, tracking changes, and understanding project history.",
+  "source": "@site/git_101/Grade 1/configure_git.md",
+  "sourceDirName": "Grade 1",
+  "slug": "/Grade 1/Setting Username and Email",
+  "permalink": "/git_101/Grade 1/Setting Username and Email",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "Setting Username and Email",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Installing Git",
+    "permalink": "/git_101/Grade 1/Installing Git"
+  }
+}

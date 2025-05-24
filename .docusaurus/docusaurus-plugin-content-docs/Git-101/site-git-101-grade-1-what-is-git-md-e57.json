@@ -1,0 +1,27 @@
+{
+  "id": "Grade 1/What is Git",
+  "title": "What is Git",
+  "description": "Git is a distributed version control system (VCS) that helps developers manage and track changes in their codebase over time. It allows multiple people to collaborate on projects efficiently and safely, without fear of overwriting each other's work.",
+  "source": "@site/git_101/Grade 1/what_is_git.md",
+  "sourceDirName": "Grade 1",
+  "slug": "/Grade 1/What is Git",
+  "permalink": "/git_101/Grade 1/What is Git",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "What is Git",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Intro",
+    "permalink": "/git_101/intro"
+  },
+  "next": {
+    "title": "Installing Git",
+    "permalink": "/git_101/Grade 1/Installing Git"
+  }
+}

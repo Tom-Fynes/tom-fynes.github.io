@@ -1,0 +1,23 @@
+{
+  "id": "intro",
+  "title": "Intro",
+  "description": "This course is designed for developers, data professionals, and anyone interested in mastering version control using Git. By the end of this course, you'll be proficient in using Git for version control and collaborating effectively using GitHub.",
+  "source": "@site/git_101/intro.md",
+  "sourceDirName": ".",
+  "slug": "/intro",
+  "permalink": "/git_101/intro",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "intro",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "What is Git",
+    "permalink": "/git_101/Grade 1/What is Git"
+  }
+}

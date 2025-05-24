@@ -203,6 +203,50 @@
         }
       ],
       "breadcrumbs": true
+    },
+    "Git-101": {
+      "path": "/git_101",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/git_101",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "Grade 1/Installing Git",
+              "path": "/git_101/Grade 1/Installing Git",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 1/Setting Username and Email",
+              "path": "/git_101/Grade 1/Setting Username and Email",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 1/What is Git",
+              "path": "/git_101/Grade 1/What is Git",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "intro",
+              "path": "/git_101/intro",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/git_101/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
     }
   }
 }

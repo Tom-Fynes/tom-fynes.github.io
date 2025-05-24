@@ -21,7 +21,18 @@ const config = {
     locales: ["en"],
   },
 
-  plugins: [tailwindPlugin],
+  plugins: [
+    tailwindPlugin,
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "Git-101",
+        path: "git_101",
+        routeBasePath: "git_101",
+        sidebarPath: "./sidebars.js",
+      },
+    ],
+  ],
 
   presets: [
     [
@@ -96,6 +107,10 @@ const config = {
                 label: "SQL 101",
                 to: "/docs/intro",
               },
+              {
+                label: "Git 101",
+                to: "/git_101/intro",
+              },
             ],
           },
           {
@@ -122,6 +137,11 @@ const config = {
                 label: "SQL 101",
                 to: "/docs/intro",
                 description: "Learn the basics of SQL",
+              },
+              {
+                label: "Git 101",
+                to: "/git_101/intro",
+                description: "Learn the basics of Git",
               },
             ],
           },
