@@ -133,6 +133,30 @@ export default {
           ]
         },
         {
+          "label": "Resources",
+          "position": "left",
+          "type": "dropdown",
+          "items": [
+            {
+              "label": "Beginner's Data Toolkit",
+              "to": "https://tfynes.gumroad.com/l/phlyc",
+              "description": "A collection of notebooks for beginners"
+            },
+            {
+              "label": "Git Cheat Sheet",
+              "href": "/downloads/cheatsheet.jpg",
+              "target": "_blank",
+              "rel": "noopener noreferrer"
+            },
+            {
+              "label": "SQL Cheat Sheet",
+              "href": "/downloads/sql_cheatsheet.jpg",
+              "target": "_blank",
+              "rel": "noopener noreferrer"
+            }
+          ]
+        },
+        {
           "to": "skills",
           "label": "Skills",
           "position": "left"
@@ -172,10 +196,6 @@ export default {
             {
               "label": "LinkedIn",
               "href": "https://www.linkedin.com/in/thomas-f-b00607163/"
-            },
-            {
-              "label": "X",
-              "href": "https://www.twitter.com/_tom_codes"
             }
           ]
         },

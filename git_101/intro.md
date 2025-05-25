@@ -41,13 +41,11 @@ cd git-101
     * Linux: Using package managers like apt or yum.
 
 
-* [**Git Config**](/git_101/Grade%201/Setting%20Username%20and%20Email) Setting up user name and email with git config.
+* [**Git Config**](/git_101/Grade%201/Setting%20Username%20and%20Email): Setting up user name and email with git config.
 
-* Understanding global vs. local configurations.
+* Git init: Initializing a repository with `git init`.
 
-* Initializing a repository with `git init`.
-
-* Cloning an existing repository with `git clone`.
+* Git clone: Cloning an existing repository with `git clone`.
 
 ### Grade 2: Basic Git Workflow
 
