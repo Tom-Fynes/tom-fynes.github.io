@@ -215,6 +215,11 @@
           "mainDocId": "intro",
           "docs": [
             {
+              "id": "Grade 1/Git Init",
+              "path": "/git_101/Grade 1/Git Init",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Grade 1/Installing Git",
               "path": "/git_101/Grade 1/Installing Git",
               "sidebar": "tutorialSidebar"

@@ -19,5 +19,9 @@
   "previous": {
     "title": "Installing Git",
     "permalink": "/git_101/Grade 1/Installing Git"
+  },
+  "next": {
+    "title": "Git Init",
+    "permalink": "/git_101/Grade 1/Git Init"
   }
 }

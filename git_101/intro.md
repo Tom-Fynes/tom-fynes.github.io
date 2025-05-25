@@ -43,7 +43,7 @@ cd git-101
 
 * [**Git Config**](/git_101/Grade%201/Setting%20Username%20and%20Email): Setting up user name and email with git config.
 
-* Git init: Initializing a repository with `git init`.
+* [**Git init**](/git_101/Grade%201/Git%20Init): Initializing a repository with `git init`.
 
 * Git clone: Cloning an existing repository with `git clone`.
 

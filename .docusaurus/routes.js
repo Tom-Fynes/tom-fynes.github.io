@@ -318,16 +318,22 @@ export default [
   },
   {
     path: '/git_101',
-    component: ComponentCreator('/git_101', 'eb5'),
+    component: ComponentCreator('/git_101', '179'),
     routes: [
       {
         path: '/git_101',
-        component: ComponentCreator('/git_101', 'e54'),
+        component: ComponentCreator('/git_101', '2d7'),
         routes: [
           {
             path: '/git_101',
-            component: ComponentCreator('/git_101', 'df8'),
+            component: ComponentCreator('/git_101', '490'),
             routes: [
+              {
+                path: '/git_101/Grade 1/Git Init',
+                component: ComponentCreator('/git_101/Grade 1/Git Init', 'fbb'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/git_101/Grade 1/Installing Git',
                 component: ComponentCreator('/git_101/Grade 1/Installing Git', '55e'),

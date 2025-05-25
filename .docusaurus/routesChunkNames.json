@@ -292,18 +292,22 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-intro-377-7e9"
   },
-  "/git_101-eb5": {
+  "/git_101-179": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---git-1011-bf-587"
     }
   },
-  "/git_101-e54": {
+  "/git_101-2d7": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---git-1012-ed-066"
   },
-  "/git_101-df8": {
+  "/git_101-490": {
     "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/git_101/Grade 1/Git Init-fbb": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-1-git-inite-4-b-f9b"
   },
   "/git_101/Grade 1/Installing Git-55e": {
     "__comp": "__comp---theme-doc-item-178-a40",
