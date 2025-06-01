@@ -71,7 +71,7 @@ cd git-101
 
 * Adding a remote with `git remote add`.
 
-* Pushing changes with g`it push`.
+* Pushing changes with `git push`.
 
 * Using `git fetch` to retrieve changes.
 
@@ -100,7 +100,7 @@ cd git-101
 
 ### Grade 5: Inspecting and Comparing Changes
 
-* Using g`it diff` to compare changes.
+* Using `git diff` to compare changes.
 
 * Comparing branches and commits.
 
