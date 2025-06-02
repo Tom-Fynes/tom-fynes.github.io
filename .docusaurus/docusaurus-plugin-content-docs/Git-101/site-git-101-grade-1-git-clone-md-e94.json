@@ -1,0 +1,27 @@
+{
+  "id": "Grade 1/Git Clone",
+  "title": "Git Clone",
+  "description": "Instead of starting a new project from scratch, you can use Git to clone an existing repository — copying all its files, branches, and history to your local machine.",
+  "source": "@site/git_101/Grade 1/git_clone.md",
+  "sourceDirName": "Grade 1",
+  "slug": "/Grade 1/Git Clone",
+  "permalink": "/git_101/Grade 1/Git Clone",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "id": "Git Clone",
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Git Init",
+    "permalink": "/git_101/Grade 1/Git Init"
+  },
+  "next": {
+    "title": "Understanding the Git Workflow",
+    "permalink": "/git_101/Grade 2/Understanding the Git Workflow"
+  }
+}

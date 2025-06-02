@@ -33,3 +33,51 @@ Add all changes (including deletions)
 ```bash
 git add -A
 ```
+
+## Add Your First Change
+
+1. Open terminal and navigate to the `git-101` repo
+
+```bash
+cd projects/git-101
+```
+
+2. Create a file:
+```bash
+echo "Hello Git" > message.txt
+```
+
+3. Check the status:
+```bash
+git status
+```
+
+Output:
+
+```yaml
+Untracked files:
+  message.txt
+```
+
+4. Stage the file:
+```bash
+git add message.txt
+```
+
+5. Check status again:
+```bash
+git status
+```
+
+Output:
+```yaml
+Changes to be committed:
+  new file: message.txt
+```
+
+## Staging Workflow
+
+```mermaid
+flowchart LR
+    A[Working Directory] -->|git add| B[Staging Area]
+```

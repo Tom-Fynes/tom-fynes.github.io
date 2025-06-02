@@ -292,22 +292,26 @@
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-intro-377-7e9"
   },
-  "/git_101-179": {
+  "/git_101-521": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---git-1011-bf-587"
     }
   },
-  "/git_101-2d7": {
+  "/git_101-358": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "__props": "__props---git-1012-ed-066"
   },
-  "/git_101-490": {
+  "/git_101-80c": {
     "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/git_101/Grade 1/Git Clone-5d7": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-1-git-clonee-94-873"
   },
   "/git_101/Grade 1/Git Init-fbb": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-1-git-inite-4-b-f9b"
+    "content": "content---git-101-grade-1-git-inite-4-b-1c2"
   },
   "/git_101/Grade 1/Installing Git-55e": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -320,6 +324,18 @@
   "/git_101/Grade 1/What is Git-c33": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---git-101-grade-1-what-is-gite-57-823"
+  },
+  "/git_101/Grade 2/Git Add-685": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-2-git-add-573-d30"
+  },
+  "/git_101/Grade 2/Git Commit-896": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-2-git-commit-96-d-038"
+  },
+  "/git_101/Grade 2/Understanding the Git Workflow-71c": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---git-101-grade-2-understanding-the-git-workflow-116-831"
   },
   "/git_101/intro-b59": {
     "__comp": "__comp---theme-doc-item-178-a40",

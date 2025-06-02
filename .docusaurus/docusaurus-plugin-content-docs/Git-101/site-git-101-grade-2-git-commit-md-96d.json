@@ -1,0 +1,23 @@
+{
+  "id": "Grade 2/Git Commit",
+  "title": "Git Commit",
+  "description": "After staging your changes with git add, the next step is to commit them to your Git repository. Commits act like snapshots of your project at a specific moment in time.",
+  "source": "@site/git_101/Grade 2/git_commit.md",
+  "sourceDirName": "Grade 2",
+  "slug": "/Grade 2/Git Commit",
+  "permalink": "/git_101/Grade 2/Git Commit",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "id": "Git Commit",
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Git Add",
+    "permalink": "/git_101/Grade 2/Git Add"
+  }
+}

@@ -318,16 +318,22 @@ export default [
   },
   {
     path: '/git_101',
-    component: ComponentCreator('/git_101', '179'),
+    component: ComponentCreator('/git_101', '521'),
     routes: [
       {
         path: '/git_101',
-        component: ComponentCreator('/git_101', '2d7'),
+        component: ComponentCreator('/git_101', '358'),
         routes: [
           {
             path: '/git_101',
-            component: ComponentCreator('/git_101', '490'),
+            component: ComponentCreator('/git_101', '80c'),
             routes: [
+              {
+                path: '/git_101/Grade 1/Git Clone',
+                component: ComponentCreator('/git_101/Grade 1/Git Clone', '5d7'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/git_101/Grade 1/Git Init',
                 component: ComponentCreator('/git_101/Grade 1/Git Init', 'fbb'),
@@ -349,6 +355,24 @@ export default [
               {
                 path: '/git_101/Grade 1/What is Git',
                 component: ComponentCreator('/git_101/Grade 1/What is Git', 'c33'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/git_101/Grade 2/Git Add',
+                component: ComponentCreator('/git_101/Grade 2/Git Add', '685'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/git_101/Grade 2/Git Commit',
+                component: ComponentCreator('/git_101/Grade 2/Git Commit', '896'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/git_101/Grade 2/Understanding the Git Workflow',
+                component: ComponentCreator('/git_101/Grade 2/Understanding the Git Workflow', '71c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

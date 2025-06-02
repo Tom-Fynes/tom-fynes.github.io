@@ -215,6 +215,11 @@
           "mainDocId": "intro",
           "docs": [
             {
+              "id": "Grade 1/Git Clone",
+              "path": "/git_101/Grade 1/Git Clone",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Grade 1/Git Init",
               "path": "/git_101/Grade 1/Git Init",
               "sidebar": "tutorialSidebar"
@@ -232,6 +237,21 @@
             {
               "id": "Grade 1/What is Git",
               "path": "/git_101/Grade 1/What is Git",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 2/Git Add",
+              "path": "/git_101/Grade 2/Git Add",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 2/Git Commit",
+              "path": "/git_101/Grade 2/Git Commit",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 2/Understanding the Git Workflow",
+              "path": "/git_101/Grade 2/Understanding the Git Workflow",
               "sidebar": "tutorialSidebar"
             },
             {

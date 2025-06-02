@@ -1,0 +1,27 @@
+{
+  "id": "Grade 2/Understanding the Git Workflow",
+  "title": "Understanding the Git Workflow",
+  "description": "To use Git effectively, it’s important to understand the workflow which is broken into three parts:",
+  "source": "@site/git_101/Grade 2/git_workflow.md",
+  "sourceDirName": "Grade 2",
+  "slug": "/Grade 2/Understanding the Git Workflow",
+  "permalink": "/git_101/Grade 2/Understanding the Git Workflow",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 1,
+  "frontMatter": {
+    "id": "Understanding the Git Workflow",
+    "sidebar_position": 1
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Git Clone",
+    "permalink": "/git_101/Grade 1/Git Clone"
+  },
+  "next": {
+    "title": "Git Add",
+    "permalink": "/git_101/Grade 2/Git Add"
+  }
+}

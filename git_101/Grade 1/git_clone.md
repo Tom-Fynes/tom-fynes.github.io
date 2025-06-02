@@ -22,10 +22,10 @@ Actions of the git clone command are as follows:
 ### Example
 
 ```bash
-git clone <repository-url>
+git clone repository-url
 ```
 
-## Clone Your First Repository 
+## Clone Your First Repository
 
 1. Open a terminal or command prompt.
 
@@ -33,6 +33,7 @@ git clone <repository-url>
 ```bash
 cd projects  # or any other directory
 ```
+
 3. Run the clone command:
 ```bash
 git clone https://github.com/Tom-Fynes/git-101

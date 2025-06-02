@@ -19,5 +19,9 @@
   "previous": {
     "title": "Setting Username and Email",
     "permalink": "/git_101/Grade 1/Setting Username and Email"
+  },
+  "next": {
+    "title": "Git Clone",
+    "permalink": "/git_101/Grade 1/Git Clone"
   }
 }

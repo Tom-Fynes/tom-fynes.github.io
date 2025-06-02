@@ -1,0 +1,27 @@
+{
+  "id": "Grade 2/Git Add",
+  "title": "Git Add",
+  "description": "Once you’ve made changes in your project, the next step is to stage those changes using git add. This prepares them to be included in your next commit.",
+  "source": "@site/git_101/Grade 2/git_add.md",
+  "sourceDirName": "Grade 2",
+  "slug": "/Grade 2/Git Add",
+  "permalink": "/git_101/Grade 2/Git Add",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 2,
+  "frontMatter": {
+    "id": "Git Add",
+    "sidebar_position": 2
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Understanding the Git Workflow",
+    "permalink": "/git_101/Grade 2/Understanding the Git Workflow"
+  },
+  "next": {
+    "title": "Git Commit",
+    "permalink": "/git_101/Grade 2/Git Commit"
+  }
+}
