@@ -19,7 +19,7 @@ Actions of the git clone command are as follows:
 
 * Downloads all branches and commit history.
 
-**Example**
+### Example
 
 ```bash
 git clone <repository-url>

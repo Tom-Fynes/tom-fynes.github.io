@@ -37,7 +37,7 @@ If you like this course and want to support the project, you can do so here:
 
 * [**Understanding the Git Workflow**](/git_101/Grade%202/Understanding%20the%20Git%20Workflow): Working Directory, Staging Area, and Repository.
 
-* Adding files to staging with `git add`.
+* `git add`: Adding files to staging.
 
 * Committing changes with `git commit`.
 
