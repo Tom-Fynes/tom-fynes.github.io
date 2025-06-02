@@ -14,14 +14,15 @@ Once initialized, Git will start tracking changes in that folder — but only fo
 ## Create Your First Repository 
 
 1. Open your terminal
-2. Navigate to the `git-101` folder created at the start of this course
-    * if you mised this step please see [here](/git_101/intro) 
+2. Navigate to a directory where you will keep your repo's
+    * IF you don't have one I like to use **projects**:  `mkdir projects`
 ```bash
-cd git-101
+cd  projects
 ```
+
 3. Initialize the repository:
 ```bash
-git init
+git init git-demo
 ```
 
 4. You should see: 

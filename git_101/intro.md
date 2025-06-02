@@ -11,20 +11,6 @@ If you like this course and want to support the project, you can do so here:
 
 [![Support me on Ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/tomfynes)
 
-## 🛠️ Setup Instructions
-
-**Create a working directory:**
-
-```bash
-mkdir git-101
-```
-
-
-**Navigate to the Directory:**
-
-```bash
-cd git-101
-```
 
 ## Grades
 
@@ -45,11 +31,11 @@ cd git-101
 
 * [**Git init**](/git_101/Grade%201/Git%20Init): Initializing a repository with `git init`.
 
-* Git clone: Cloning an existing repository with `git clone`.
+* [**Git clone**](/git_101/Grade%201/Git%20Clone): Cloning an existing repository with `git clone`.
 
 ### Grade 2: Basic Git Workflow
 
-* Understanding the Git Workflow: Working Directory, Staging Area, and Repository.
+* [**Understanding the Git Workflow**](/git_101/Grade%202/Understanding%20the%20Git%20Workflow): Working Directory, Staging Area, and Repository.
 
 * Adding files to staging with `git add`.
 
@@ -125,7 +111,7 @@ cd git-101
 
 * Applying specific commits with `git cherry-pick`.
 
-* Rewriting commit history with g`it rebase`.
+* Rewriting commit history with git rebase`.
 
 
 ### Grade 7: Troubleshooting and Optimization
