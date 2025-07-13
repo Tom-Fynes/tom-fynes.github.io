@@ -250,8 +250,18 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "Grade 2/Git Log",
+              "path": "/git_101/Grade 2/Git Log",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "Grade 2/Understanding the Git Workflow",
               "path": "/git_101/Grade 2/Understanding the Git Workflow",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "Grade 3/GitHub Account Creation",
+              "path": "/git_101/Grade 3/GitHub Account Creation",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -265,6 +275,35 @@
             "tutorialSidebar": {
               "link": {
                 "path": "/git_101/intro",
+                "label": "intro"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    },
+    "Python-101": {
+      "path": "/python_101",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/python_101",
+          "mainDocId": "intro",
+          "docs": [
+            {
+              "id": "intro",
+              "path": "/python_101/intro",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/python_101/intro",
                 "label": "intro"
               }
             }

@@ -32,6 +32,15 @@ const config = {
         sidebarPath: "./sidebars.js",
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "Python-101",
+        path: "python_101",
+        routeBasePath: "python_101",
+        sidebarPath: "./sidebars.js",
+      },
+    ],
   ],
 
   themes: ["@docusaurus/theme-mermaid"],
@@ -116,6 +125,10 @@ const config = {
                 label: "Git 101",
                 to: "/git_101/intro",
               },
+              {
+                label: "Python 101",
+                to: "/python_101/intro",
+              },
             ],
           },
           {
@@ -171,6 +184,11 @@ const config = {
                 label: "Git 101",
                 to: "/git_101/intro",
                 description: "Learn the basics of Git",
+              },
+              {
+                label: "Python 101",
+                to: "/python_101/intro",
+                description: "Learn the basics of Python",
               },
             ],
           },

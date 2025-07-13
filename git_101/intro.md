@@ -41,15 +41,12 @@ If you like this course and want to support the project, you can do so here:
 
 * [**Git commit**](/git_101/Grade%202/Git%20Commit): Commiting changes from staging.
 
-* Using `git log` to view commit history.
+* [**Git log**](/git_101/Grade%202/Git%20Log): view commit history.
 
-* Understanding commit hashes and messages.
-
-* Ignoring Files: Using .`gitignore` to exclude files from tracking.
 
 ### Grade 3: Collaborating with GitHub
 
-* Creating a GitHub account.
+* [GitHub](/git_101/Grade%203/GitHub%20Account%20Creation): Creating a GitHub account.
 
 * Generating SSH keys and adding them to GitHub.
 
@@ -113,6 +110,7 @@ If you like this course and want to support the project, you can do so here:
 
 * Rewriting commit history with git rebase`.
 
+* Ignoring Files: Using .`gitignore` to exclude files from tracking.
 
 ### Grade 7: Troubleshooting and Optimization
 

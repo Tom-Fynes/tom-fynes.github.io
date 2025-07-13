@@ -1,0 +1,27 @@
+{
+  "id": "Grade 2/Git Log",
+  "title": "Git Log",
+  "description": "Once you’ve made several commits, it’s important to understand how to view and explore your project’s history. Git’s git log command gives you a detailed view of every commit that has been made.",
+  "source": "@site/git_101/Grade 2/git_log.md",
+  "sourceDirName": "Grade 2",
+  "slug": "/Grade 2/Git Log",
+  "permalink": "/git_101/Grade 2/Git Log",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 4,
+  "frontMatter": {
+    "id": "Git Log",
+    "sidebar_position": 4
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Git Commit",
+    "permalink": "/git_101/Grade 2/Git Commit"
+  },
+  "next": {
+    "title": "GitHub Account Creation",
+    "permalink": "/git_101/Grade 3/GitHub Account Creation"
+  }
+}

@@ -318,15 +318,15 @@ export default [
   },
   {
     path: '/git_101',
-    component: ComponentCreator('/git_101', '521'),
+    component: ComponentCreator('/git_101', 'a83'),
     routes: [
       {
         path: '/git_101',
-        component: ComponentCreator('/git_101', '358'),
+        component: ComponentCreator('/git_101', 'de2'),
         routes: [
           {
             path: '/git_101',
-            component: ComponentCreator('/git_101', '80c'),
+            component: ComponentCreator('/git_101', 'eeb'),
             routes: [
               {
                 path: '/git_101/Grade 1/Git Clone',
@@ -371,14 +371,50 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/git_101/Grade 2/Git Log',
+                component: ComponentCreator('/git_101/Grade 2/Git Log', 'a4f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/git_101/Grade 2/Understanding the Git Workflow',
                 component: ComponentCreator('/git_101/Grade 2/Understanding the Git Workflow', '71c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/git_101/Grade 3/GitHub Account Creation',
+                component: ComponentCreator('/git_101/Grade 3/GitHub Account Creation', 'a20'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/git_101/intro',
                 component: ComponentCreator('/git_101/intro', 'b59'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    path: '/python_101',
+    component: ComponentCreator('/python_101', '625'),
+    routes: [
+      {
+        path: '/python_101',
+        component: ComponentCreator('/python_101', 'b16'),
+        routes: [
+          {
+            path: '/python_101',
+            component: ComponentCreator('/python_101', 'cbf'),
+            routes: [
+              {
+                path: '/python_101/intro',
+                component: ComponentCreator('/python_101/intro', '020'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

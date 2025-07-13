@@ -32,6 +32,15 @@ export default {
         "routeBasePath": "git_101",
         "sidebarPath": "./sidebars.js"
       }
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "id": "Python-101",
+        "path": "python_101",
+        "routeBasePath": "python_101",
+        "sidebarPath": "./sidebars.js"
+      }
     ]
   ],
   "themes": [
@@ -133,6 +142,10 @@ export default {
             {
               "label": "Git 101",
               "to": "/git_101/intro"
+            },
+            {
+              "label": "Python 101",
+              "to": "/python_101/intro"
             }
           ]
         },
@@ -194,6 +207,11 @@ export default {
               "label": "Git 101",
               "to": "/git_101/intro",
               "description": "Learn the basics of Git"
+            },
+            {
+              "label": "Python 101",
+              "to": "/python_101/intro",
+              "description": "Learn the basics of Python"
             }
           ]
         },

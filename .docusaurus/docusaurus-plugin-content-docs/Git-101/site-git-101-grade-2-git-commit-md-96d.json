@@ -19,5 +19,9 @@
   "previous": {
     "title": "Git Add",
     "permalink": "/git_101/Grade 2/Git Add"
+  },
+  "next": {
+    "title": "Git Log",
+    "permalink": "/git_101/Grade 2/Git Log"
   }
 }
