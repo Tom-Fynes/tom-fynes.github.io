@@ -13,7 +13,6 @@ export default {
   "projectName": "https://github.com/tom-fynes.github.io",
   "trailingSlash": false,
   "onBrokenLinks": "throw",
-  "onBrokenMarkdownLinks": "warn",
   "i18n": {
     "defaultLocale": "en",
     "locales": [
@@ -41,6 +40,15 @@ export default {
         "routeBasePath": "python_101",
         "sidebarPath": "./sidebars.js"
       }
+    ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        "id": "Projects",
+        "path": "projects",
+        "routeBasePath": "projects",
+        "sidebarPath": "./sidebars.js"
+      }
     ]
   ],
   "themes": [
@@ -49,6 +57,7 @@ export default {
   "markdown": {
     "mermaid": true,
     "format": "mdx",
+    "emoji": true,
     "mdx1Compat": {
       "comments": true,
       "admonitions": true,
@@ -56,6 +65,10 @@ export default {
     },
     "anchors": {
       "maintainCase": false
+    },
+    "hooks": {
+      "onBrokenMarkdownLinks": "warn",
+      "onBrokenMarkdownImages": "throw"
     }
   },
   "presets": [
@@ -157,6 +170,10 @@ export default {
             {
               "label": "VS Code Theme",
               "href": "https://github.com/Tom-Fynes/nebula-nights"
+            },
+            {
+              "label": "SQL Query Optimiser",
+              "to": "/projects/sql-optimiser"
             }
           ]
         },

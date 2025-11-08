@@ -1,0 +1,201 @@
+/* src/components/SqlQueryOptimizer.module.css - UPDATED COLORS */
+.optimizerContainer {
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-border-radius);
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: var(--ifm-shadow-md);
+}
+
+.introText {
+  font-size: 1rem;
+  color: var(--ifm-font-color-secondary);
+  margin-bottom: 25px;
+}
+
+.inputGroup {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--ifm-font-color-base);
+}
+
+.select,
+.textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: var(--ifm-border-radius);
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+  font-family: var(--ifm-font-family-base);
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.select:focus,
+.textarea:focus {
+  border-color: var(--ifm-color-primary);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 150px;
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Monospace for code */
+}
+
+.button {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-button-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--ifm-border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--ifm-color-primary-dark);
+  box-shadow: var(--ifm-shadow-sm);
+}
+
+.resultsContainer {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-border-radius);
+}
+
+.resultsContainer h3 {
+  margin-top: 0;
+  color: var(--ifm-font-color-base);
+}
+
+.resultsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resultItem {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-left: 5px solid;
+  border-radius: var(--ifm-border-radius);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  /* Use surface color for consistency, or base background color */
+  background-color: var(--ifm-background-surface-color); 
+}
+
+/* Specific styling for message types */
+/* --- INFO (Suggestions, Best Practices) - Using Light Blue/Periwinkle derivatives --- */
+.resultItem.info {
+  /* Border color: Light Blue */
+  border-color: #83AFDF; 
+  /* Background: Lightest Periwinkle (subtle blue tone) */
+  background-color: #f0f3ff; 
+}
+
+html[data-theme='dark'] .resultItem.info {
+    /* Border color: Light Blue */
+    border-color: #AED6F1;
+    /* Background: A lightened Paynes Gray for dark theme contrast */
+    background-color: #5d7083;
+}
+
+
+/* --- WARNING (Potential Issues) - Using Magenta/Pale Yellow derivatives --- */
+.resultItem.warning {
+  /* Border color: Pale Yellow (Magenta from your palette) */
+  border-color: #ECDA90;
+  /* Background: A slightly lighter yellow/off-white */
+  background-color: #fffde7; 
+}
+
+html[data-theme='dark'] .resultItem.warning {
+    /* Border color: Magenta (ECDA90) */
+    border-color: #ECDA90;
+    /* Background: A slightly lighter Paynes Gray with a hint of yellow */
+    background-color: #63765e;
+}
+
+
+/* --- ERROR (Critical Anti-Pattern) - Using Dark Rose/Deep Lavender derivatives --- */
+.resultItem.error {
+  /* Border color: Dark Rose */
+  border-color: #CF1259;
+  /* Background: A very light rose tint */
+  background-color: #fff0f5; 
+}
+
+html[data-theme='dark'] .resultItem.error {
+    /* Border color: Dark Rose (CF1259) */
+    border-color: #CF1259;
+    /* Background: A deep lavender/rose derivative for dark theme */
+    background-color: #724b7a;
+}
+
+/* --- SUCCESS (No Issues Found) - Using Light Rose/Periwinkle derivatives --- */
+.resultItem.success {
+  /* Border color: Light Rose */
+  border-color: #DD7596;
+  /* Background: A very light rose/pink tint */
+  background-color: #fff7fa; 
+}
+
+html[data-theme='dark'] .resultItem.success {
+    /* Border color: Light Rose (DD7596) */
+    border-color: #DD7596;
+    /* Background: A subtle rose tint on the dark background */
+    background-color: #5c626e;
+}
+
+/* New Container for Side-by-Side Buttons */
+.buttonContainer {
+  display: flex;
+  gap: 15px; /* Space between buttons */
+  margin-top: 5px; /* Adjust spacing above buttons */
+  margin-bottom: 20px;
+}
+
+/* Base Button Style (already defined, just for context) */
+.button {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-button-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--ifm-border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+/* Style for the new Format Button */
+.formatButton {
+  background-color: var(--ifm-color-primary);
+  color: var(--ifm-button-color);
+  padding: 10px 20px;
+  border: none;
+  border-radius: var(--ifm-border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.formatButton:hover {
+  background-color: var(--ifm-color-primary-dark);
+  box-shadow: var(--ifm-shadow-sm);
+}

@@ -401,6 +401,30 @@ export default [
     ]
   },
   {
+    path: '/projects',
+    component: ComponentCreator('/projects', '8bf'),
+    routes: [
+      {
+        path: '/projects',
+        component: ComponentCreator('/projects', '738'),
+        routes: [
+          {
+            path: '/projects',
+            component: ComponentCreator('/projects', '388'),
+            routes: [
+              {
+                path: '/projects/sql-optimiser',
+                component: ComponentCreator('/projects/sql-optimiser', '690'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     path: '/python_101',
     component: ComponentCreator('/python_101', '625'),
     routes: [

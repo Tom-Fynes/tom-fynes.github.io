@@ -335,7 +335,7 @@
   },
   "/git_101/Grade 2/Git Log-a4f": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-2-git-log-74-a-810"
+    "content": "content---git-101-grade-2-git-log-74-a-05f"
   },
   "/git_101/Grade 2/Understanding the Git Workflow-71c": {
     "__comp": "__comp---theme-doc-item-178-a40",
@@ -343,11 +343,28 @@
   },
   "/git_101/Grade 3/GitHub Account Creation-a20": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-3-create-account-40-b-010"
+    "content": "content---git-101-grade-3-git-hub-account-creation-40-b-ee0"
   },
   "/git_101/intro-b59": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---git-101-introb-98-bf1"
+  },
+  "/projects-8bf": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---projectsd-0-b-0bd"
+    }
+  },
+  "/projects-738": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---projects-162-e09"
+  },
+  "/projects-388": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/projects/sql-optimiser-690": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---projects-sql-optimizere-9-b-dfd"
   },
   "/python_101-625": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",

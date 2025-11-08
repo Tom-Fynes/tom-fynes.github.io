@@ -41,6 +41,15 @@ const config = {
         sidebarPath: "./sidebars.js",
       },
     ],
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "Projects",
+        path: "projects",
+        routeBasePath: "projects",
+        sidebarPath: "./sidebars.js",
+      },
+    ],
   ],
 
   themes: ["@docusaurus/theme-mermaid"],
@@ -139,6 +148,10 @@ const config = {
               {
                 label: "VS Code Theme",
                 href: "https://github.com/Tom-Fynes/nebula-nights",
+              },
+              {
+                label: "SQL Query Optimiser",
+                to: "/projects/sql-optimiser",
               },
             ],
           },

@@ -311,6 +311,35 @@
         }
       ],
       "breadcrumbs": true
+    },
+    "Projects": {
+      "path": "/projects",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/projects",
+          "mainDocId": "sql-optimiser",
+          "docs": [
+            {
+              "id": "sql-optimiser",
+              "path": "/projects/sql-optimiser",
+              "sidebar": "tutorialSidebar"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "tutorialSidebar": {
+              "link": {
+                "path": "/projects/sql-optimiser",
+                "label": "SQL Optimiser"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
     }
   }
 }
