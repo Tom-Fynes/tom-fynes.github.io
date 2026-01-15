@@ -1,0 +1,56 @@
+{
+  "permalink": "/blog/dimensional-modeling-basics",
+  "source": "@site/blog/2025/dimentions.md",
+  "title": "Dimensional Modeling 101 - Design Better Data Warehouses",
+  "description": "If you're building a data warehouse, dimensional modeling is your best friend. It makes data easier to query, understand, and analyze. Let's break down this powerful technique!",
+  "date": "2025-09-24T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Data Modeling",
+      "permalink": "/blog/tags/data-modeling",
+      "description": "Tag used for Data Modeling related posts, normalization, schema design, etc."
+    },
+    {
+      "inline": false,
+      "label": "sql",
+      "permalink": "/blog/tags/sql",
+      "description": "Tag used for SQL related posts"
+    }
+  ],
+  "readingTime": 5.79,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Tom Fynes",
+      "title": "Data Engineer @ OptumUK",
+      "url": "https://github.com/Tom-Fynes",
+      "page": {
+        "permalink": "/blog/authors/tomfynes"
+      },
+      "socials": {
+        "github": "https://www.github.com/Tom-Fynes",
+        "linkedin": "https://www.linkedin.com/in/thomas-f-b00607163/"
+      },
+      "imageURL": "https://github.com/Tom-Fynes.png",
+      "key": "tomfynes"
+    }
+  ],
+  "frontMatter": {
+    "slug": "dimensional-modeling-basics",
+    "title": "Dimensional Modeling 101 - Design Better Data Warehouses",
+    "authors": [
+      "tomfynes"
+    ],
+    "date": "2025-09-24T00:00:00.000Z",
+    "tags": [
+      "data-modeling",
+      "sql"
+    ]
+  },
+  "unlisted": false,
+  "nextItem": {
+    "title": "Data Quality Validation - Ensuring Your Data is Trustworthy",
+    "permalink": "/blog/data-quality-validation"
+  }
+}

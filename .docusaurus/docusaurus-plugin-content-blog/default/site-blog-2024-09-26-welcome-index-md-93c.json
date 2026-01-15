@@ -14,31 +14,17 @@
   ],
   "readingTime": 0.14,
   "hasTruncateMarker": true,
-  "authors": [
-    {
-      "name": "Tom Fynes",
-      "title": "Data Engineer @ OptumUK",
-      "url": "https://github.com/Tom-Fynes",
-      "page": {
-        "permalink": "/blog/authors/tomfynes"
-      },
-      "socials": {
-        "github": "https://www.github.com/Tom-Fynes",
-        "linkedin": "https://www.linkedin.com/in/thomas-f-b00607163/"
-      },
-      "imageURL": "https://github.com/Tom-Fynes.png",
-      "key": "tomfynes"
-    }
-  ],
+  "authors": [],
   "frontMatter": {
     "slug": "welcome",
     "title": "Welcome",
-    "authors": [
-      "tomfynes"
-    ],
     "tags": [
       "misc"
     ]
   },
-  "unlisted": false
+  "unlisted": false,
+  "prevItem": {
+    "title": "Introduction to Data Pipelines - Your First Step in Data Engineering",
+    "permalink": "/blog/introduction-to-data-pipelines"
+  }
 }

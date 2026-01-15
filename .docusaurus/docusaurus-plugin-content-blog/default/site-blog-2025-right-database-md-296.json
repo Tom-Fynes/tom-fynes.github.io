@@ -1,0 +1,53 @@
+{
+  "permalink": "/blog/choosing-the-right-database",
+  "source": "@site/blog/2025/right-database.md",
+  "title": "How to Choose the Right Database for Your Data Project",
+  "description": "Choosing a database feels a bit like choosing a car - there's no single \"best\" option, only the best option for your specific needs. Let's navigate this together!",
+  "date": "2025-07-09T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Database",
+      "permalink": "/blog/tags/database",
+      "description": "Tag used for Database related posts, design, optimization, indexing, etc."
+    }
+  ],
+  "readingTime": 3.42,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Tom Fynes",
+      "title": "Data Engineer @ OptumUK",
+      "url": "https://github.com/Tom-Fynes",
+      "page": {
+        "permalink": "/blog/authors/tomfynes"
+      },
+      "socials": {
+        "github": "https://www.github.com/Tom-Fynes",
+        "linkedin": "https://www.linkedin.com/in/thomas-f-b00607163/"
+      },
+      "imageURL": "https://github.com/Tom-Fynes.png",
+      "key": "tomfynes"
+    }
+  ],
+  "frontMatter": {
+    "slug": "choosing-the-right-database",
+    "title": "How to Choose the Right Database for Your Data Project",
+    "authors": [
+      "tomfynes"
+    ],
+    "date": "2025-07-09T00:00:00.000Z",
+    "tags": [
+      "database"
+    ]
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Getting Started with Apache Airflow - Orchestrate Your Data Pipelines",
+    "permalink": "/blog/apache-airflow-getting-started"
+  },
+  "nextItem": {
+    "title": "Introduction to Data Pipelines - Your First Step in Data Engineering",
+    "permalink": "/blog/introduction-to-data-pipelines"
+  }
+}

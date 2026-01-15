@@ -42,7 +42,7 @@
       "plugin": "plugin---docusaurus-debugb-38-ad3"
     }
   },
-  "/blog-835": {
+  "/blog-f7c": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
       "plugin": "plugin---blog-369-22e"
@@ -50,10 +50,36 @@
     "sidebar": "sidebar---blog-814-8ac",
     "items": [
       {
+        "content": "content---blog-001-a33"
+      },
+      {
+        "content": "content---blogb-88-07e"
+      },
+      {
+        "content": "content---blog-73-a-1b2"
+      },
+      {
+        "content": "content---blog-997-afa"
+      },
+      {
+        "content": "content---blogd-89-1b9"
+      },
+      {
         "content": "content---blog-524-da6"
       }
     ],
     "__props": "__props---blogc-15-573"
+  },
+  "/blog/apache-airflow-getting-started-948": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2025-airflowb-38-770"
   },
   "/blog/archive-182": {
     "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
@@ -73,7 +99,7 @@
     "sidebar": "sidebar---blog-814-8ac",
     "__props": "__props---blog-authorsef-8-44f"
   },
-  "/blog/authors/tomfynes-b0a": {
+  "/blog/authors/tomfynes-ab2": {
     "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
     "__context": {
       "data": {
@@ -83,11 +109,67 @@
     },
     "items": [
       {
-        "content": "content---blog-524-da6"
+        "content": "content---blog-001-a33"
+      },
+      {
+        "content": "content---blogb-88-07e"
+      },
+      {
+        "content": "content---blog-73-a-1b2"
+      },
+      {
+        "content": "content---blog-997-afa"
+      },
+      {
+        "content": "content---blogd-89-1b9"
       }
     ],
     "sidebar": "sidebar---blog-814-8ac",
     "__props": "__props---blog-authors-tomfynesecd-141"
+  },
+  "/blog/choosing-the-right-database-111": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2025-right-database-296-978"
+  },
+  "/blog/data-quality-validation-32b": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2025-data-checks-068-d6c"
+  },
+  "/blog/dimensional-modeling-basics-57b": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-2025-dimentions-58-f-f58"
+  },
+  "/blog/introduction-to-data-pipelines-6a1": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "data": {
+        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+      },
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-introduction-to-data-pipelines-377-34d"
   },
   "/blog/tags-287": {
     "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
@@ -96,6 +178,51 @@
     },
     "sidebar": "sidebar---blog-814-8ac",
     "__props": "__props---blog-tags-3-a-2-fa2"
+  },
+  "/blog/tags/data-engineering-3eb": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blogb-88-07e"
+      },
+      {
+        "content": "content---blog-73-a-1b2"
+      },
+      {
+        "content": "content---blogd-89-1b9"
+      }
+    ],
+    "__props": "__props---blog-tags-data-engineering-38-f-93a"
+  },
+  "/blog/tags/data-modeling-717": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-001-a33"
+      }
+    ],
+    "__props": "__props---blog-tags-data-modeling-69-a-ff8"
+  },
+  "/blog/tags/database-570": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-997-afa"
+      }
+    ],
+    "__props": "__props---blog-tags-databasea-6-f-05e"
   },
   "/blog/tags/misc-3d9": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
@@ -109,6 +236,35 @@
       }
     ],
     "__props": "__props---blog-tags-misc-2-c-0-f10"
+  },
+  "/blog/tags/python-967": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blogb-88-07e"
+      },
+      {
+        "content": "content---blogd-89-1b9"
+      }
+    ],
+    "__props": "__props---blog-tags-pythonae-3-319"
+  },
+  "/blog/tags/sql-d83": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blog-369-22e"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blog-001-a33"
+      }
+    ],
+    "__props": "__props---blog-tags-sql-2-da-f07"
   },
   "/blog/welcome-841": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
@@ -364,7 +520,7 @@
   },
   "/projects/sql-optimiser-690": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---projects-sql-optimizere-9-b-dfd"
+    "content": "content---projects-sql-optimisere-9-b-04e"
   },
   "/python_101-625": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",

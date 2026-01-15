@@ -259,7 +259,7 @@ export default {
           ]
         }
       ],
-      "copyright": "Copyright © 2025 Tom Fynes."
+      "copyright": "Copyright © 2026 Tom Fynes."
     },
     "prism": {
       "theme": {

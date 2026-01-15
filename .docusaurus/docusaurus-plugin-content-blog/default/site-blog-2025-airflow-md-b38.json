@@ -1,0 +1,53 @@
+{
+  "permalink": "/blog/apache-airflow-getting-started",
+  "source": "@site/blog/2025/airflow.md",
+  "title": "Getting Started with Apache Airflow - Orchestrate Your Data Pipelines",
+  "description": "Apache Airflow has become the go-to tool for orchestrating data workflows. If you've ever needed to run tasks in a specific order, on a schedule, with dependencies - Airflow is your friend!",
+  "date": "2025-08-19T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Data Engineering",
+      "permalink": "/blog/tags/data-engineering",
+      "description": "Tag used for Data Engineering related posts, ETL, data pipelines, beginners"
+    }
+  ],
+  "readingTime": 4.58,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Tom Fynes",
+      "title": "Data Engineer @ OptumUK",
+      "url": "https://github.com/Tom-Fynes",
+      "page": {
+        "permalink": "/blog/authors/tomfynes"
+      },
+      "socials": {
+        "github": "https://www.github.com/Tom-Fynes",
+        "linkedin": "https://www.linkedin.com/in/thomas-f-b00607163/"
+      },
+      "imageURL": "https://github.com/Tom-Fynes.png",
+      "key": "tomfynes"
+    }
+  ],
+  "frontMatter": {
+    "slug": "apache-airflow-getting-started",
+    "title": "Getting Started with Apache Airflow - Orchestrate Your Data Pipelines",
+    "authors": [
+      "tomfynes"
+    ],
+    "date": "2025-08-19T00:00:00.000Z",
+    "tags": [
+      "data-engineering"
+    ]
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "Data Quality Validation - Ensuring Your Data is Trustworthy",
+    "permalink": "/blog/data-quality-validation"
+  },
+  "nextItem": {
+    "title": "How to Choose the Right Database for Your Data Project",
+    "permalink": "/blog/choosing-the-right-database"
+  }
+}

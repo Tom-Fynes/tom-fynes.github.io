@@ -39,7 +39,12 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '835'),
+    component: ComponentCreator('/blog', 'f7c'),
+    exact: true
+  },
+  {
+    path: '/blog/apache-airflow-getting-started',
+    component: ComponentCreator('/blog/apache-airflow-getting-started', '948'),
     exact: true
   },
   {
@@ -54,7 +59,27 @@ export default [
   },
   {
     path: '/blog/authors/tomfynes',
-    component: ComponentCreator('/blog/authors/tomfynes', 'b0a'),
+    component: ComponentCreator('/blog/authors/tomfynes', 'ab2'),
+    exact: true
+  },
+  {
+    path: '/blog/choosing-the-right-database',
+    component: ComponentCreator('/blog/choosing-the-right-database', '111'),
+    exact: true
+  },
+  {
+    path: '/blog/data-quality-validation',
+    component: ComponentCreator('/blog/data-quality-validation', '32b'),
+    exact: true
+  },
+  {
+    path: '/blog/dimensional-modeling-basics',
+    component: ComponentCreator('/blog/dimensional-modeling-basics', '57b'),
+    exact: true
+  },
+  {
+    path: '/blog/introduction-to-data-pipelines',
+    component: ComponentCreator('/blog/introduction-to-data-pipelines', '6a1'),
     exact: true
   },
   {
@@ -63,8 +88,33 @@ export default [
     exact: true
   },
   {
+    path: '/blog/tags/data-engineering',
+    component: ComponentCreator('/blog/tags/data-engineering', '3eb'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/data-modeling',
+    component: ComponentCreator('/blog/tags/data-modeling', '717'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/database',
+    component: ComponentCreator('/blog/tags/database', '570'),
+    exact: true
+  },
+  {
     path: '/blog/tags/misc',
     component: ComponentCreator('/blog/tags/misc', '3d9'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/python',
+    component: ComponentCreator('/blog/tags/python', '967'),
+    exact: true
+  },
+  {
+    path: '/blog/tags/sql',
+    component: ComponentCreator('/blog/tags/sql', 'd83'),
     exact: true
   },
   {

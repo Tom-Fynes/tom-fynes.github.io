@@ -1,7 +1,6 @@
 ---
 slug: welcome
 title: Welcome
-authors: [tomfynes]
 tags: [misc]
 ---
 
