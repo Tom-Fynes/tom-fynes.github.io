@@ -1,549 +1,506 @@
 {
-  "/__docusaurus/debug-5ff": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/config-5ba": {
-    "__comp": "__comp---theme-debug-config-23-a-2ff",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/content-a2b": {
-    "__comp": "__comp---theme-debug-contentba-8-ce7",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    },
-    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
-  },
-  "/__docusaurus/debug/globalData-c3c": {
-    "__comp": "__comp---theme-debug-global-dataede-0fa",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/metadata-156": {
-    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/registry-88c": {
-    "__comp": "__comp---theme-debug-registry-679-501",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
-  "/__docusaurus/debug/routes-000": {
-    "__comp": "__comp---theme-debug-routes-946-699",
-    "__context": {
-      "plugin": "plugin---docusaurus-debugb-38-ad3"
-    }
-  },
   "/blog-f7c": {
-    "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
+    "__comp": "a6aa9e1f",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---blog-001-a33"
+        "content": "001e0564"
       },
       {
-        "content": "content---blogb-88-07e"
+        "content": "b889435c"
       },
       {
-        "content": "content---blog-73-a-1b2"
+        "content": "73a2f030"
       },
       {
-        "content": "content---blog-997-afa"
+        "content": "997556f0"
       },
       {
-        "content": "content---blogd-89-1b9"
+        "content": "d89e19d5"
       },
       {
-        "content": "content---blog-524-da6"
+        "content": "524f71ac"
       }
     ],
-    "__props": "__props---blogc-15-573"
+    "__props": "c15d9823"
   },
   "/blog/apache-airflow-getting-started-948": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-2025-airflowb-38-770"
+    "sidebar": "814f3328",
+    "content": "b3897c11"
   },
   "/blog/archive-182": {
-    "__comp": "__comp---theme-blog-archive-page-9-e-4-1d8",
+    "__comp": "9e4087bc",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "__props": "__props---blog-archivef-81-229"
+    "__props": "f81c1134"
   },
   "/blog/authors-0b7": {
-    "__comp": "__comp---theme-blog-pages-blog-authors-list-page-621-70c",
+    "__comp": "621db11d",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "__props": "__props---blog-authorsef-8-44f"
+    "sidebar": "814f3328",
+    "__props": "ef8b811a"
   },
   "/blog/authors/tomfynes-ab2": {
-    "__comp": "__comp---theme-blog-pages-blog-authors-posts-page-33-f-bd5",
+    "__comp": "33fc5bb8",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
     "items": [
       {
-        "content": "content---blog-001-a33"
+        "content": "001e0564"
       },
       {
-        "content": "content---blogb-88-07e"
+        "content": "b889435c"
       },
       {
-        "content": "content---blog-73-a-1b2"
+        "content": "73a2f030"
       },
       {
-        "content": "content---blog-997-afa"
+        "content": "997556f0"
       },
       {
-        "content": "content---blogd-89-1b9"
+        "content": "d89e19d5"
       }
     ],
-    "sidebar": "sidebar---blog-814-8ac",
-    "__props": "__props---blog-authors-tomfynesecd-141"
+    "sidebar": "814f3328",
+    "__props": "ecdd12c4"
   },
   "/blog/choosing-the-right-database-111": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-2025-right-database-296-978"
+    "sidebar": "814f3328",
+    "content": "296c285c"
   },
   "/blog/data-quality-validation-32b": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-2025-data-checks-068-d6c"
+    "sidebar": "814f3328",
+    "content": "0680ded9"
   },
   "/blog/dimensional-modeling-basics-57b": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-2025-dimentions-58-f-f58"
+    "sidebar": "814f3328",
+    "content": "58f2df68"
   },
   "/blog/introduction-to-data-pipelines-6a1": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-introduction-to-data-pipelines-377-34d"
+    "sidebar": "814f3328",
+    "content": "37719c8d"
   },
   "/blog/tags-287": {
-    "__comp": "__comp---theme-blog-tags-list-page-01-a-d0b",
+    "__comp": "01a85c17",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "__props": "__props---blog-tags-3-a-2-fa2"
+    "sidebar": "814f3328",
+    "__props": "3a2db09e"
   },
   "/blog/tags/data-engineering-3eb": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---blogb-88-07e"
+        "content": "b889435c"
       },
       {
-        "content": "content---blog-73-a-1b2"
+        "content": "73a2f030"
       },
       {
-        "content": "content---blogd-89-1b9"
+        "content": "d89e19d5"
       }
     ],
-    "__props": "__props---blog-tags-data-engineering-38-f-93a"
+    "__props": "38f7a866"
   },
   "/blog/tags/data-modeling-717": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---blog-001-a33"
+        "content": "001e0564"
       }
     ],
-    "__props": "__props---blog-tags-data-modeling-69-a-ff8"
+    "__props": "69a3a9bd"
   },
   "/blog/tags/database-570": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---blog-997-afa"
+        "content": "997556f0"
       }
     ],
-    "__props": "__props---blog-tags-databasea-6-f-05e"
+    "__props": "a6fed517"
   },
   "/blog/tags/misc-3d9": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---blog-524-da6"
+        "content": "524f71ac"
       }
     ],
-    "__props": "__props---blog-tags-misc-2-c-0-f10"
+    "__props": "2c06c927"
   },
   "/blog/tags/python-967": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---blogb-88-07e"
+        "content": "b889435c"
       },
       {
-        "content": "content---blogd-89-1b9"
+        "content": "d89e19d5"
       }
     ],
-    "__props": "__props---blog-tags-pythonae-3-319"
+    "__props": "ae3304ee"
   },
   "/blog/tags/sql-d83": {
-    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__comp": "6875c492",
     "__context": {
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
+    "sidebar": "814f3328",
     "items": [
       {
-        "content": "content---blog-001-a33"
+        "content": "001e0564"
       }
     ],
-    "__props": "__props---blog-tags-sql-2-da-f07"
+    "__props": "2da420e9"
   },
   "/blog/welcome-841": {
-    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__comp": "ccc49370",
     "__context": {
       "data": {
-        "blogMetadata": "blogMetadata---blog-authorsace-e7d"
+        "blogMetadata": "acecf23e"
       },
-      "plugin": "plugin---blog-369-22e"
+      "plugin": "36994c47"
     },
-    "sidebar": "sidebar---blog-814-8ac",
-    "content": "content---blog-welcome-93-c-76b"
+    "sidebar": "814f3328",
+    "content": "93c85924"
   },
   "/markdown-page-3d7": {
-    "__comp": "__comp---theme-mdx-page-1-f-3-b90",
+    "__comp": "1f391b9e",
     "__context": {
-      "plugin": "plugin---markdown-pagea-74-7b5"
+      "plugin": "a7456010"
     },
-    "content": "content---markdown-page-393-028"
+    "content": "393be207"
   },
   "/skills-56c": {
-    "__comp": "__comp---site-src-pages-skills-js-18-d-1c7",
+    "__comp": "18db556a",
     "__context": {
-      "plugin": "plugin---markdown-pagea-74-7b5"
+      "plugin": "a7456010"
     },
-    "config": "config---skills-5-e-9-eb4"
+    "config": "5e9f5e1a"
   },
   "/docs-20b": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---docsaba-d7c"
+      "plugin": "aba21aa0"
     }
   },
   "/docs-88b": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---docs-005-788"
+    "__comp": "a7bd4aaa",
+    "__props": "0058b4c6"
   },
   "/docs-ff7": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/docs/Getting Started/Duckdb-409": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-duckdbf-83-970"
+    "__comp": "17896441",
+    "content": "f834633a"
   },
   "/docs/Getting Started/MySql-b98": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-my-sql-571-9e7"
+    "__comp": "17896441",
+    "content": "5712a764"
   },
   "/docs/Getting Started/Postgres-41c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-postgres-923-63b"
+    "__comp": "17896441",
+    "content": "9236a944"
   },
   "/docs/Getting Started/SQL Server-abb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-getting-started-sql-server-89-d-be1"
+    "__comp": "17896441",
+    "content": "89d44fb7"
   },
   "/docs/Grade 1/01 What is SQL-bd0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-1-01-what-is-sq-ldd-7-0fb"
+    "__comp": "17896441",
+    "content": "dd74b7cb"
   },
   "/docs/Grade 1/02 Relational databases-a2c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-1-02-relational-databasesfd-2-ef0"
+    "__comp": "17896441",
+    "content": "fd2cdb64"
   },
   "/docs/Grade 1/03 Simple queries-693": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-1-03-simple-queries-5-fc-b47"
+    "__comp": "17896441",
+    "content": "5fcf0db5"
   },
   "/docs/Grade 1/04 Filtering data-a49": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-1-04-filtering-data-3-fd-109"
+    "__comp": "17896441",
+    "content": "3fdbb466"
   },
   "/docs/Grade 2/01 sorting data-536": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-2-01-sorting-data-30-c-a07"
+    "__comp": "17896441",
+    "content": "30c0e4f1"
   },
   "/docs/Grade 2/02 Limiting data-3c8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-2-02-limiting-data-1-ad-270"
+    "__comp": "17896441",
+    "content": "1ad08689"
   },
   "/docs/Grade 2/03 Basic functions-991": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-2-03-basic-functions-56-f-cca"
+    "__comp": "17896441",
+    "content": "56fdfadf"
   },
   "/docs/Grade 2/04 Alias-38c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-2-04-aliasee-7-97e"
+    "__comp": "17896441",
+    "content": "ee70ddab"
   },
   "/docs/Grade 3/01 joins-1fd": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-3-01-joins-281-afa"
+    "__comp": "17896441",
+    "content": "281ddda5"
   },
   "/docs/Grade 3/02 Aggregation-880": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-3-02-aggregation-2-b-6-f71"
+    "__comp": "17896441",
+    "content": "2b60975d"
   },
   "/docs/Grade 3/03 subqueries-21f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-3-03-subqueries-2-eb-b2b"
+    "__comp": "17896441",
+    "content": "2eb49725"
   },
   "/docs/Grade 3/04 Set operations-22b": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-3-04-set-operations-54-c-d4d"
+    "__comp": "17896441",
+    "content": "54ce8f04"
   },
   "/docs/Grade 4/01 Inserting data-378": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-4-01-inserting-datad-23-ccf"
+    "__comp": "17896441",
+    "content": "d23638bc"
   },
   "/docs/Grade 4/02 Updateing data-6c0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-4-02-updateing-dataca-6-c08"
+    "__comp": "17896441",
+    "content": "ca6442f1"
   },
   "/docs/Grade 4/03 Deleting data-f10": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-4-03-deleting-datad-42-4da"
+    "__comp": "17896441",
+    "content": "d42d0144"
   },
   "/docs/Grade 5/01 Create tables-32f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-5-01-create-tables-0-d-5-29a"
+    "__comp": "17896441",
+    "content": "0d535c1a"
   },
   "/docs/Grade 5/02 Altering tables-021": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-5-02-altering-tables-4-e-4-957"
+    "__comp": "17896441",
+    "content": "4e4b190d"
   },
   "/docs/Grade 5/03 Droping Tables-abd": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-5-03-droping-tables-38-f-c44"
+    "__comp": "17896441",
+    "content": "38f9feb7"
   },
   "/docs/Grade 5/04 Constraints-2ab": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-5-04-constraints-877-e28"
+    "__comp": "17896441",
+    "content": "8775c4b8"
   },
   "/docs/Grade 6/01 String functions-f06": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-6-01-string-functionscbc-7ef"
+    "__comp": "17896441",
+    "content": "cbcdfdf5"
   },
   "/docs/Grade 6/02 Date time-295": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-6-02-date-time-371-c3a"
+    "__comp": "17896441",
+    "content": "371f1ad1"
   },
   "/docs/Grade 6/03 Maths-3fb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-6-03-maths-7-a-1-22e"
+    "__comp": "17896441",
+    "content": "7a1f7151"
   },
   "/docs/Grade 6/04 Case-09f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-6-04-casea-34-a0d"
+    "__comp": "17896441",
+    "content": "a3425694"
   },
   "/docs/Grade 7/01 Indexes-402": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-7-01-indexes-0-b-1-f27"
+    "__comp": "17896441",
+    "content": "0b11a25c"
   },
   "/docs/Grade 7/02 Optermization-087": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-7-02-optermizationa-35-de0"
+    "__comp": "17896441",
+    "content": "a3500b3f"
   },
   "/docs/Grade 7/03 Execution plans-2ca": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-7-03-execution-plans-865-b82"
+    "__comp": "17896441",
+    "content": "86594e1a"
   },
   "/docs/Grade 7/04 Temp tables and ctes-e3d": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-7-04-temp-tables-and-ctesbf-6-38d"
+    "__comp": "17896441",
+    "content": "bf66f0b9"
   },
   "/docs/Grade 8/01 Transactions-bf8": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-8-01-transactionscf-8-489"
+    "__comp": "17896441",
+    "content": "cf8aa424"
   },
   "/docs/Grade 8/02 Locking concurrentct-0e1": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-8-02-locking-concurrentct-74-e-5d8"
+    "__comp": "17896441",
+    "content": "74e9c18e"
   },
   "/docs/Grade 8/03 Windows functions-1d0": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-8-03-windows-functions-0-c-7-a65"
+    "__comp": "17896441",
+    "content": "0c78ca40"
   },
   "/docs/Grade 9 (Extras)/SQL Server/01 tsql cursors-f63": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-grade-9-extras-sql-server-01-tsql-cursors-77-a-29e"
+    "__comp": "17896441",
+    "content": "77ad3817"
   },
   "/docs/intro-ff5": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-intro-377-7e9"
+    "__comp": "17896441",
+    "content": "377ca38f"
   },
   "/git_101-a83": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---git-1011-bf-587"
+      "plugin": "1bf5f826"
     }
   },
   "/git_101-de2": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---git-1012-ed-066"
+    "__comp": "a7bd4aaa",
+    "__props": "2ed1fe00"
   },
   "/git_101-eeb": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/git_101/Grade 1/Git Clone-5d7": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-1-git-clonee-94-873"
+    "__comp": "17896441",
+    "content": "e94aac1e"
   },
   "/git_101/Grade 1/Git Init-fbb": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-1-git-inite-4-b-1c2"
+    "__comp": "17896441",
+    "content": "e4b37bfb"
   },
   "/git_101/Grade 1/Installing Git-55e": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-1-installing-git-13-c-0a1"
+    "__comp": "17896441",
+    "content": "13ce9f09"
   },
   "/git_101/Grade 1/Setting Username and Email-763": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-1-setting-username-and-emaila-0-d-eaf"
+    "__comp": "17896441",
+    "content": "a0d9a494"
   },
   "/git_101/Grade 1/What is Git-c33": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-1-what-is-gite-57-823"
+    "__comp": "17896441",
+    "content": "e571294c"
   },
   "/git_101/Grade 2/Git Add-685": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-2-git-add-573-d30"
+    "__comp": "17896441",
+    "content": "57343b0d"
   },
   "/git_101/Grade 2/Git Commit-896": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-2-git-commit-96-d-038"
+    "__comp": "17896441",
+    "content": "96d8e45b"
   },
   "/git_101/Grade 2/Git Log-a4f": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-2-git-log-74-a-05f"
+    "__comp": "17896441",
+    "content": "74ab3e7b"
   },
   "/git_101/Grade 2/Understanding the Git Workflow-71c": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-2-understanding-the-git-workflow-116-831"
+    "__comp": "17896441",
+    "content": "11641587"
   },
   "/git_101/Grade 3/GitHub Account Creation-a20": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-grade-3-git-hub-account-creation-40-b-ee0"
+    "__comp": "17896441",
+    "content": "40b8b1f6"
   },
   "/git_101/intro-b59": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---git-101-introb-98-bf1"
+    "__comp": "17896441",
+    "content": "b98daaa6"
   },
   "/projects-8bf": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---projectsd-0-b-0bd"
+      "plugin": "d0bdd2d9"
     }
   },
   "/projects-738": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---projects-162-e09"
+    "__comp": "a7bd4aaa",
+    "__props": "162773bd"
   },
   "/projects-388": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/projects/sql-optimiser-690": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---projects-sql-optimisere-9-b-04e"
+    "__comp": "17896441",
+    "content": "e9b42e79"
   },
   "/python_101-625": {
-    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__comp": "5e95c892",
     "__context": {
-      "plugin": "plugin---python-101469-54d"
+      "plugin": "4696c80a"
     }
   },
   "/python_101-b16": {
-    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
-    "__props": "__props---python-101752-fa9"
+    "__comp": "a7bd4aaa",
+    "__props": "752cf7d8"
   },
   "/python_101-cbf": {
-    "__comp": "__comp---theme-doc-roota-94-67a"
+    "__comp": "a94703ab"
   },
   "/python_101/intro-020": {
-    "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---python-101-introf-69-555"
+    "__comp": "17896441",
+    "content": "f69e02c7"
   },
   "/-2e1": {
-    "__comp": "__comp---site-src-pages-index-jsc-4-f-f99",
+    "__comp": "c4f5d8e4",
     "__context": {
-      "plugin": "plugin---markdown-pagea-74-7b5"
+      "plugin": "a7456010"
     },
-    "config": "config---skills-5-e-9-eb4"
+    "config": "5e9f5e1a"
   }
 }
