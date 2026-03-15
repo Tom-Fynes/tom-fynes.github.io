@@ -15,8 +15,9 @@ export function HomepageHeader() {
         <img
           src="img/profile.jpg"
           alt="Avatar"
-          class="inline-block size-30 rounded-full ring-2 ring-white"
-        ></img>
+          loading="lazy"
+          className="inline-block size-30 rounded-full ring-2 ring-white"
+        />
         <Heading as="h1" className="text-4xl md:text-5xl font-extrabold mb-4">
           <div>{siteConfig.title}</div>
         </Heading>

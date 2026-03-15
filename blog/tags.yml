@@ -32,3 +32,8 @@ data-modeling:
   label: Data Modeling
   permalink: /data-modeling
   description: Tag used for Data Modeling related posts, normalization, schema design, etc.
+
+web-dev:
+  label: Web Dev
+  permalink: /web-dev
+  description: Tag used for web development related posts, frontend, frameworks, tooling, etc.

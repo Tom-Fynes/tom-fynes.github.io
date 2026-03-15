@@ -18,6 +18,7 @@
 * Dark purple: #8716f1
 */
 
+/* Modern font stack using Inter with system-ui fallback */
 
 :root {
     --ifm-color-primary: #DD7596; /* Light Blue */
@@ -31,6 +32,9 @@
     --code: #8716f1;
     --ifm-code-font-size: 95%;
     --docusaurus-highlighted-code-line-bg: rgba(208, 87, 134, 0.1); /* Pale Yellow tint */
+    --ifm-font-family-base: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --ifm-heading-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --transition-speed: 0.2s;
   }
   
   [data-theme='dark'] {
@@ -149,3 +153,61 @@ h2 {
 html[data-theme='dark'] .footer {
     --ifm-footer-title-color: #9F7EBE;
   }
+
+/* === Card hover transitions === */
+.card {
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* === Button transitions === */
+.button {
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease, background-color var(--transition-speed) ease;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* === Navbar glassmorphism (mobile + desktop) === */
+.navbar {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    border-bottom: 1px solid rgba(221, 117, 150, 0.15);
+    transition: background-color var(--transition-speed) ease;
+}
+
+html[data-theme='dark'] .navbar {
+    background-color: rgba(64, 78, 92, 0.9) !important;
+    border-bottom: 1px solid rgba(221, 117, 150, 0.2);
+}
+
+/* Mobile sidebar glassmorphism */
+@media (max-width: 996px) {
+    .navbar-sidebar {
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background-color: rgba(255, 255, 255, 0.92) !important;
+    }
+
+    html[data-theme='dark'] .navbar-sidebar {
+        background-color: rgba(64, 78, 92, 0.95) !important;
+    }
+}
+
+/* === Navbar link hover transitions === */
+.navbar__link {
+    transition: color var(--transition-speed) ease;
+}
+
+/* === Sidebar menu link transitions === */
+.menu__link {
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+    border-radius: 6px;
+}
