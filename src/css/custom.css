@@ -190,16 +190,19 @@ html[data-theme='dark'] .navbar {
     border-bottom: 1px solid rgba(221, 117, 150, 0.2);
 }
 
-/* Mobile sidebar glassmorphism */
+/* Mobile sidebar styling */
+/* Note: backdrop-filter is intentionally omitted from .navbar-sidebar for the same
+   reason it is omitted from .navbar — applying backdrop-filter creates a new CSS
+   containing block, which causes position:fixed children like .navbar-sidebar__backdrop
+   to be positioned relative to the sidebar instead of the full viewport, so the
+   dark overlay behind the open menu does not cover the whole screen. */
 @media (max-width: 996px) {
     .navbar-sidebar {
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        background-color: rgba(255, 255, 255, 0.92) !important;
+        background-color: #ffffff;
     }
 
     html[data-theme='dark'] .navbar-sidebar {
-        background-color: rgba(64, 78, 92, 0.95) !important;
+        background-color: #404E5C;
     }
 }
 
