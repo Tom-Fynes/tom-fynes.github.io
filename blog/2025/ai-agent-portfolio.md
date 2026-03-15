@@ -2,7 +2,7 @@
 slug: ai-agent-portfolio-modernization
 title: How I Used an AI Agent to Modernize My Portfolio
 authors: [tomfynes]
-date: 2025-03-15
+date: 2026-03-15
 tags: [misc, web-dev]
 ---
 
