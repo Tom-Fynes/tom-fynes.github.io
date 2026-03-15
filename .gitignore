@@ -3,6 +3,7 @@ node_modules/
 
 # Build outputs and caches
 .cache/
+.docusaurus/
 dist/
 build/
 *.log
