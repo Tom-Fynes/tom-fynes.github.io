@@ -174,17 +174,19 @@ html[data-theme='dark'] .footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* === Navbar glassmorphism (mobile + desktop) === */
+/* === Navbar styling (mobile + desktop) === */
+/* Note: backdrop-filter is intentionally omitted from .navbar because applying it
+   creates a new CSS containing block, which causes position:fixed children like
+   .navbar-sidebar to be clipped to the navbar height instead of the full viewport,
+   breaking the mobile menu. */
 .navbar {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.85) !important;
+    background-color: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid rgba(221, 117, 150, 0.15);
     transition: background-color var(--transition-speed) ease;
 }
 
 html[data-theme='dark'] .navbar {
-    background-color: rgba(64, 78, 92, 0.9) !important;
+    background-color: rgba(64, 78, 92, 0.97);
     border-bottom: 1px solid rgba(221, 117, 150, 0.2);
 }
 
