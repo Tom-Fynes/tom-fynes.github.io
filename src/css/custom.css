@@ -174,30 +174,32 @@ html[data-theme='dark'] .footer {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* === Navbar glassmorphism (mobile + desktop) === */
+/* === Navbar styling (mobile + desktop) === */
+/* Note: backdrop-filter must NOT be applied to .navbar or .navbar-sidebar because
+   it creates a new CSS containing block, causing position:fixed descendants
+   (like .navbar-sidebar and .navbar-sidebar__backdrop) to be clipped/positioned
+   relative to the element's bounding box instead of the full viewport.
+   Semi-transparent backgrounds are also avoided on the navbar to prevent
+   scrolling page content from bleeding through. */
 .navbar {
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background-color: rgba(255, 255, 255, 0.85) !important;
+    background-color: #ffffff;
     border-bottom: 1px solid rgba(221, 117, 150, 0.15);
     transition: background-color var(--transition-speed) ease;
 }
 
 html[data-theme='dark'] .navbar {
-    background-color: rgba(64, 78, 92, 0.9) !important;
+    background-color: #404E5C;
     border-bottom: 1px solid rgba(221, 117, 150, 0.2);
 }
 
-/* Mobile sidebar glassmorphism */
+/* Mobile sidebar */
 @media (max-width: 996px) {
     .navbar-sidebar {
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        background-color: rgba(255, 255, 255, 0.92) !important;
+        background-color: #ffffff;
     }
 
     html[data-theme='dark'] .navbar-sidebar {
-        background-color: rgba(64, 78, 92, 0.95) !important;
+        background-color: #404E5C;
     }
 }
 
