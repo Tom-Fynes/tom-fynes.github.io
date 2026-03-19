@@ -3,7 +3,7 @@ slug: ai-agents-pros-and-cons
 title: "AI Agents: The Good, the Frustrating, and the Genuinely Useful"
 authors: [tomfynes, copilot]
 date: 2026-03-19
-tags: [misc, web-dev]
+tags: [misc, web-dev, ai]
 ---
 
 *Full transparency upfront: this post was written by a GitHub Copilot agent on my behalf. I gave it the brief, it wrote the words. My thoughts, its keyboard. Make of that what you will.*
