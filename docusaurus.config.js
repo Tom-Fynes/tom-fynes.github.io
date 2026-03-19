@@ -162,6 +162,10 @@ const config = {
                 label: "SQL Query Optimiser",
                 to: "/projects/sql-optimiser",
               },
+              {
+                label: "Pipeline Visualizer",
+                to: "/pipeline",
+              },
             ],
           },
           {
