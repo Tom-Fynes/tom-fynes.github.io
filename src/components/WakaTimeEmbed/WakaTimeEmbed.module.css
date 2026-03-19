@@ -1,0 +1,39 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  margin: 0 0 1rem 0;
+  text-align: center;
+}
+
+.imgWrapper {
+  width: 100%;
+  overflow: hidden;
+  border-radius: calc(var(--ifm-global-radius) / 2);
+}
+
+.embed {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: filter 0.3s ease;
+}
+
+/* Dark mode inversion for WakaTime SVG embeds */
+.dark {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+/* Additional dark mode overrides */
+:global([data-theme="dark"]) .embed {
+  /* wakatime-embed--dark hook for any extra overrides */
+}

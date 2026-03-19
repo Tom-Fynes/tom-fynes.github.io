@@ -166,6 +166,10 @@ const config = {
                 label: "Pipeline Visualizer",
                 to: "/pipeline",
               },
+              {
+                label: "Dashboard",
+                to: "/dashboard",
+              },
             ],
           },
           {
