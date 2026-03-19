@@ -189,6 +189,7 @@ const config = {
             ],
           },
           { to: "skills", label: "Skills", position: "left" },
+          { to: "/pipeline", label: "Pipeline", position: "left" },
         ],
       },
       footer: {
