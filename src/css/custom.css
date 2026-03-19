@@ -213,3 +213,306 @@ html[data-theme='dark'] .navbar {
     transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
     border-radius: 6px;
 }
+
+/* ============================================================
+   Pipeline Visualizer — pipeline.tsx
+   ============================================================ */
+
+/* CSS variables scoped to the pipeline page */
+:root {
+  --pipeline-bg-dot: #cbd5e1;
+  --pipeline-minimap-mask: rgba(255,255,255,0.6);
+  --pipeline-panel-bg: #ffffff;
+  --pipeline-panel-border: #e2e8f0;
+  --pipeline-panel-text: #1e293b;
+  --pipeline-panel-muted: #64748b;
+  --pipeline-toolbar-bg: #f8fafc;
+  --pipeline-toolbar-border: #e2e8f0;
+  --pipeline-node-bg: var(--node-bg-light, #eff6ff);
+  --pipeline-node-text: #1e293b;
+}
+
+[data-theme='dark'] {
+  --pipeline-bg-dot: #334155;
+  --pipeline-minimap-mask: rgba(30,41,59,0.6);
+  --pipeline-panel-bg: #1e293b;
+  --pipeline-panel-border: #334155;
+  --pipeline-panel-text: #f1f5f9;
+  --pipeline-panel-muted: #94a3b8;
+  --pipeline-toolbar-bg: #0f172a;
+  --pipeline-toolbar-border: #1e293b;
+  --pipeline-node-bg: var(--node-bg-dark, #1e3a5f);
+  --pipeline-node-text: #f1f5f9;
+}
+
+/* Page layout */
+.pipeline-page {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 60px); /* fill below navbar */
+  overflow: hidden;
+}
+
+.pipeline-header {
+  padding: 1rem 1.5rem 0.5rem;
+  flex-shrink: 0;
+}
+
+.pipeline-header__title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 0.25rem;
+}
+
+.pipeline-header__subtitle {
+  color: var(--pipeline-panel-muted);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Canvas wrapper */
+.pipeline-canvas-wrap {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Toolbar */
+.pipeline-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--pipeline-toolbar-bg);
+  border-bottom: 1px solid var(--pipeline-toolbar-border);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.pipeline-toolbar__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid var(--pipeline-toolbar-border);
+  background: var(--pipeline-panel-bg);
+  color: var(--pipeline-panel-text);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.pipeline-toolbar__btn:hover {
+  background: var(--ifm-color-primary-lightest);
+  transform: translateY(-1px);
+}
+
+.pipeline-toolbar__legend {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.pipeline-toolbar__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--pipeline-panel-muted);
+}
+
+.pipeline-toolbar__legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Flow area */
+.pipeline-flow-area {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Override React Flow background in dark mode */
+[data-theme='dark'] .react-flow__background {
+  background-color: #0f172a;
+}
+
+/* Custom node */
+.pipeline-node {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.85rem;
+  border-radius: 10px;
+  border: 2px solid var(--node-border, #3b82f6);
+  background: var(--pipeline-node-bg);
+  color: var(--pipeline-node-text);
+  min-width: 155px;
+  max-width: 180px;
+  cursor: pointer;
+  transition: box-shadow 0.15s, transform 0.1s;
+}
+
+.pipeline-node:hover {
+  transform: translateY(-2px);
+}
+
+.pipeline-node__icon {
+  font-size: 1.4rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.pipeline-node__text {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.pipeline-node__label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pipeline-node__subtitle {
+  font-size: 0.68rem;
+  opacity: 0.7;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Detail panel */
+.pipeline-detail-panel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 300px;
+  max-width: calc(100vw - 2rem);
+  background: var(--pipeline-panel-bg);
+  border: 1px solid var(--pipeline-panel-border);
+  border-left: 5px solid;
+  border-radius: 10px;
+  padding: 1.1rem;
+  box-shadow: 0 8px 28px rgba(0,0,0,0.16);
+  z-index: 10;
+  color: var(--pipeline-panel-text);
+}
+
+.pipeline-detail-panel__close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--pipeline-panel-muted);
+  padding: 0.2rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.pipeline-detail-panel__close:hover {
+  color: var(--pipeline-panel-text);
+}
+
+.pipeline-detail-panel__header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.9rem;
+}
+
+.pipeline-detail-panel__icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.pipeline-detail-panel__title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem;
+  color: var(--pipeline-panel-text);
+}
+
+.pipeline-detail-panel__badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pipeline-detail-panel__section {
+  margin-top: 0.75rem;
+}
+
+.pipeline-detail-panel__section h4 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pipeline-panel-muted);
+  margin: 0 0 0.3rem;
+  padding: 0;
+}
+
+.pipeline-detail-panel__section p {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  margin: 0;
+  color: var(--pipeline-panel-text);
+}
+
+/* Mobile summary */
+.pipeline-mobile {
+  padding: 1.5rem;
+}
+
+.pipeline-mobile__subtitle {
+  color: var(--pipeline-panel-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.pipeline-mobile__table-wrap {
+  overflow-x: auto;
+}
+
+.pipeline-mobile__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.pipeline-mobile__table th,
+.pipeline-mobile__table td {
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--pipeline-panel-border);
+  text-align: left;
+}
+
+.pipeline-mobile__badge {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+}
