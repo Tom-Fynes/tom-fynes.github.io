@@ -1,0 +1,235 @@
+/* ── Page wrapper ──────────────────────────────────────── */
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+/* ── Page header ────────────────────────────────────────── */
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--ifm-font-color-base);
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+/* ── Meta bar (timestamp + refresh) ────────────────────── */
+.metaBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.refreshBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: var(--ifm-global-radius);
+  background: transparent;
+  color: var(--ifm-color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.refreshBtn:hover:not(:disabled) {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+.refreshBtn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+/* ── Section divider ────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  margin: 2.5rem 0;
+}
+
+/* ── Section headings ────────────────────────────────────── */
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+  margin: 0 0 1.5rem 0;
+}
+
+/* ── Stat card grid ─────────────────────────────────────── */
+.statGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .statGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .statGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Chart grid ─────────────────────────────────────────── */
+.chartGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .chartGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Chart card ─────────────────────────────────────────── */
+.chartCard {
+  background: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  padding: 1.25rem;
+}
+
+.chartTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  margin: 0 0 1rem 0;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.repoSelect {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: var(--ifm-global-radius);
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  cursor: pointer;
+  max-width: 180px;
+}
+
+/* ── WakaTime grid ──────────────────────────────────────── */
+.wakaGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .wakaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .wakaGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wakaCaption {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.5rem;
+}
+
+.wakaCaption a {
+  color: var(--ifm-color-primary);
+}
+
+/* ── Loading skeleton ───────────────────────────────────── */
+.skeleton {
+  border-radius: var(--ifm-global-radius);
+  background: linear-gradient(
+    90deg,
+    var(--ifm-color-emphasis-200) 25%,
+    var(--ifm-color-emphasis-100) 50%,
+    var(--ifm-color-emphasis-200) 75%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s ease infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.skeletonCard {
+  composes: skeleton;
+  height: 120px;
+}
+
+.skeletonChart {
+  composes: skeleton;
+  height: 260px;
+}
+
+/* ── Error state ────────────────────────────────────────── */
+.errorBox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  background: var(--ifm-color-danger-contrast-background, #fff1f0);
+  border: 1px solid var(--ifm-color-danger-dark, #ff4d4f);
+  border-radius: var(--ifm-global-radius);
+  color: var(--ifm-color-danger-dark, #c0392b);
+  margin-bottom: 2rem;
+}
+
+.errorIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.errorTitle {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.errorMsg {
+  font-size: 0.9rem;
+}
