@@ -308,29 +308,23 @@ function FlowInner({
 }: FlowInnerProps) {
   const { fitView } = useReactFlow();
 
-  const rfNodes: Node<PipelineNodeData>[] = rawNodes.map((n) => ({
-    id: n.id,
-    type: "pipelineNode",
-    position: n.position ?? { x: 0, y: 0 },
-    data: n.data,
-  }));
-
-  const rfEdges: Edge[] = rawEdges.map((e) => ({
-    id: e.id,
-    source: e.source,
-    target: e.target,
-    animated: e.animated ?? true,
-    type: e.type ?? "smoothstep",
-    style: { strokeWidth: 2, stroke: isDark ? "#64748b" : "#94a3b8" },
-  }));
-
-  const { nodes: layoutedNodes, edges: layoutedEdges } = useMemo(
-    () => getLayoutedElements(rfNodes, rfEdges),
-    // Empty deps intentional: layout is computed once at mount. rawNodes/rawEdges
-    // are derived from props that don't change after initial render for a given page.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
+  const { nodes: layoutedNodes, edges: layoutedEdges } = useMemo(() => {
+    const rfNodes: Node<PipelineNodeData>[] = rawNodes.map((n) => ({
+      id: n.id,
+      type: "pipelineNode",
+      position: n.position ?? { x: 0, y: 0 },
+      data: n.data,
+    }));
+    const rfEdges: Edge[] = rawEdges.map((e) => ({
+      id: e.id,
+      source: e.source,
+      target: e.target,
+      animated: e.animated ?? true,
+      type: e.type ?? "smoothstep",
+      style: { strokeWidth: 2, stroke: isDark ? "#64748b" : "#94a3b8" },
+    }));
+    return getLayoutedElements(rfNodes, rfEdges);
+  }, [rawNodes, rawEdges, isDark]);
 
   const [nodes, , onNodesChange] = useNodesState<Node<PipelineNodeData>>(layoutedNodes);
   const [edges, , onEdgesChange] = useEdgesState(layoutedEdges);
