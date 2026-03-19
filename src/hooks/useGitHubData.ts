@@ -1,5 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
-import { FEATURED_REPO as FEATURED_REPO_PLACEHOLDER } from "../config/dashboardConfig";
+import {
+  FEATURED_REPO as FEATURED_REPO_PLACEHOLDER,
+  DEMO_REPOS,
+  DEMO_COMMIT_ACTIVITY,
+} from "../config/dashboardConfig";
 
 export interface GitHubRepo {
   id: number;
@@ -79,6 +83,8 @@ interface UseGitHubDataResult {
   data: GitHubData | null;
   isLoading: boolean;
   error: string | null;
+  /** True when data comes from the built-in sample set (GitHub API unavailable) */
+  isDemoMode: boolean;
   refetch: () => void;
   lastUpdated: Date | null;
 }
@@ -90,6 +96,7 @@ export function useGitHubData(
   const [data, setData] = useState<GitHubData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [isDemoMode, setIsDemoMode] = useState(false);
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null);
   const [fetchCount, setFetchCount] = useState(0);
 
@@ -149,12 +156,20 @@ export function useGitHubData(
         }
 
         if (!cancelled) {
+          setIsDemoMode(false);
           setData({ repos, commitActivity, commitRepo: targetRepo });
           setLastUpdated(new Date());
         }
       } catch (err) {
         if (!cancelled) {
           setError(err instanceof Error ? err.message : "Unknown error");
+          // Fall back to sample data so charts are always visible
+          setIsDemoMode(true);
+          setData({
+            repos: DEMO_REPOS as GitHubRepo[],
+            commitActivity: DEMO_COMMIT_ACTIVITY,
+            commitRepo: DEMO_REPOS[0]?.name ?? "",
+          });
         }
       } finally {
         if (!cancelled) {
@@ -169,5 +184,5 @@ export function useGitHubData(
     };
   }, [username, featuredRepo, fetchCount]);
 
-  return { data, isLoading, error, refetch, lastUpdated };
+  return { data, isLoading, error, isDemoMode, refetch, lastUpdated };
 }

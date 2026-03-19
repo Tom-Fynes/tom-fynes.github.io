@@ -27,6 +27,7 @@ import {
   Code2,
   RefreshCw,
   AlertCircle,
+  Info,
 } from "lucide-react";
 
 import StatCard from "../components/StatCard/StatCard";
@@ -155,7 +156,7 @@ function ThemedTooltip({ active, payload, label }: TooltipProps): JSX.Element | 
 export default function DashboardPage(): JSX.Element {
   const [commitRepo, setCommitRepo] = useState<string>(FEATURED_REPO);
 
-  const { data, isLoading, error, refetch, lastUpdated } = useGitHubData(
+  const { data, isLoading, error, isDemoMode, refetch, lastUpdated } = useGitHubData(
     GITHUB_USERNAME,
     commitRepo
   );
@@ -267,8 +268,23 @@ export default function DashboardPage(): JSX.Element {
           </button>
         </div>
 
-        {/* ── Error state ───────────────────────────────────────────── */}
-        {error && (
+        {/* ── Status banners ────────────────────────────────────────── */}
+        {isDemoMode && (
+          <div className={styles.noticeBanner} role="status">
+            <Info size={16} className={styles.noticeIcon} />
+            <span>
+              Showing sample data — GitHub API is currently unavailable.{" "}
+              <button
+                className={styles.noticeBannerRefresh}
+                onClick={refetch}
+                disabled={isLoading}
+              >
+                Try again
+              </button>
+            </span>
+          </div>
+        )}
+        {error && !isDemoMode && (
           <div className={styles.errorBox} role="alert">
             <AlertCircle size={20} className={styles.errorIcon} />
             <div>
@@ -315,7 +331,7 @@ export default function DashboardPage(): JSX.Element {
               <div className={styles.chartCard}>
                 <div className={styles.chartHeader}>
                   <h3 className={styles.chartTitle}>Commit Activity</h3>
-                  {data && data.repos.length > 0 && (
+                  {data && data.repos.length > 0 && !isDemoMode && (
                     <select
                       className={styles.repoSelect}
                       value={commitRepo}
