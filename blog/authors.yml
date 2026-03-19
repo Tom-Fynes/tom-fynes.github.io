@@ -7,3 +7,10 @@ tomfynes:
   socials:
     github: https://www.github.com/Tom-Fynes
     linkedin: https://www.linkedin.com/in/thomas-f-b00607163/
+
+copilot:
+  name: GitHub Copilot
+  title: AI Coding Agent
+  url: https://github.com/features/copilot
+  image_url: https://github.com/copilot.png
+  page: true

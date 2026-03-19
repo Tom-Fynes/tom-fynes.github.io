@@ -37,3 +37,8 @@ web-dev:
   label: Web Dev
   permalink: /web-dev
   description: Tag used for web development related posts, frontend, frameworks, tooling, etc.
+
+ai:
+  label: AI
+  permalink: /ai
+  description: Tag used for AI related posts, agents, LLMs, automation, etc.

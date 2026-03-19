@@ -3,7 +3,7 @@ slug: ai-agent-portfolio-modernization
 title: How I Used an AI Agent to Modernize My Portfolio
 authors: [tomfynes]
 date: 2026-03-15
-tags: [misc, web-dev]
+tags: [misc, web-dev, ai]
 ---
 
 I recently handed the keys of my portfolio site over to a GitHub Copilot coding agent and asked it to modernize the whole thing — version upgrades, UI polish, dependency management, the lot. Here's what that actually looked like in practice.
