@@ -139,14 +139,22 @@ export function useGitHubData(
         let commitActivity: CommitWeek[] | null = null;
         if (targetRepo) {
           const commitsCacheKey = `gh_commits_${username}_${targetRepo}`;
-          commitActivity = getCached<CommitWeek[]>(commitsCacheKey);
+          const cached = getCached<unknown>(commitsCacheKey);
+          // Guard: cached value must be an actual array (not a stale {} from a 202 response)
+          if (Array.isArray(cached)) {
+            commitActivity = cached as CommitWeek[];
+          }
           if (!commitActivity) {
             try {
-              commitActivity = await fetchWithRateLimit<CommitWeek[]>(
+              const raw = await fetchWithRateLimit<unknown>(
                 `https://api.github.com/repos/${username}/${targetRepo}/stats/commit_activity`
               );
-              if (commitActivity) {
+              // GitHub returns {} (HTTP 202) while stats are being computed — not an array
+              if (Array.isArray(raw)) {
+                commitActivity = raw as CommitWeek[];
                 setCache(commitsCacheKey, commitActivity);
+              } else {
+                commitActivity = null;
               }
             } catch {
               // Non-fatal: commit activity is optional

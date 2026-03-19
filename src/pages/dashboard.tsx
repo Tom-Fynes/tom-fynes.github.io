@@ -181,7 +181,7 @@ export default function DashboardPage(): JSX.Element {
 
   // ── Commit activity chart data ─────────────────────────────────────────
   const commitChartData = useMemo(() => {
-    if (!data?.commitActivity) return [];
+    if (!data?.commitActivity || !Array.isArray(data.commitActivity)) return [];
     return data.commitActivity.map((w) => ({
       week: formatWeekLabel(w.week),
       commits: w.total,
