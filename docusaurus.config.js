@@ -163,8 +163,8 @@ const config = {
                 to: "/projects/sql-optimiser",
               },
               {
-                label: "Pipeline Visualizer",
-                to: "/pipeline",
+                label: "Pipelines",
+                to: "/pipelines",
               },
               {
                 label: "Dashboard",
