@@ -12,5 +12,5 @@ copilot:
   name: GitHub Copilot
   title: AI Coding Agent
   url: https://github.com/features/copilot
-  image_url: https://github.com/copilot.png
+  image_url: https://github.com/github-copilot.png
   page: true
