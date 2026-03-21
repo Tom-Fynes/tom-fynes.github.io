@@ -197,6 +197,7 @@ const config = {
             ],
           },
           { to: "skills", label: "Skills", position: "left" },
+          { to: "career", label: "Career", position: "left" },
         ],
       },
       footer: {
