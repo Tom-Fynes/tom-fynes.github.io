@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import { useThemeConfig } from "@docusaurus/theme-common";
@@ -351,6 +351,8 @@ export default function Navbar() {
 
   const items = (navbar?.items || []).filter((i) => i.position !== "right");
 
+  const closeMenu = useCallback(() => setMobileOpen(false), []);
+
   return (
     <>
       <motion.nav
@@ -422,7 +424,7 @@ export default function Navbar() {
 
       <MobileMenu
         isOpen={mobileOpen}
-        onClose={() => setMobileOpen(false)}
+        onClose={closeMenu}
         items={items}
       />
     </>
