@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "@theme/Layout";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./skills.module.css";
+import { FadeInOnScroll, StaggerContainer, StaggerItem } from "@site/src/components/animations";
 
 const categories = [
   {
@@ -120,20 +121,22 @@ function CategorySection({ category, isOpen, onToggle, index }) {
             variants={contentVariants}
             className={styles.sectionContent}
           >
-            <div className={styles.skillsGrid}>
+            <StaggerContainer className={styles.skillsGrid}>
               {category.skills.map((skill) => (
-                <div key={skill.label} className={styles.skillChip}>
-                  {skill.img && (
-                    <img
-                      src={skill.img}
-                      alt={skill.label}
-                      className={styles.chipIcon}
-                    />
-                  )}
-                  <span>{skill.label}</span>
-                </div>
+                <StaggerItem key={skill.label}>
+                  <div className={styles.skillChip}>
+                    {skill.img && (
+                      <img
+                        src={skill.img}
+                        alt={skill.label}
+                        className={styles.chipIcon}
+                      />
+                    )}
+                    <span>{skill.label}</span>
+                  </div>
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerContainer>
           </motion.div>
         )}
       </AnimatePresence>
@@ -156,32 +159,35 @@ export default function Skills() {
         <div className="py-20">
           <div className="max-w-4xl mx-auto px-4">
             {/* Header */}
-            <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Skills</h1>
-              <p className="text-base leading-relaxed max-w-2xl mx-auto opacity-70">
-                A snapshot of the tools, technologies and competencies that make up
-                my professional toolkit.
-              </p>
-              <div className="mt-6 flex justify-center">
-                <div
-                  className="w-16 h-1 rounded-full"
-                  style={{
-                    background: "linear-gradient(90deg, #DD7596, #B7C3F3)",
-                  }}
-                />
+            <FadeInOnScroll direction="up" delay={0}>
+              <div className="text-center mb-16">
+                <h1 className="text-4xl md:text-5xl font-extrabold mb-4">Skills</h1>
+                <p className="text-base leading-relaxed max-w-2xl mx-auto opacity-70">
+                  A snapshot of the tools, technologies and competencies that make up
+                  my professional toolkit.
+                </p>
+                <div className="mt-6 flex justify-center">
+                  <div
+                    className="w-16 h-1 rounded-full"
+                    style={{
+                      background: "linear-gradient(90deg, #DD7596, #B7C3F3)",
+                    }}
+                  />
+                </div>
               </div>
-            </div>
+            </FadeInOnScroll>
 
             {/* Accordion sections */}
             <div className={styles.sectionsContainer}>
               {categories.map((category, index) => (
-                <CategorySection
-                  key={category.id}
-                  category={category}
-                  isOpen={openSections[category.id]}
-                  onToggle={() => toggleSection(category.id)}
-                  index={index}
-                />
+                <FadeInOnScroll key={category.id} direction="up" delay={index * 100}>
+                  <CategorySection
+                    category={category}
+                    isOpen={openSections[category.id]}
+                    onToggle={() => toggleSection(category.id)}
+                    index={index}
+                  />
+                </FadeInOnScroll>
               ))}
             </div>
           </div>
