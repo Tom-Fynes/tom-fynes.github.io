@@ -248,6 +248,7 @@ export default function DashboardPage(): JSX.Element {
         <div className={styles.header}>
           <h1 className={styles.title}>Developer Metrics</h1>
           <p className={styles.subtitle}>Live GitHub activity and coding stats</p>
+          <div className={styles.gradientBar} />
         </div>
 
         {/* ── Meta bar ──────────────────────────────────────────────── */}

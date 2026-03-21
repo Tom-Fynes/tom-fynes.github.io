@@ -9,12 +9,16 @@ export interface PipelineGalleryItem extends PipelineMeta {
   techStack: string[];
   complexity: "Intermediate" | "Advanced";
   shortDescription: string;
+  emoji: string;
+  accentColor: string;
 }
 
 export const PIPELINES: PipelineGalleryItem[] = [
   {
     ...lakehouseMeta,
     id: "lakehouse",
+    emoji: "🏔️",
+    accentColor: "#AED6F1",
     techStack: ["Apache Iceberg", "Trino", "SQLMesh", "Airflow", "Debezium"],
     complexity: "Advanced",
     shortDescription:
@@ -23,6 +27,8 @@ export const PIPELINES: PipelineGalleryItem[] = [
   {
     ...gcpMeta,
     id: "gcp",
+    emoji: "☁️",
+    accentColor: "#a9e34b",
     techStack: ["BigQuery", "Dataflow", "dbt", "Pub/Sub", "Composer"],
     complexity: "Advanced",
     shortDescription:
@@ -31,6 +37,8 @@ export const PIPELINES: PipelineGalleryItem[] = [
   {
     ...streamingMeta,
     id: "streaming",
+    emoji: "⚡",
+    accentColor: "#ffa94d",
     techStack: ["Apache Kafka", "Apache Flink", "Iceberg", "Redis", "Elasticsearch"],
     complexity: "Advanced",
     shortDescription:
@@ -39,6 +47,8 @@ export const PIPELINES: PipelineGalleryItem[] = [
   {
     ...eltMeta,
     id: "elt",
+    emoji: "🔄",
+    accentColor: "#B7C3F3",
     techStack: ["Fivetran", "Snowflake", "dbt", "Census", "Tableau"],
     complexity: "Intermediate",
     shortDescription:

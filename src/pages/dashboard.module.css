@@ -23,6 +23,14 @@
   margin: 0;
 }
 
+.gradientBar {
+  width: 4rem;
+  height: 4px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #DD7596, #B7C3F3);
+  margin-top: 1rem;
+}
+
 /* ── Meta bar (timestamp + refresh) ────────────────────── */
 .metaBar {
   display: flex;
