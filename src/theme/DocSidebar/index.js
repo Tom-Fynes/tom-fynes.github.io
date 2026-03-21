@@ -165,6 +165,12 @@ function SidebarItems({ items, depth = 0 }) {
  *   path      — current page path
  *   onCollapse — callback to collapse sidebar (mobile)
  *   isHidden  — whether to hide the sidebar
+ *
+ * Layout note: DocRoot/Layout/Sidebar wraps this in a `.sidebarViewport` div
+ * that is already `position: sticky; top: 0`.  We add `pt-[72px]` (slightly
+ * more than our 64 px navbar) so the card clears the fixed navbar and sits
+ * flush below it.  We use `w-full px-3` instead of a fixed width so the card
+ * fills the container with breathing room on both sides.
  */
 export default function DocSidebar({ sidebar, path, onCollapse, isHidden }) {
   const prefersReducedMotion = useReducedMotion();
@@ -176,7 +182,7 @@ export default function DocSidebar({ sidebar, path, onCollapse, isHidden }) {
       initial={prefersReducedMotion ? { opacity: 0 } : { opacity: 0, y: 12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: prefersReducedMotion ? 0.1 : 0.45, ease: "easeOut" }}
-      className="sticky top-20 w-64 flex-shrink-0 self-start"
+      className="w-full px-3 pt-[72px] pb-4 self-start"
       aria-label="Documentation sidebar"
     >
       <div className="rounded-2xl shadow-2xl border border-[#DD7596]/25 bg-white/95 dark:bg-[#2d3748]/95 backdrop-blur-sm overflow-hidden">
@@ -188,7 +194,7 @@ export default function DocSidebar({ sidebar, path, onCollapse, isHidden }) {
           }}
         />
 
-        <nav className="p-3 space-y-1 max-h-[calc(100vh-120px)] overflow-y-auto scrollbar-thin">
+        <nav className="p-3 space-y-1 max-h-[calc(100vh-140px)] overflow-y-auto scrollbar-thin">
           <SidebarItems items={sidebar} depth={0} />
         </nav>
       </div>
