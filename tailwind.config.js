@@ -26,6 +26,10 @@ module.exports = {
         dark: "#111827", // optional alias
         light: "#e5e7eb",
       },
+      boxShadow: {
+        accent: "0 0 20px rgba(221, 117, 150, 0.4)",
+        "accent-lg": "0 0 40px rgba(221, 117, 150, 0.6)",
+      },
     },
   },
   plugins: [],
