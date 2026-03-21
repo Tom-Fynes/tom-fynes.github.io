@@ -8,54 +8,72 @@ const skills = [
   {
     title: "Python",
     img: "img/python.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #ffeaa7 0%, #74b9ff 40%, #0984e3 100%)",
     description:
       "Using as the main language for professional development. Effective in writing scalable, testable, and maintainable code.",
   },
   {
     title: "SQL Server",
     img: "img/sql_server.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #a29bfe 0%, #6c5ce7 50%, #74b9ff 100%)",
     description:
       "Proficient in all areas of SQL Server development & administration; performance tuning, indexing, backups, and restores.",
   },
   {
     title: "AWS",
     img: "img/aws.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #fdcb6e 0%, #e17055 50%, #d63031 100%)",
     description:
       "Certified cloud practitioner with experience working with AWS on enterprise projects.",
   },
   {
     title: "Trino",
     img: "img/trino.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #fd79a8 0%, #a29bfe 50%, #6c5ce7 100%)",
     description:
       "Experienced in creating and tuning Presto SQL statements for large-scale data analysis.",
   },
   {
     title: "Git & GitHub",
     img: "img/Git.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #fd79a8 0%, #e84393 50%, #d63031 100%)",
     description:
       "Skilled in Git and GitHub CLI with the ability to maintain repository source control effectively.",
   },
   {
     title: "SSRS",
     img: "img/sql_server.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #fdcb6e 0%, #f9ca24 40%, #e17055 100%)",
     description:
       "Competent in deploying, creating, and supporting SSRS reports along with maintaining and installing the product.",
   },
   {
     title: "PowerShell",
     img: "img/powershell.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #74b9ff 0%, #0984e3 50%, #6c5ce7 100%)",
     description:
       "Proficient in writing supportable and testable PowerShell scripts for automation and system tasks.",
   },
   {
     title: "C#",
     img: "img/csharp.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #fd79a8 0%, #fdcb6e 40%, #e17055 100%)",
     description:
       "Previous experience with Windows Forms and WPF development, along with C# scripting.",
   },
   {
     title: "SSIS",
     img: "img/sql_server.png",
+    gradient:
+      "radial-gradient(circle at 100% 107%, #00cec9 0%, #55efc4 50%, #00b894 100%)",
     description:
       "Skilled in creating, deploying, and maintaining SSIS packages for ETL processes.",
   },
@@ -98,11 +116,12 @@ function SkillsMain() {
           animate="show"
         >
           {skills.map((skill) => (
-            <motion.div key={skill.title} variants={cardVariants} style={{ width: "100%" }}>
+            <motion.div key={skill.title} variants={cardVariants}>
               <SkillCard
                 title={skill.title}
                 img={skill.img}
                 description={skill.description}
+                gradient={skill.gradient}
               />
             </motion.div>
           ))}
@@ -121,3 +140,4 @@ export default function Skills() {
     </Layout>
   );
 }
+

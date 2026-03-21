@@ -1,355 +1,177 @@
-/* SkillCard — modern 3D tilt card with cyber/neon aesthetics */
+/* SkillCard — based on Uiverse.io by Smit-Prajapati, adapted to site theme */
 
-.container {
-  position: relative;
-  width: 100%;
-  max-width: 260px;
-  height: 280px;
-  margin: 0 auto;
-  transition: width 200ms, height 200ms;
-  perspective: 800px;
-}
-
-.container:active {
-  width: 250px;
-  height: 270px;
-}
-
-/* ── Card face ── */
 .card {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* ── Gradient background ── */
+.background {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 20px;
-  transition: transform 125ms ease-in-out, filter 300ms, box-shadow 300ms;
-  background: linear-gradient(145deg, #2a3542, #35475a);
-  border: 1.5px solid rgba(183, 195, 243, 0.12);
-  overflow: hidden;
-  box-shadow:
-    0 0 25px rgba(0, 0, 0, 0.4),
-    inset 0 0 20px rgba(0, 0, 0, 0.25);
-  will-change: transform;
 }
 
-.card.hovered {
-  filter: brightness(1.08);
-  box-shadow:
-    0 0 35px rgba(221, 117, 150, 0.18),
-    0 0 60px rgba(183, 195, 243, 0.08),
-    inset 0 0 20px rgba(0, 0, 0, 0.2);
+/* ── Centred logo that moves to bottom-right on hover ── */
+.logo {
+  position: absolute;
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%, 50%);
+  transition: all 0.6s ease-in-out;
+  z-index: 10;
 }
 
-/* ── Icon area ── */
-.iconWrap {
-  position: relative;
-  z-index: 5;
-  margin-top: 36px;
-  width: 64px;
-  height: 64px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1.5px solid rgba(183, 195, 243, 0.18);
-  box-shadow: 0 0 20px rgba(221, 117, 150, 0.12);
-  transition: box-shadow 300ms, transform 300ms;
-}
-
-.card.hovered .iconWrap {
-  box-shadow: 0 0 28px rgba(221, 117, 150, 0.4);
-  transform: scale(1.08);
-}
-
-.icon {
-  width: 38px;
-  height: 38px;
+.logoImg {
+  width: 55px;
+  height: 55px;
   object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
-/* ── Title ── */
-.title {
-  position: relative;
-  z-index: 5;
-  margin-top: 18px;
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-align: center;
-  text-transform: uppercase;
-  background: linear-gradient(45deg, #DD7596, #B7C3F3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 10px rgba(221, 117, 150, 0.35));
-  transition: transform 300ms, opacity 300ms;
-}
-
-.card.hovered .title {
-  transform: translateY(-4px);
-}
-
-/* ── Description ── */
-.description {
-  position: relative;
-  z-index: 5;
-  margin: 10px 20px 0;
-  font-size: 12px;
-  line-height: 1.6;
-  letter-spacing: 0.4px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.58);
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-}
-
-.card.hovered .description {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* ── Glowing radial blobs ── */
-.glows {
+/* ── Frosted-glass panel shared base ── */
+.box {
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
+  padding: 10px;
+  text-align: right;
+  background: rgba(255, 255, 255, 0.389);
+  border-top: 2px solid rgb(255, 255, 255);
+  border-right: 1px solid white;
+  border-radius: 10% 13% 42% 0% / 10% 12% 75% 0%;
+  box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
+  transform-origin: bottom left;
+  transition: all 1s ease-in-out;
 }
 
-.glow {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(18px);
-  opacity: 0;
-  transition: opacity 400ms ease;
-}
-
-.card.hovered .glow {
-  opacity: 1;
-}
-
-.glow1 {
-  width: 110px;
-  height: 110px;
-  top: -25px;
-  left: -25px;
-  background: radial-gradient(circle at center, rgba(221, 117, 150, 0.35) 0%, transparent 70%);
-}
-
-.glow2 {
-  width: 90px;
-  height: 90px;
-  bottom: -20px;
-  right: -20px;
-  background: radial-gradient(circle at center, rgba(183, 195, 243, 0.3) 0%, transparent 70%);
-}
-
-.glow3 {
-  width: 80px;
-  height: 80px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle at center, rgba(159, 126, 190, 0.2) 0%, transparent 70%);
-}
-
-/* ── Mouse-follow glow overlay ── */
-.glare {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  border-radius: 20px;
-  background: radial-gradient(
-    circle at var(--mx, 50%) var(--my, 50%),
-    rgba(255, 255, 255, 0.07) 0%,
-    transparent 60%
-  );
-  opacity: 0;
-  transition: opacity 300ms;
-}
-
-.card.hovered .glare {
-  opacity: 1;
-}
-
-/* ── Scan line ── */
-.scanLine {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(183, 195, 243, 0.07) 50%,
-    transparent 100%
-  );
-  transform: translateY(-100%);
-  animation: scanMove 3s linear infinite;
-}
-
-@keyframes scanMove {
-  0%   { transform: translateY(-100%); }
-  100% { transform: translateY(200%); }
-}
-
-/* ── Cyber horizontal lines ── */
-.cyberLines {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.cyberLines span {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(183, 195, 243, 0.22), transparent);
-}
-
-.cyberLines span:nth-child(1) {
-  top: 22%;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: lineGrow 3.5s linear infinite;
-}
-
-.cyberLines span:nth-child(2) {
-  top: 44%;
-  transform: scaleX(0);
-  transform-origin: right;
-  animation: lineGrow 3.5s linear infinite 1.2s;
-}
-
-.cyberLines span:nth-child(3) {
-  top: 66%;
-  transform: scaleX(0);
-  transform-origin: left;
-  animation: lineGrow 3.5s linear infinite 2.3s;
-}
-
-.cyberLines span:nth-child(4) {
-  top: 84%;
-  transform: scaleX(0);
-  transform-origin: right;
-  animation: lineGrow 3.5s linear infinite 0.7s;
-}
-
-@keyframes lineGrow {
-  0%   { transform: scaleX(0); opacity: 0; }
-  30%  { opacity: 1; }
-  60%  { transform: scaleX(1); opacity: 0.8; }
-  100% { transform: scaleX(0); opacity: 0; }
-}
-
-/* ── Corner brackets ── */
-.corners {
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  pointer-events: none;
-}
-
-.corners span {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border: 2px solid rgba(183, 195, 243, 0.3);
-  transition: border-color 300ms, box-shadow 300ms;
-}
-
-.card.hovered .corners span {
-  border-color: rgba(221, 117, 150, 0.75);
-  box-shadow: 0 0 8px rgba(221, 117, 150, 0.4);
-}
-
-.corners span:nth-child(1) {
-  top: 10px; left: 10px;
-  border-right: 0; border-bottom: 0;
-}
-.corners span:nth-child(2) {
-  top: 10px; right: 10px;
-  border-left: 0; border-bottom: 0;
-}
-.corners span:nth-child(3) {
-  bottom: 10px; left: 10px;
-  border-right: 0; border-top: 0;
-}
-.corners span:nth-child(4) {
-  bottom: 10px; right: 10px;
-  border-left: 0; border-top: 0;
-}
-
-/* ── Floating particles ── */
-.particles {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  pointer-events: none;
-}
-
-.particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: #DD7596;
-  opacity: 0;
-}
-
-.card.hovered .particle {
-  animation: particleFloat 2s ease-in-out infinite;
-}
-
-.card.hovered .particle:nth-child(1) { top: 40%; left: 20%; animation-delay: 0s;    --px: 30px;  --py: -30px; }
-.card.hovered .particle:nth-child(2) { top: 60%; right: 20%; animation-delay: 0.3s; --px: -30px; --py: -28px; }
-.card.hovered .particle:nth-child(3) { top: 20%; left: 45%; animation-delay: 0.6s; --px: 15px;  --py: 30px; }
-.card.hovered .particle:nth-child(4) { top: 75%; right: 40%; animation-delay: 0.9s; --px: -18px; --py: 25px; }
-.card.hovered .particle:nth-child(5) { top: 30%; left: 65%; animation-delay: 0.15s; --px: 28px; --py: 15px; }
-.card.hovered .particle:nth-child(6) { top: 65%; right: 60%; animation-delay: 0.45s; --px: -25px; --py: 20px; }
-
-@keyframes particleFloat {
-  0%   { transform: translate(0, 0);                          opacity: 0; }
-  20%  {                                                       opacity: 1; }
-  80%  {                                                       opacity: 0.7; }
-  100% { transform: translate(var(--px, 20px), var(--py, -20px)); opacity: 0; }
-}
-
-/* ── Card inner glow on hover ── */
-.card::before {
+.box::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: 0;
-  border-radius: 20px;
-  background: radial-gradient(
-    circle at 50% 50%,
-    rgba(221, 117, 150, 0.08) 0%,
-    rgba(183, 195, 243, 0.04) 50%,
-    transparent 100%
-  );
-  filter: blur(20px);
+  border-radius: inherit;
   opacity: 0;
-  transition: opacity 300ms;
+  transition: all 0.5s ease-in-out;
 }
 
-.card.hovered::before {
+/* ── Four nested panels (largest → smallest) ── */
+.box1 {
+  width: 70%;
+  height: 70%;
+  bottom: -70%;
+  left: -70%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.box1::before {
+  background: radial-gradient(
+    circle at 30% 107%,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.05) 90%
+  );
+}
+
+.box2 {
+  width: 50%;
+  height: 50%;
+  bottom: -50%;
+  left: -50%;
+  transition-delay: 0.2s;
+  z-index: 2;
+}
+
+.box2::before {
+  background: radial-gradient(
+    circle at 30% 107%,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.08) 90%
+  );
+}
+
+.box3 {
+  width: 30%;
+  height: 30%;
+  bottom: -30%;
+  left: -30%;
+  transition-delay: 0.4s;
+  z-index: 3;
+}
+
+.box3::before {
+  background: radial-gradient(
+    circle at 30% 107%,
+    rgba(255, 255, 255, 0.25) 0%,
+    rgba(255, 255, 255, 0.1) 90%
+  );
+}
+
+.box4 {
+  width: 10%;
+  height: 10%;
+  bottom: -10%;
+  left: -10%;
+  transition-delay: 0.6s;
+  z-index: 4;
+}
+
+/* ── Hover: scale card up, slide panels in, move logo ── */
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card:hover .box {
+  bottom: -1px;
+  left: -1px;
+}
+
+.card:hover .box::before {
   opacity: 1;
 }
 
-/* ── Responsive grid wrapper ── */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 2rem;
-  justify-items: center;
+.card:hover .logo {
+  transform: translate(0, 0);
+  bottom: 20px;
+  right: 20px;
 }
+
+/* ── Text content inside box1 ── */
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 5px 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.description {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.5;
+  text-align: right;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* ── Responsive flex grid wrapper ── */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
