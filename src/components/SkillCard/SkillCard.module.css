@@ -35,94 +35,33 @@
   filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
 }
 
-/* ── Frosted-glass panel shared base ── */
+/* ── Frosted-glass panel ── */
 .box {
   position: absolute;
-  padding: 10px;
+  padding: 14px 16px;
   text-align: right;
-  background: rgba(255, 255, 255, 0.389);
+  background: rgba(255, 255, 255, 0.55);
   border-top: 2px solid rgb(255, 255, 255);
   border-right: 1px solid white;
   border-radius: 10% 13% 42% 0% / 10% 12% 75% 0%;
   box-shadow: rgba(100, 100, 111, 0.364) -7px 7px 29px 0px;
   transform-origin: bottom left;
   transition: all 1s ease-in-out;
-}
-
-.box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  opacity: 0;
-  transition: all 0.5s ease-in-out;
-}
-
-/* ── Four nested panels (largest → smallest) ── */
-.box1 {
-  width: 70%;
-  height: 70%;
-  bottom: -70%;
-  left: -70%;
+  /* single large panel */
+  width: 85%;
+  height: 85%;
+  bottom: -85%;
+  left: -85%;
   z-index: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: flex-end;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
-.box1::before {
-  background: radial-gradient(
-    circle at 30% 107%,
-    rgba(255, 255, 255, 0.15) 0%,
-    rgba(255, 255, 255, 0.05) 90%
-  );
-}
-
-.box2 {
-  width: 50%;
-  height: 50%;
-  bottom: -50%;
-  left: -50%;
-  transition-delay: 0.2s;
-  z-index: 2;
-}
-
-.box2::before {
-  background: radial-gradient(
-    circle at 30% 107%,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.08) 90%
-  );
-}
-
-.box3 {
-  width: 30%;
-  height: 30%;
-  bottom: -30%;
-  left: -30%;
-  transition-delay: 0.4s;
-  z-index: 3;
-}
-
-.box3::before {
-  background: radial-gradient(
-    circle at 30% 107%,
-    rgba(255, 255, 255, 0.25) 0%,
-    rgba(255, 255, 255, 0.1) 90%
-  );
-}
-
-.box4 {
-  width: 10%;
-  height: 10%;
-  bottom: -10%;
-  left: -10%;
-  transition-delay: 0.6s;
-  z-index: 4;
-}
-
-/* ── Hover: scale card up, slide panels in, move logo ── */
+/* ── Hover: scale card up, slide panel in, move logo ── */
 .card:hover {
   transform: scale(1.1);
 }
@@ -132,23 +71,19 @@
   left: -1px;
 }
 
-.card:hover .box::before {
-  opacity: 1;
-}
-
 .card:hover .logo {
   transform: translate(0, 0);
-  bottom: 20px;
-  right: 20px;
+  bottom: 16px;
+  right: 16px;
 }
 
-/* ── Text content inside box1 ── */
+/* ── Text content inside panel ── */
 .title {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
-  color: white;
-  margin: 0 0 5px 0;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  color: #1a1a2e;
+  margin: 0 0 6px 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.4);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -156,15 +91,36 @@
 }
 
 .description {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.9);
+  font-size: 11.5px;
+  color: #2c2c3e;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.55;
   text-align: right;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   overflow: hidden;
+}
+
+/* ── Dark mode overrides ── */
+html[data-theme='dark'] .card {
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 7px 29px 0px;
+}
+
+html[data-theme='dark'] .box {
+  background: rgba(20, 20, 35, 0.72);
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.5) -7px 7px 29px 0px;
+}
+
+html[data-theme='dark'] .title {
+  color: #f0f0ff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+html[data-theme='dark'] .description {
+  color: rgba(220, 220, 255, 0.85);
 }
 
 /* ── Responsive flex grid wrapper ── */
