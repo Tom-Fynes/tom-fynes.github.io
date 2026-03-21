@@ -283,17 +283,20 @@ function HamburgerIcon({ isOpen }) {
     >
       <motion.line
         x1="3" y1="6" x2="19" y2="6"
-        animate={isOpen ? { y: 5, rotate: 45, x2: 19, opacity: 1 } : { y: 0, rotate: 0, opacity: 1 }}
+        animate={isOpen ? { y: 5, rotate: 45 } : { y: 0, rotate: 0 }}
+        style={{ originX: "11px", originY: "6px" }}
         transition={{ duration }}
       />
       <motion.line
         x1="3" y1="11" x2="19" y2="11"
         animate={isOpen ? { opacity: 0, scaleX: 0 } : { opacity: 1, scaleX: 1 }}
+        style={{ originX: "11px", originY: "11px" }}
         transition={{ duration }}
       />
       <motion.line
         x1="3" y1="16" x2="19" y2="16"
-        animate={isOpen ? { y: -5, rotate: -45, opacity: 1 } : { y: 0, rotate: 0, opacity: 1 }}
+        animate={isOpen ? { y: -5, rotate: -45 } : { y: 0, rotate: 0 }}
+        style={{ originX: "11px", originY: "16px" }}
         transition={{ duration }}
       />
     </svg>
@@ -356,7 +359,7 @@ export default function Navbar() {
             ? {}
             : { height: navHeight }
         }
-        className="fixed top-0 left-0 right-0 z-30 border-b border-[#DD7596]/20"
+        className="navbar fixed top-0 left-0 right-0 z-30 border-b border-[#DD7596]/20"
         aria-label="Main navigation"
       >
         {/* frosted glass bg layer */}
