@@ -24,8 +24,9 @@
   right: 50%;
   bottom: 50%;
   transform: translate(50%, 50%);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out, opacity 0.4s ease-in-out;
   z-index: 10;
+  opacity: 1;
 }
 
 .logoImg {
@@ -75,6 +76,7 @@
   transform: translate(0, 0);
   bottom: 16px;
   right: 16px;
+  opacity: 0;
 }
 
 /* ── Text content inside panel ── */
@@ -121,6 +123,21 @@ html[data-theme='dark'] .title {
 
 html[data-theme='dark'] .description {
   color: rgba(220, 220, 255, 0.85);
+}
+
+/* ── Text badge (used when no distinct icon exists) ── */
+.textBadge {
+  font-size: 20px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
 /* ── Responsive flex grid wrapper ── */

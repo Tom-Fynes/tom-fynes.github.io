@@ -1,13 +1,17 @@
 import React from "react";
 import styles from "./SkillCard.module.css";
 
-export default function SkillCard({ title, img, description, gradient }) {
+export default function SkillCard({ title, img, textBadge, description, gradient }) {
   return (
     <div className={styles.card}>
       <div className={styles.background} style={{ background: gradient }} />
 
       <div className={styles.logo}>
-        <img src={img} alt={title} className={styles.logoImg} />
+        {img ? (
+          <img src={img} alt={title} className={styles.logoImg} />
+        ) : (
+          <span className={styles.textBadge}>{textBadge}</span>
+        )}
       </div>
 
       <div className={styles.box}>
