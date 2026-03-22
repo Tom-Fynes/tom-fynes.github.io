@@ -2,6 +2,12 @@
 import React, { useState } from "react";
 // Import the formatter function
 import { format } from "sql-formatter";
+import { motion } from "framer-motion";
+import {
+  FadeInOnScroll,
+  StaggerContainer,
+  StaggerItem,
+} from "@site/src/components/animations";
 import styles from "./SqlQueryOptimizer.module.css";
 
 const DATABASE_TYPES = [
@@ -290,73 +296,106 @@ function SqlQueryOptimizer() {
     setOptimizationResults(suggestions);
   };
 
+  const resultIcons = {
+    info: "ℹ️",
+    warning: "⚠️",
+    error: "✕",
+    success: "✓",
+  };
+
   return (
     <div className={styles.optimizerContainer}>
-      <p className={styles.introText}>
-        Input your SQL query, select a database type, and get instant
-        optimization and formatting tools.
-      </p>
+      {/* ── Hero ── */}
+      <FadeInOnScroll direction="down">
+        <div className={styles.hero}>
+          <h1 className={styles.heroTitle}>SQL Query Optimiser</h1>
+          <p className={styles.heroSubtitle}>
+            Input your SQL query, select a database type, and get instant
+            optimization and formatting tools.
+          </p>
+        </div>
+      </FadeInOnScroll>
 
+      {/* ── Database type pill selector ── */}
       <div className={styles.inputGroup}>
-        <label htmlFor="dbTypeSelect" className={styles.label}>
-          Select Database Type:
-        </label>
-        <select
-          id="dbTypeSelect"
-          className={styles.select}
-          value={dbType}
-          onChange={(e) => {
-            setDbType(e.target.value);
-            setOptimizationResults([]);
-          }}
-        >
+        <span className={styles.label}>Select Database Type:</span>
+        <StaggerContainer className={styles.pillGroup} staggerDelay={0.06}>
           {DATABASE_TYPES.map((db) => (
-            <option key={db.value} value={db.value}>
-              {db.label}
-            </option>
+            <StaggerItem key={db.value}>
+              <motion.button
+                className={`${styles.pill} ${
+                  dbType === db.value ? styles.pillActive : ""
+                }`}
+                onClick={() => {
+                  setDbType(db.value);
+                  setOptimizationResults([]);
+                }}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.96 }}
+                type="button"
+              >
+                {db.label}
+              </motion.button>
+            </StaggerItem>
           ))}
-        </select>
+        </StaggerContainer>
       </div>
 
+      {/* ── SQL textarea ── */}
       <div className={styles.inputGroup}>
-        <label htmlFor="sqlQuery" className={styles.label}>
-          Your SQL Query:
-        </label>
-        <textarea
-          id="sqlQuery"
-          className={styles.textarea}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="e.g., SELECT * FROM users WHERE age > 30 ORDER BY registration_date DESC;"
-          rows="10"
-        />
+        <div className={styles.textareaWrapper}>
+          <span className={styles.textareaLabel}>SQL Input</span>
+          <textarea
+            id="sqlQuery"
+            className={styles.textarea}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="e.g., SELECT * FROM users WHERE age > 30 ORDER BY registration_date DESC;"
+            rows="10"
+          />
+        </div>
       </div>
 
+      {/* ── Action buttons ── */}
       <div className={styles.buttonContainer}>
-        <button className={styles.button} onClick={analyzeQuery}>
-          Analyze Query
-        </button>
-        <button
-          className={`${styles.button} ${styles.formatButton}`}
+        <motion.button
+          className={styles.buttonPrimary}
+          onClick={analyzeQuery}
+          whileHover={{ scale: 1.04, boxShadow: "0 0 24px rgba(221,117,150,0.45)" }}
+          whileTap={{ scale: 0.97 }}
+          type="button"
+        >
+          Analyse Query
+        </motion.button>
+        <motion.button
+          className={styles.buttonGhost}
           onClick={formatQuery}
+          whileHover={{ scale: 1.04 }}
+          whileTap={{ scale: 0.97 }}
+          type="button"
         >
           Format Query
-        </button>
+        </motion.button>
       </div>
 
+      {/* ── Results panel ── */}
       {optimizationResults.length > 0 && (
         <div className={styles.resultsContainer}>
-          <h3>Optimization Suggestions:</h3>
-          <ul className={styles.resultsList}>
+          <h3 className={styles.resultsHeading}>Optimisation Suggestions:</h3>
+          <StaggerContainer className={styles.resultsList} staggerDelay={0.08}>
             {optimizationResults.map((result, index) => (
-              <li
-                key={index}
-                className={`${styles.resultItem} ${styles[result.type]}`}
-              >
-                {result.text}
-              </li>
+              <StaggerItem key={index}>
+                <div
+                  className={`${styles.resultItem} ${styles[result.type]}`}
+                >
+                  <span className={styles.resultIcon}>
+                    {resultIcons[result.type]}
+                  </span>
+                  <span>{result.text}</span>
+                </div>
+              </StaggerItem>
             ))}
-          </ul>
+          </StaggerContainer>
         </div>
       )}
     </div>
