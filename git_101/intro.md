@@ -46,96 +46,92 @@ If you like this course and want to support the project, you can do so here:
 
 ### Grade 3: Collaborating with GitHub
 
-* [GitHub](/git_101/Grade%203/GitHub%20Account%20Creation): Creating a GitHub account.
+* [**GitHub**](/git_101/Grade%203/GitHub%20Account%20Creation): Creating a GitHub account.
 
-* Generating SSH keys and adding them to GitHub.
+* [**SSH Keys**](/git_101/Grade%203/SSH%20Keys): Generating SSH keys and adding them to GitHub.
 
-* Connecting Local Repository to GitHub:
+* [**Connecting to GitHub**](/git_101/Grade%203/Connecting%20to%20GitHub): Connecting Local Repository to GitHub.
 
-* Adding a remote with `git remote add`.
+* [**Git Remote Add**](/git_101/Grade%203/Git%20Remote%20Add): Adding a remote with `git remote add`.
 
-* Pushing changes with `git push`.
+* [**Git Push**](/git_101/Grade%203/Git%20Push): Pushing changes with `git push`.
 
-* Using `git fetch` to retrieve changes.
+* [**Git Fetch**](/git_101/Grade%203/Git%20Fetch): Using `git fetch` to retrieve changes.
 
-* Using `git pull` to fetch and merge changes.
+* [**Git Pull**](/git_101/Grade%203/Git%20Pull): Using `git pull` to fetch and merge changes.
 
-* Understanding Remotes: Managing multiple remotes and tracking branches.
+* [**Understanding Remotes**](/git_101/Grade%203/Understanding%20Remotes): Managing multiple remotes and tracking branches.
 
 
 ### Grade 4: Branching and Merging
 
-* Creating branches with `git branch`.
+* [**Git Branch**](/git_101/Grade%204/Git%20Branch): Creating branches with `git branch`.
 
-* Switching branches with `git checkout`.
+* [**Git Checkout**](/git_101/Grade%204/Git%20Checkout): Switching branches with `git checkout`.
 
-* Merging changes with `git merge`.
+* [**Git Merge**](/git_101/Grade%204/Git%20Merge): Merging changes with `git merge`.
 
-* Resolving merge conflicts.
+* [**Resolving Merge Conflicts**](/git_101/Grade%204/Resolving%20Merge%20Conflicts): Resolving merge conflicts.
 
-* Branch Management:
+* [**Branch Management**](/git_101/Grade%204/Branch%20Management): Deleting and renaming branches.
 
-* Deleting branches.
-
-* Renaming branches.
-
-* Best Practices: Using feature branches and pull requests.
+* [**Branch Best Practices**](/git_101/Grade%204/Branch%20Best%20Practices): Using feature branches and pull requests.
 
 ### Grade 5: Inspecting and Comparing Changes
 
-* Using `git diff` to compare changes.
+* [**Git Diff**](/git_101/Grade%205/Git%20Diff): Using `git diff` to compare changes.
 
-* Comparing branches and commits.
+* [**Comparing Branches**](/git_101/Grade%205/Comparing%20Branches): Comparing branches and commits.
 
-* What is HEAD in Git?
+* [**What is HEAD**](/git_101/Grade%205/What%20is%20HEAD): What is HEAD in Git?
 
-* Navigating with git checkout.
+* [**Navigating with Checkout**](/git_101/Grade%205/Navigating%20with%20Checkout): Navigating with git checkout.
 
-* Using git revert to undo commits.
+* [**Git Revert**](/git_101/Grade%205/Git%20Revert): Using git revert to undo commits.
 
-* Using git reset to unstage or undo changes.
+* [**Git Reset**](/git_101/Grade%205/Git%20Reset): Using git reset to unstage or undo changes.
 
 
 ### Grade 6: Advanced Git Techniques
 
-* Saving work-in-progress with `git stash`.
+* [**Git Stash**](/git_101/Grade%206/Git%20Stash): Saving work-in-progress with `git stash`.
 
-* Applying stashed changes.
+* [**Applying Stash**](/git_101/Grade%206/Applying%20Stash): Applying stashed changes.
 
-* Creating tags with `git tag`.
+* [**Git Tag**](/git_101/Grade%206/Git%20Tag): Creating tags with `git tag`.
 
-* Pushing tags to remote repositories.
+* [**Pushing Tags**](/git_101/Grade%206/Pushing%20Tags): Pushing tags to remote repositories.
 
-* Applying specific commits with `git cherry-pick`.
+* [**Git Cherry-Pick**](/git_101/Grade%206/Git%20Cherry-Pick): Applying specific commits with `git cherry-pick`.
 
-* Rewriting commit history with git rebase`.
+* [**Git Rebase**](/git_101/Grade%206/Git%20Rebase): Rewriting commit history with `git rebase`.
 
-* Ignoring Files: Using .`gitignore` to exclude files from tracking.
+* [**Gitignore**](/git_101/Grade%206/Gitignore): Ignoring Files: Using `.gitignore` to exclude files from tracking.
 
 ### Grade 7: Troubleshooting and Optimization
 
-* Identifying and resolving merge conflicts.
+* [**Advanced Merge Conflicts**](/git_101/Grade%207/Advanced%20Merge%20Conflicts): Identifying and resolving merge conflicts.
 
-* Using tools like git mergetool.
+* [**Git Mergetool**](/git_101/Grade%207/Git%20Mergetool): Using tools like git mergetool.
 
-* Removing untracked files with `git clean`.
+* [**Git Clean**](/git_101/Grade%207/Git%20Clean): Removing untracked files with `git clean`.
 
-* Pruning branches with `git prune`.
+* [**Git Prune**](/git_101/Grade%207/Git%20Prune): Pruning branches with `git prune`.
 
-* Compressing repository with `git gc`.
+* [**Git GC**](/git_101/Grade%207/Git%20GC): Compressing repository with `git gc`.
 
-* Analyzing repository with `git fsck`.
+* [**Git Fsck**](/git_101/Grade%207/Git%20Fsck): Analyzing repository with `git fsck`.
 
 ### Grade 8: Git in Real-World Scenarios
 
-* Understanding Gitflow and other branching strategies.
+* [**Gitflow**](/git_101/Grade%208/Gitflow): Understanding Gitflow and other branching strategies.
 
-* Using pull requests for code reviews.
+* [**Pull Requests**](/git_101/Grade%208/Pull%20Requests): Using pull requests for code reviews.
 
-* Setting up continuous integration with GitHub Actions.
+* [**GitHub Actions CI**](/git_101/Grade%208/GitHub%20Actions%20CI): Setting up continuous integration with GitHub Actions.
 
-* Automating deployments.
+* [**Automating Deployments**](/git_101/Grade%208/Automating%20Deployments): Automating deployments.
 
-* Managing sensitive data and .gitignore.
+* [**Sensitive Data**](/git_101/Grade%208/Sensitive%20Data): Managing sensitive data and .gitignore.
 
-* Signing commits with GPG.
+* [**Signing Commits**](/git_101/Grade%208/Signing%20Commits): Signing commits with GPG.
