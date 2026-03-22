@@ -479,3 +479,121 @@ h2 {
   color: #ffffff;
   text-transform: uppercase;
 }
+
+/* ============================================================
+   Blog — custom styles
+   Added below existing styles; do NOT remove anything above.
+   ============================================================ */
+
+/* ── Blog hero background — animated gradient mesh ─────────── */
+@keyframes blogGradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.blog-hero-bg {
+  background: linear-gradient(
+    -45deg,
+    rgba(221, 117, 150, 0.12),
+    rgba(207,  18,  89, 0.08),
+    rgba(183, 195, 243, 0.10),
+    rgba(159, 126, 190, 0.10),
+    rgba(221, 117, 150, 0.08)
+  );
+  background-size: 400% 400%;
+  animation: blogGradientShift 14s ease infinite;
+  border: 1px solid rgba(221, 117, 150, 0.15);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blog-hero-bg {
+    animation: none;
+    background: rgba(221, 117, 150, 0.06);
+  }
+}
+
+/* ── Blog card stretched link (avoids nested <a> issue) ─────────── */
+
+/*
+ * Stretched-link pattern: the title link's ::after pseudo-element covers
+ * the whole card (which must be position:relative). Tag pills sit above it
+ * with position:relative + z-index:2.
+ */
+.blog-card-stretched-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blog-card-stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.blog-card-stretched-link:hover {
+  background: linear-gradient(
+    135deg,
+    var(--ifm-color-primary),
+    var(--ifm-color-primary-darkest)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Blog post content — scoped to .blog-post-content ───────── */
+
+/* Blockquotes */
+.blog-post-content blockquote {
+  border-left: 4px solid var(--ifm-color-primary);
+  background: rgba(221, 117, 150, 0.06);
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+
+[data-theme='dark'] .blog-post-content blockquote {
+  background: rgba(221, 117, 150, 0.08);
+}
+
+/* Inline code background pill */
+.blog-post-content :not(pre) > code {
+  background: rgba(135, 22, 241, 0.10);
+  border-radius: 4px;
+  padding: 0.1em 0.4em;
+  font-size: 0.875em;
+}
+
+[data-theme='dark'] .blog-post-content :not(pre) > code {
+  background: rgba(135, 22, 241, 0.15);
+}
+
+/* Code block accent top border */
+.blog-post-content .theme-code-block,
+.blog-post-content pre[class*='language-'] {
+  border-top: 3px solid var(--ifm-color-primary);
+  border-radius: 0 0 8px 8px;
+}
+
+/* H2 accent left bar */
+.blog-post-content h2 {
+  border-left: 4px solid var(--ifm-color-primary);
+  padding-left: 0.85rem;
+  margin-left: -0.85rem;
+}
+
+/* Links inside blog post */
+.blog-post-content a:not([class]) {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+  text-decoration-color: rgba(221, 117, 150, 0.4);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+}
+
+.blog-post-content a:not([class]):hover {
+  color: var(--ifm-color-primary-darkest);
+  text-decoration-color: var(--ifm-color-primary-darkest);
+}
