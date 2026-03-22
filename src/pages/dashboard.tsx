@@ -3,6 +3,7 @@
 
 import React, { useMemo, useState, useCallback } from "react";
 import Layout from "@theme/Layout";
+import { motion } from "framer-motion";
 import {
   LineChart,
   Line,
@@ -41,6 +42,11 @@ import {
   COMMIT_CHART_TICK_INTERVAL,
   WAKATIME_EMBEDS,
 } from "../config/dashboardConfig";
+import {
+  FadeInOnScroll,
+  StaggerContainer,
+  StaggerItem,
+} from "../components/animations";
 
 import styles from "./dashboard.module.css";
 
@@ -86,16 +92,16 @@ function cssVar(name: string, fallback: string): string {
   );
 }
 
-// Donut chart colour palette — works in both light and dark mode
+// Donut chart colour palette — site palette
 const LANG_COLORS = [
-  "#4dabf7",
-  "#74c0fc",
-  "#a9e34b",
-  "#ffd43b",
-  "#ff8787",
-  "#da77f2",
-  "#63e6be",
-  "#ffa94d",
+  "#DD7596",
+  "#B7C3F3",
+  "#83AFDF",
+  "#ECDA90",
+  "#9F7EBE",
+  "#63C5EA",
+  "#CF1259",
+  "#8716f1",
 ];
 
 // ── Skeleton loading ───────────────────────────────────────────────────────
@@ -128,17 +134,18 @@ interface TooltipProps {
 function ThemedTooltip({ active, payload, label }: TooltipProps): JSX.Element | null {
   if (!active || !payload?.length) return null;
   const bg = cssVar("--ifm-background-color", "#fff");
-  const border = cssVar("--ifm-color-emphasis-300", "#ddd");
+  const border = cssVar("--ifm-color-primary", "#DD7596");
   const color = cssVar("--ifm-font-color-base", "#333");
   return (
     <div
       style={{
         background: bg,
         border: `1px solid ${border}`,
-        borderRadius: 6,
+        borderRadius: 8,
         padding: "0.5rem 0.75rem",
         color,
         fontSize: "0.85rem",
+        fontFamily: "Inter, system-ui, sans-serif",
       }}
     >
       {label && <p style={{ margin: 0, fontWeight: 600 }}>{label}</p>}
@@ -244,29 +251,43 @@ export default function DashboardPage(): JSX.Element {
       description="Live GitHub activity and coding stats"
     >
       <main className={styles.page}>
-        {/* ── Header ──────────────────────────────────────────────── */}
-        <div className={styles.header}>
-          <h1 className={styles.title}>Developer Metrics</h1>
-          <p className={styles.subtitle}>Live GitHub activity and coding stats</p>
+        {/* ── Hero banner ──────────────────────────────────────────────── */}
+        <div className={`${styles.heroBanner} blog-hero-bg`}>
+          <FadeInOnScroll direction="down">
+            <h1 className={styles.heroTitle}>Developer Metrics</h1>
+            <p className={styles.heroSubtitle}>Live GitHub activity and coding stats</p>
+          </FadeInOnScroll>
           <div className={styles.gradientBar} />
         </div>
 
         {/* ── Meta bar ──────────────────────────────────────────────── */}
         <div className={styles.metaBar}>
-          <span>
+          <span className={styles.metaTimestamp}>
             {lastUpdated
               ? `Last updated: ${lastUpdated.toLocaleTimeString()}`
               : "Fetching data…"}
           </span>
-          <button
+          <motion.button
             className={styles.refreshBtn}
             onClick={refetch}
             disabled={isLoading}
             aria-label="Refresh GitHub data"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
           >
-            <RefreshCw size={14} />
+            <motion.span
+              animate={{ rotate: isLoading ? 360 : 0 }}
+              transition={
+                isLoading
+                  ? { repeat: Infinity, duration: 1, ease: "linear" }
+                  : { duration: 0.3 }
+              }
+              style={{ display: "inline-flex", alignItems: "center" }}
+            >
+              <RefreshCw size={14} />
+            </motion.span>
             {isLoading ? "Loading…" : "Refresh"}
-          </button>
+          </motion.button>
         </div>
 
         {/* ── Status banners ────────────────────────────────────────── */}
@@ -303,226 +324,244 @@ export default function DashboardPage(): JSX.Element {
         {!isLoading && kpis && (
           <>
             {/* Row 1 — Stat cards */}
-            <div className={styles.statGrid}>
-              <StatCard
-                icon={<BookOpen size={28} />}
-                value={kpis.totalRepos}
-                label="Public Repos"
-              />
-              <StatCard
-                icon={<Star size={28} />}
-                value={kpis.totalStars}
-                label="Total Stars"
-              />
-              <StatCard
-                icon={<GitFork size={28} />}
-                value={kpis.totalForks}
-                label="Total Forks"
-              />
-              <StatCard
-                icon={<Code2 size={28} />}
-                value={kpis.topLang}
-                label="Top Language"
-              />
-            </div>
+            <StaggerContainer className={styles.statGrid} staggerDelay={0.1}>
+              <StaggerItem>
+                <StatCard
+                  icon={<BookOpen size={28} />}
+                  value={kpis.totalRepos}
+                  label="Public Repos"
+                />
+              </StaggerItem>
+              <StaggerItem>
+                <StatCard
+                  icon={<Star size={28} />}
+                  value={kpis.totalStars}
+                  label="Total Stars"
+                />
+              </StaggerItem>
+              <StaggerItem>
+                <StatCard
+                  icon={<GitFork size={28} />}
+                  value={kpis.totalForks}
+                  label="Total Forks"
+                />
+              </StaggerItem>
+              <StaggerItem>
+                <StatCard
+                  icon={<Code2 size={28} />}
+                  value={kpis.topLang}
+                  label="Top Language"
+                />
+              </StaggerItem>
+            </StaggerContainer>
 
             {/* Row 2 — Charts */}
-            <div className={styles.chartGrid}>
+            <StaggerContainer className={styles.chartGrid} staggerDelay={0.12}>
               {/* Chart 1 — Commit Activity */}
-              <div className={styles.chartCard}>
-                <div className={styles.chartHeader}>
-                  <h3 className={styles.chartTitle}>Commit Activity</h3>
-                  {data && data.repos.length > 0 && !isDemoMode && (
-                    <select
-                      className={styles.repoSelect}
-                      value={commitRepo}
-                      onChange={handleRepoChange}
-                      aria-label="Select repository for commit activity"
-                    >
-                      {data.repos.slice(0, MAX_REPO_SELECTOR_OPTIONS).map((r: GitHubRepo) => (
-                        <option key={r.id} value={r.name}>
-                          {r.name}
-                        </option>
-                      ))}
-                    </select>
+              <StaggerItem>
+                <div className={styles.chartCard}>
+                  <div className={styles.chartHeader}>
+                    <h3 className={styles.chartTitle}>Commit Activity</h3>
+                    {data && data.repos.length > 0 && !isDemoMode && (
+                      <select
+                        className={styles.repoSelect}
+                        value={commitRepo}
+                        onChange={handleRepoChange}
+                        aria-label="Select repository for commit activity"
+                      >
+                        {data.repos.slice(0, MAX_REPO_SELECTOR_OPTIONS).map((r: GitHubRepo) => (
+                          <option key={r.id} value={r.name}>
+                            {r.name}
+                          </option>
+                        ))}
+                      </select>
+                    )}
+                  </div>
+                  {commitChartData.length > 0 ? (
+                    <ResponsiveContainer width="100%" height={220}>
+                      <LineChart data={commitChartData}>
+                        <CartesianGrid
+                          strokeDasharray="3 3"
+                          stroke={cssVar("--ifm-color-emphasis-200", "#eee")}
+                        />
+                        <XAxis
+                          dataKey="week"
+                          tick={{ fontSize: 10 }}
+                          interval={COMMIT_CHART_TICK_INTERVAL}
+                          stroke={cssVar("--ifm-color-emphasis-500", "#999")}
+                        />
+                        <YAxis
+                          tick={{ fontSize: 10 }}
+                          stroke={cssVar("--ifm-color-emphasis-500", "#999")}
+                        />
+                        <Tooltip content={<ThemedTooltip />} />
+                        <Line
+                          type="monotone"
+                          dataKey="commits"
+                          stroke={primaryColor}
+                          strokeWidth={2}
+                          dot={false}
+                        />
+                      </LineChart>
+                    </ResponsiveContainer>
+                  ) : (
+                    <p style={{ color: "var(--ifm-color-emphasis-600)", fontSize: "0.9rem" }}>
+                      No commit activity data available for this repo.
+                    </p>
                   )}
                 </div>
-                {commitChartData.length > 0 ? (
-                  <ResponsiveContainer width="100%" height={220}>
-                    <LineChart data={commitChartData}>
-                      <CartesianGrid
-                        strokeDasharray="3 3"
-                        stroke={cssVar("--ifm-color-emphasis-200", "#eee")}
-                      />
-                      <XAxis
-                        dataKey="week"
-                        tick={{ fontSize: 10 }}
-                        interval={COMMIT_CHART_TICK_INTERVAL}
-                        stroke={cssVar("--ifm-color-emphasis-500", "#999")}
-                      />
-                      <YAxis
-                        tick={{ fontSize: 10 }}
-                        stroke={cssVar("--ifm-color-emphasis-500", "#999")}
-                      />
-                      <Tooltip content={<ThemedTooltip />} />
-                      <Line
-                        type="monotone"
-                        dataKey="commits"
-                        stroke={primaryColor}
-                        strokeWidth={2}
-                        dot={false}
-                      />
-                    </LineChart>
-                  </ResponsiveContainer>
-                ) : (
-                  <p style={{ color: "var(--ifm-color-emphasis-600)", fontSize: "0.9rem" }}>
-                    No commit activity data available for this repo.
-                  </p>
-                )}
-              </div>
+              </StaggerItem>
 
               {/* Chart 2 — Top Repos by Stars */}
-              <div className={styles.chartCard}>
-                <h3 className={styles.chartTitle}>Top Repos by Stars</h3>
-                <ResponsiveContainer width="100%" height={220}>
-                  <BarChart
-                    data={topReposData}
-                    layout="vertical"
-                    margin={{ left: 8, right: 8 }}
-                  >
-                    <CartesianGrid
-                      strokeDasharray="3 3"
-                      stroke={cssVar("--ifm-color-emphasis-200", "#eee")}
-                    />
-                    <XAxis
-                      type="number"
-                      tick={{ fontSize: 10 }}
-                      stroke={cssVar("--ifm-color-emphasis-500", "#999")}
-                    />
-                    <YAxis
-                      type="category"
-                      dataKey="name"
-                      tick={{ fontSize: 10 }}
-                      width={90}
-                      stroke={cssVar("--ifm-color-emphasis-500", "#999")}
-                    />
-                    <Tooltip content={<ThemedTooltip />} />
-                    <Bar dataKey="stars" fill={primaryColor} radius={[0, 4, 4, 0]} />
-                  </BarChart>
-                </ResponsiveContainer>
-              </div>
-
-              {/* Chart 3 — Language Breakdown */}
-              <div className={styles.chartCard}>
-                <h3 className={styles.chartTitle}>Language Breakdown</h3>
-                {langData.length > 0 ? (
+              <StaggerItem>
+                <div className={styles.chartCard}>
+                  <h3 className={styles.chartTitle}>Top Repos by Stars</h3>
                   <ResponsiveContainer width="100%" height={220}>
-                    <PieChart>
-                      <Pie
-                        data={langData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={55}
-                        outerRadius={85}
-                        paddingAngle={3}
-                        dataKey="value"
-                        nameKey="name"
-                        label={({ name }) => name}
-                        labelLine={false}
-                      >
-                        {langData.map((_entry, index) => (
-                          <Cell
-                            key={`cell-${index}`}
-                            fill={LANG_COLORS[index % LANG_COLORS.length]}
-                          />
-                        ))}
-                      </Pie>
-                      <Tooltip content={<ThemedTooltip />} />
-                      <Legend
-                        iconType="circle"
-                        iconSize={8}
-                        wrapperStyle={{ fontSize: "0.75rem" }}
-                      />
-                    </PieChart>
-                  </ResponsiveContainer>
-                ) : (
-                  <p style={{ color: "var(--ifm-color-emphasis-600)", fontSize: "0.9rem" }}>
-                    No language data available.
-                  </p>
-                )}
-              </div>
-
-              {/* Chart 4 — Repo Creation Timeline */}
-              <div className={styles.chartCard}>
-                <h3 className={styles.chartTitle}>Repo Creation Timeline</h3>
-                {timelineData.length > 0 ? (
-                  <ResponsiveContainer width="100%" height={220}>
-                    <AreaChart data={timelineData}>
-                      <defs>
-                        <linearGradient
-                          id="timelineGradient"
-                          x1="0"
-                          y1="0"
-                          x2="0"
-                          y2="1"
-                        >
-                          <stop
-                            offset="5%"
-                            stopColor={primaryColor}
-                            stopOpacity={0.35}
-                          />
-                          <stop
-                            offset="95%"
-                            stopColor={primaryColor}
-                            stopOpacity={0}
-                          />
-                        </linearGradient>
-                      </defs>
+                    <BarChart
+                      data={topReposData}
+                      layout="vertical"
+                      margin={{ left: 8, right: 8 }}
+                    >
                       <CartesianGrid
                         strokeDasharray="3 3"
                         stroke={cssVar("--ifm-color-emphasis-200", "#eee")}
                       />
                       <XAxis
-                        dataKey="quarter"
-                        tick={{ fontSize: 9 }}
-                        interval="preserveStartEnd"
-                        stroke={cssVar("--ifm-color-emphasis-500", "#999")}
-                      />
-                      <YAxis
+                        type="number"
                         tick={{ fontSize: 10 }}
                         stroke={cssVar("--ifm-color-emphasis-500", "#999")}
                       />
-                      <Tooltip content={<ThemedTooltip />} />
-                      <Area
-                        type="monotone"
-                        dataKey="cumulative"
-                        stroke={primaryColor}
-                        strokeWidth={2}
-                        fill="url(#timelineGradient)"
+                      <YAxis
+                        type="category"
+                        dataKey="name"
+                        tick={{ fontSize: 10 }}
+                        width={90}
+                        stroke={cssVar("--ifm-color-emphasis-500", "#999")}
                       />
-                    </AreaChart>
+                      <Tooltip content={<ThemedTooltip />} />
+                      <Bar dataKey="stars" fill={primaryColor} radius={[0, 4, 4, 0]} />
+                    </BarChart>
                   </ResponsiveContainer>
-                ) : (
-                  <p style={{ color: "var(--ifm-color-emphasis-600)", fontSize: "0.9rem" }}>
-                    No timeline data available.
-                  </p>
-                )}
-              </div>
-            </div>
+                </div>
+              </StaggerItem>
+
+              {/* Chart 3 — Language Breakdown */}
+              <StaggerItem>
+                <div className={styles.chartCard}>
+                  <h3 className={styles.chartTitle}>Language Breakdown</h3>
+                  {langData.length > 0 ? (
+                    <ResponsiveContainer width="100%" height={220}>
+                      <PieChart>
+                        <Pie
+                          data={langData}
+                          cx="50%"
+                          cy="50%"
+                          innerRadius={55}
+                          outerRadius={85}
+                          paddingAngle={3}
+                          dataKey="value"
+                          nameKey="name"
+                          label={({ name }) => name}
+                          labelLine={false}
+                        >
+                          {langData.map((_entry, index) => (
+                            <Cell
+                              key={`cell-${index}`}
+                              fill={LANG_COLORS[index % LANG_COLORS.length]}
+                            />
+                          ))}
+                        </Pie>
+                        <Tooltip content={<ThemedTooltip />} />
+                        <Legend
+                          iconType="circle"
+                          iconSize={8}
+                          wrapperStyle={{ fontSize: "0.75rem" }}
+                        />
+                      </PieChart>
+                    </ResponsiveContainer>
+                  ) : (
+                    <p style={{ color: "var(--ifm-color-emphasis-600)", fontSize: "0.9rem" }}>
+                      No language data available.
+                    </p>
+                  )}
+                </div>
+              </StaggerItem>
+
+              {/* Chart 4 — Repo Creation Timeline */}
+              <StaggerItem>
+                <div className={styles.chartCard}>
+                  <h3 className={styles.chartTitle}>Repo Creation Timeline</h3>
+                  {timelineData.length > 0 ? (
+                    <ResponsiveContainer width="100%" height={220}>
+                      <AreaChart data={timelineData}>
+                        <defs>
+                          <linearGradient
+                            id="timelineGradient"
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="1"
+                          >
+                            <stop
+                              offset="5%"
+                              stopColor={primaryColor}
+                              stopOpacity={0.35}
+                            />
+                            <stop
+                              offset="95%"
+                              stopColor={primaryColor}
+                              stopOpacity={0}
+                            />
+                          </linearGradient>
+                        </defs>
+                        <CartesianGrid
+                          strokeDasharray="3 3"
+                          stroke={cssVar("--ifm-color-emphasis-200", "#eee")}
+                        />
+                        <XAxis
+                          dataKey="quarter"
+                          tick={{ fontSize: 9 }}
+                          interval="preserveStartEnd"
+                          stroke={cssVar("--ifm-color-emphasis-500", "#999")}
+                        />
+                        <YAxis
+                          tick={{ fontSize: 10 }}
+                          stroke={cssVar("--ifm-color-emphasis-500", "#999")}
+                        />
+                        <Tooltip content={<ThemedTooltip />} />
+                        <Area
+                          type="monotone"
+                          dataKey="cumulative"
+                          stroke={primaryColor}
+                          strokeWidth={2}
+                          fill="url(#timelineGradient)"
+                        />
+                      </AreaChart>
+                    </ResponsiveContainer>
+                  ) : (
+                    <p style={{ color: "var(--ifm-color-emphasis-600)", fontSize: "0.9rem" }}>
+                      No timeline data available.
+                    </p>
+                  )}
+                </div>
+              </StaggerItem>
+            </StaggerContainer>
           </>
         )}
 
         {/* ── Section Divider ───────────────────────────────────────── */}
-        <hr className={styles.divider} />
+        <div className={styles.divider} />
 
         {/* ── WakaTime Coding Stats ──────────────────────────────────── */}
         <h2 className={styles.sectionTitle}>Coding Stats</h2>
 
-        <div className={styles.wakaGrid}>
+        <StaggerContainer className={styles.wakaGrid} staggerDelay={0.1}>
           {WAKATIME_EMBEDS.map((embed) => (
-            <WakaTimeEmbed key={embed.url} label={embed.label} url={embed.url} />
+            <StaggerItem key={embed.url}>
+              <WakaTimeEmbed label={embed.label} url={embed.url} />
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
 
         <p className={styles.wakaCaption}>
           Powered by{" "}

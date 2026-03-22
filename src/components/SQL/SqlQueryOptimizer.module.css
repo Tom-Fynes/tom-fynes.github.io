@@ -1,201 +1,254 @@
-/* src/components/SqlQueryOptimizer.module.css - UPDATED COLORS */
+/* src/components/SqlQueryOptimizer.module.css — restyled */
+
+/* ── Page wrapper ── */
 .optimizerContainer {
-  background-color: var(--ifm-background-color);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-border-radius);
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: var(--ifm-shadow-md);
+  width: 100%;
+  background: var(--ifm-background-color);
+  border: 1px solid rgba(221, 117, 150, 0.25);
+  border-radius: 1rem;
+  padding: 2.5rem 2rem;
+  margin: 1.5rem 0;
 }
 
-.introText {
+/* ── Hero ── */
+.hero {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem;
+  background: linear-gradient(135deg, #DD7596, #8716f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSubtitle {
   font-size: 1rem;
-  color: var(--ifm-font-color-secondary);
-  margin-bottom: 25px;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
+/* ── Input group ── */
 .inputGroup {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .label {
   display: block;
-  font-weight: bold;
-  margin-bottom: 8px;
-  color: var(--ifm-font-color-base);
+  font-weight: 700;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-emphasis-700);
 }
 
-.select,
+/* ── Pill selector ── */
+.pillGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill {
+  padding: 0.45rem 1.1rem;
+  border-radius: 999px;
+  border: 1.5px solid rgba(221, 117, 150, 0.4);
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.pill:hover {
+  background: rgba(221, 117, 150, 0.15);
+  border-color: rgba(221, 117, 150, 0.7);
+  color: var(--ifm-color-primary);
+}
+
+.pillActive {
+  background: var(--ifm-color-primary) !important;
+  border-color: var(--ifm-color-primary) !important;
+  color: #fff !important;
+}
+
+/* ── Textarea wrapper (for floating label) ── */
+.textareaWrapper {
+  position: relative;
+}
+
+.textareaLabel {
+  position: absolute;
+  top: -0.65rem;
+  left: 0.75rem;
+  background: var(--ifm-color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  z-index: 1;
+}
+
 .textarea {
   width: 100%;
-  padding: 10px 12px;
-  border: 1px solid var(--ifm-color-emphasis-400);
-  border-radius: var(--ifm-border-radius);
-  background-color: var(--ifm-background-surface-color);
+  padding: 1rem;
+  border: 1.5px solid rgba(221, 117, 150, 0.4);
+  border-radius: 0.75rem;
+  background: var(--ifm-background-color);
   color: var(--ifm-font-color-base);
-  font-family: var(--ifm-font-family-base);
-  font-size: 0.95rem;
-  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  font-family: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 0.9rem;
+  resize: vertical;
+  min-height: 180px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.select:focus,
 .textarea:focus {
   border-color: var(--ifm-color-primary);
   outline: none;
-  box-shadow: 0 0 0 2px var(--ifm-color-primary-lightest);
+  box-shadow: 0 0 0 3px rgba(221, 117, 150, 0.3);
 }
 
-.textarea {
-  resize: vertical;
-  min-height: 150px;
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Monospace for code */
+html[data-theme='dark'] .textarea {
+  background: #404E5C;
 }
 
-.button {
-  background-color: var(--ifm-color-primary);
-  color: var(--ifm-button-color);
-  padding: 10px 20px;
+/* ── Buttons ── */
+.buttonContainer {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+
+.buttonPrimary {
+  padding: 0.75rem 1.75rem;
+  background: var(--ifm-color-primary);
+  color: #fff;
   border: none;
-  border-radius: var(--ifm-border-radius);
-  cursor: pointer;
+  border-radius: 0.75rem;
   font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease;
 }
 
-.button:hover {
-  background-color: var(--ifm-color-primary-dark);
-  box-shadow: var(--ifm-shadow-sm);
+.buttonGhost {
+  padding: 0.75rem 1.75rem;
+  background: transparent;
+  color: var(--ifm-color-primary);
+  border: 1.5px solid var(--ifm-color-primary);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
+.buttonGhost:hover {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+
+/* ── Results container ── */
 .resultsContainer {
-  margin-top: 30px;
-  padding: 15px;
-  background-color: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-border-radius);
+  margin-top: 1.5rem;
+  background: var(--ifm-background-color);
+  border: 1px solid rgba(221, 117, 150, 0.25);
+  border-top: 3px solid var(--ifm-color-primary);
+  border-radius: 1rem;
+  padding: 1.5rem;
 }
 
-.resultsContainer h3 {
-  margin-top: 0;
-  color: var(--ifm-font-color-base);
+.resultsHeading {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #DD7596, #8716f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .resultsList {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .resultItem {
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-left: 5px solid;
-  border-radius: var(--ifm-border-radius);
-  font-size: 0.9rem;
-  line-height: 1.4;
-  /* Use surface color for consistency, or base background color */
-  background-color: var(--ifm-background-surface-color); 
-}
-
-/* Specific styling for message types */
-/* --- INFO (Suggestions, Best Practices) - Using Light Blue/Periwinkle derivatives --- */
-.resultItem.info {
-  /* Border color: Light Blue */
-  border-color: #83AFDF; 
-  /* Background: Lightest Periwinkle (subtle blue tone) */
-  background-color: #f0f3ff; 
-}
-
-html[data-theme='dark'] .resultItem.info {
-    /* Border color: Light Blue */
-    border-color: #AED6F1;
-    /* Background: A lightened Paynes Gray for dark theme contrast */
-    background-color: #5d7083;
-}
-
-
-/* --- WARNING (Potential Issues) - Using Magenta/Pale Yellow derivatives --- */
-.resultItem.warning {
-  /* Border color: Pale Yellow (Magenta from your palette) */
-  border-color: #ECDA90;
-  /* Background: A slightly lighter yellow/off-white */
-  background-color: #fffde7; 
-}
-
-html[data-theme='dark'] .resultItem.warning {
-    /* Border color: Magenta (ECDA90) */
-    border-color: #ECDA90;
-    /* Background: A slightly lighter Paynes Gray with a hint of yellow */
-    background-color: #63765e;
-}
-
-
-/* --- ERROR (Critical Anti-Pattern) - Using Dark Rose/Deep Lavender derivatives --- */
-.resultItem.error {
-  /* Border color: Dark Rose */
-  border-color: #CF1259;
-  /* Background: A very light rose tint */
-  background-color: #fff0f5; 
-}
-
-html[data-theme='dark'] .resultItem.error {
-    /* Border color: Dark Rose (CF1259) */
-    border-color: #CF1259;
-    /* Background: A deep lavender/rose derivative for dark theme */
-    background-color: #724b7a;
-}
-
-/* --- SUCCESS (No Issues Found) - Using Light Rose/Periwinkle derivatives --- */
-.resultItem.success {
-  /* Border color: Light Rose */
-  border-color: #DD7596;
-  /* Background: A very light rose/pink tint */
-  background-color: #fff7fa; 
-}
-
-html[data-theme='dark'] .resultItem.success {
-    /* Border color: Light Rose (DD7596) */
-    border-color: #DD7596;
-    /* Background: A subtle rose tint on the dark background */
-    background-color: #5c626e;
-}
-
-/* New Container for Side-by-Side Buttons */
-.buttonContainer {
   display: flex;
-  gap: 15px; /* Space between buttons */
-  margin-top: 5px; /* Adjust spacing above buttons */
-  margin-bottom: 20px;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.75rem 1rem;
+  border-left: 6px solid;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-/* Base Button Style (already defined, just for context) */
-.button {
-  background-color: var(--ifm-color-primary);
-  color: var(--ifm-button-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--ifm-border-radius);
-  cursor: pointer;
+.resultIcon {
+  flex-shrink: 0;
   font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  line-height: 1.5;
 }
 
-/* Style for the new Format Button */
-.formatButton {
-  background-color: var(--ifm-color-primary);
-  color: var(--ifm-button-color);
-  padding: 10px 20px;
-  border: none;
-  border-radius: var(--ifm-border-radius);
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* ── Result type colors ── */
+.info {
+  border-color: #83AFDF;
+  background: #f0f3ff;
+  color: var(--ifm-font-color-base);
 }
 
-.formatButton:hover {
-  background-color: var(--ifm-color-primary-dark);
-  box-shadow: var(--ifm-shadow-sm);
+html[data-theme='dark'] .info {
+  border-color: #AED6F1;
+  background: #5d7083;
+  color: #fff;
+}
+
+.warning {
+  border-color: #ECDA90;
+  background: #fffde7;
+  color: var(--ifm-font-color-base);
+}
+
+html[data-theme='dark'] .warning {
+  border-color: #ECDA90;
+  background: #63765e;
+  color: #fff;
+}
+
+.error {
+  border-color: #CF1259;
+  background: #fff0f5;
+  color: var(--ifm-font-color-base);
+}
+
+html[data-theme='dark'] .error {
+  border-color: #CF1259;
+  background: #724b7a;
+  color: #fff;
+}
+
+.success {
+  border-color: #DD7596;
+  background: #fff7fa;
+  color: var(--ifm-font-color-base);
+}
+
+html[data-theme='dark'] .success {
+  border-color: #DD7596;
+  background: #5c626e;
+  color: #fff;
 }
