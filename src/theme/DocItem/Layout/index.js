@@ -26,6 +26,7 @@ import { FadeInOnScroll } from "@site/src/components/animations";
    ═══════════════════════════════════════════════════════════════ */
 
 const READING_SPEED_WPM = 200;
+const COURSE_CONFIG = {
   "/docs/": {
     name: "SQL 101",
     description: "Learn the fundamentals of SQL from scratch.",
