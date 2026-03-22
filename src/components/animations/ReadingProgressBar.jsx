@@ -23,7 +23,9 @@ export default function ReadingProgressBar() {
 
   const isBlogOrDocs =
     location.pathname.startsWith("/blog") ||
-    location.pathname.startsWith("/docs");
+    location.pathname.startsWith("/docs") ||
+    location.pathname.startsWith("/git_101") ||
+    location.pathname.startsWith("/python_101");
 
   if (!isBlogOrDocs) return null;
 
