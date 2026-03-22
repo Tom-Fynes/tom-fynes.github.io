@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Configure DuckDB
 
 DuckDB is an open source database management system which supports either persisting databases or an in-memory mode. This setup page will demonstrate how to configure either of these options.
