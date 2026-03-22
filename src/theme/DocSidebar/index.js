@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import Link from "@docusaurus/Link";
 import { useLocation } from "@docusaurus/router";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -12,6 +12,94 @@ function isActiveItem(href, pathname) {
   return path === clean || path === href;
 }
 
+function getCourseNameFromPath(pathname) {
+  if (pathname.startsWith("/docs/")) return "SQL 101";
+  if (pathname.startsWith("/git_101/")) return "Git 101";
+  if (pathname.startsWith("/python_101/")) return "Python 101";
+  if (pathname.startsWith("/projects/")) return "Projects";
+  return null;
+}
+
+function countTotalLinks(items) {
+  return items.reduce((acc, item) => {
+    if (item.type === "link" || item.type === "doc") return acc + 1;
+    if (item.type === "category") return acc + countTotalLinks(item.items || []);
+    return acc;
+  }, 0);
+}
+
+function countVisitedLinks(items) {
+  return items.reduce((acc, item) => {
+    if (item.type === "link" || item.type === "doc") {
+      const href = item.href || item.to || "";
+      try {
+        return acc + (localStorage.getItem("tfynes_visited_" + href) === "true" ? 1 : 0);
+      } catch {
+        return acc;
+      }
+    }
+    if (item.type === "category") return acc + countVisitedLinks(item.items || []);
+    return acc;
+  }, 0);
+}
+
+/* ─────────────── CourseHeader ─────────────── */
+
+function CourseHeader({ sidebar }) {
+  const location = useLocation();
+  const courseName = getCourseNameFromPath(location.pathname);
+  const [visitedCount, setVisitedCount] = useState(0);
+  const prefersReducedMotion = useReducedMotion();
+
+  const totalCount = useMemo(() => countTotalLinks(sidebar), [sidebar]);
+
+  useEffect(() => {
+    function update() {
+      try {
+        setVisitedCount(countVisitedLinks(sidebar));
+      } catch {}
+    }
+    update();
+    window.addEventListener("tfynes_visited", update);
+    return () => window.removeEventListener("tfynes_visited", update);
+  }, [sidebar]);
+
+  if (!courseName) return null;
+
+  const progress = totalCount > 0 ? (visitedCount / totalCount) * 100 : 0;
+
+  return (
+    <div className="px-3 pt-3 pb-2 border-b border-[#DD7596]/15 mb-1">
+      <span
+        className="text-xs font-bold uppercase tracking-wider"
+        style={{ color: "var(--ifm-color-primary)" }}
+      >
+        {courseName}
+      </span>
+      {/* Progress bar */}
+      <div className="mt-2 h-1.5 rounded-full bg-gray-100 dark:bg-gray-700 overflow-hidden">
+        <motion.div
+          className="h-full rounded-full"
+          style={{ backgroundColor: "var(--ifm-color-primary)" }}
+          initial={{ width: 0 }}
+          animate={{ width: progress + "%" }}
+          transition={
+            prefersReducedMotion
+              ? { duration: 0 }
+              : { duration: 0.6, ease: "easeOut" }
+          }
+        />
+      </div>
+      <p
+        className="text-[11px] text-gray-400 dark:text-gray-500 mt-1"
+        style={{ margin: "0.25rem 0 0" }}
+      >
+        {visitedCount} / {totalCount} lessons
+      </p>
+    </div>
+  );
+}
+
 /* ─────────────── SidebarLink — a single doc/link item ─────────────── */
 
 function SidebarLink({ item, depth = 0 }) {
@@ -19,6 +107,18 @@ function SidebarLink({ item, depth = 0 }) {
   const prefersReducedMotion = useReducedMotion();
   const href = item.href || item.to || "#";
   const active = isActiveItem(href, location.pathname);
+  const [isVisited, setIsVisited] = useState(false);
+
+  useEffect(() => {
+    function update() {
+      try {
+        setIsVisited(localStorage.getItem("tfynes_visited_" + href) === "true");
+      } catch {}
+    }
+    update();
+    window.addEventListener("tfynes_visited", update);
+    return () => window.removeEventListener("tfynes_visited", update);
+  }, [href]);
 
   return (
     <motion.div
@@ -30,13 +130,13 @@ function SidebarLink({ item, depth = 0 }) {
     >
       <Link
         to={href}
-        className={`block rounded-lg px-3 py-1.5 text-sm no-underline transition-colors duration-150 ${
-          depth > 0 ? "ml-3" : ""
-        } ${
-          active
+        className={
+          "block rounded-lg px-3 py-1.5 text-sm no-underline transition-colors duration-150 " +
+          (depth > 0 ? "ml-3 " : "") +
+          (active
             ? "bg-[#DD7596]/20 text-[#CF1259] dark:text-[#DD7596] font-bold"
-            : "text-gray-600 dark:text-gray-300 hover:text-[#DD7596] dark:hover:text-[#DD7596]"
-        }`}
+            : "text-gray-600 dark:text-gray-300 hover:text-[#DD7596] dark:hover:text-[#DD7596]")
+        }
         aria-current={active ? "page" : undefined}
       >
         {active && (
@@ -46,7 +146,18 @@ function SidebarLink({ item, depth = 0 }) {
             transition={{ type: "spring", stiffness: 400, damping: 28 }}
           />
         )}
-        <span className="relative z-10">{item.label}</span>
+        <span className="relative z-10 flex items-center justify-between gap-1">
+          <span className="truncate">{item.label}</span>
+          {isVisited && !active && (
+            <span
+              className="text-xs flex-shrink-0"
+              style={{ color: "var(--ifm-color-primary)" }}
+              aria-label="Visited"
+            >
+              ✓
+            </span>
+          )}
+        </span>
       </Link>
     </motion.div>
   );
@@ -83,11 +194,12 @@ function SidebarCategory({ item, depth = 0 }) {
             <span className="w-0.5 h-4 rounded-full bg-[#DD7596] flex-shrink-0" />
           )}
           <span
-            className={`text-xs font-bold uppercase tracking-widest truncate ${
-              depth === 0
+            className={
+              "text-xs font-bold uppercase tracking-widest truncate " +
+              (depth === 0
                 ? "text-gray-800 dark:text-gray-100"
-                : "text-gray-600 dark:text-gray-300"
-            }`}
+                : "text-gray-600 dark:text-gray-300")
+            }
           >
             {item.label}
           </span>
@@ -107,6 +219,11 @@ function SidebarCategory({ item, depth = 0 }) {
           <path d="M9 18l6-6-6-6" />
         </motion.svg>
       </button>
+
+      {/* Subtle divider below top-level category heading (only when expanded) */}
+      {depth === 0 && open && (
+        <div className="mx-3 mb-1 h-px bg-[#DD7596]/10" />
+      )}
 
       <AnimatePresence initial={false}>
         {open && (
@@ -158,19 +275,13 @@ function SidebarItems({ items, depth = 0 }) {
 /* ─────────────── DocSidebar — main export ─────────────── */
 
 /**
- * Custom DocSidebar — a floating detached card panel.
+ * Custom DocSidebar — a floating detached card panel with course progress.
  *
  * Props (passed by Docusaurus):
  *   sidebar   — array of sidebar items
  *   path      — current page path
  *   onCollapse — callback to collapse sidebar (mobile)
  *   isHidden  — whether to hide the sidebar
- *
- * Layout note: DocRoot/Layout/Sidebar wraps this in a `.sidebarViewport` div
- * that is already `position: sticky; top: 0`.  We add `pt-[72px]` (slightly
- * more than our 64 px navbar) so the card clears the fixed navbar and sits
- * flush below it.  We use `w-full px-3` instead of a fixed width so the card
- * fills the container with breathing room on both sides.
  */
 export default function DocSidebar({ sidebar, path, onCollapse, isHidden }) {
   const prefersReducedMotion = useReducedMotion();
@@ -194,7 +305,10 @@ export default function DocSidebar({ sidebar, path, onCollapse, isHidden }) {
           }}
         />
 
-        <nav className="p-3 space-y-1 max-h-[calc(100vh-140px)] overflow-y-auto scrollbar-thin">
+        {/* Course header with progress */}
+        <CourseHeader sidebar={sidebar} />
+
+        <nav className="p-3 space-y-1 max-h-[calc(100vh-220px)] overflow-y-auto scrollbar-thin">
           <SidebarItems items={sidebar} depth={0} />
         </nav>
       </div>
